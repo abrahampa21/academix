@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="src/student.png" />
+    <link rel="stylesheet" href="portales.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script
+      src="https://kit.fontawesome.com/e522357059.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Panel del alumno</title>
+  </head>
+  <body>
+    <header>
+      <h1>Bienvenido al Portal del Alumno</h1>
+    </header>
+
+    <!--Menú lateral-->
+    <aside class="menu-side" id="menu-side">
+      <div class="name-page">
+        <i class="fa-solid fa-house" id="home" title="Panel"></i>
+        <h4>Menú</h4>
+      </div>
+
+      <div class="options-menu">
+        <a href="" id="data-student">
+          <div class="option">
+            <i class="fa-solid fa-address-card"></i>
+            <h4>Datos Personales</h4>
+          </div>
+        </a>
+
+        <a href="" id="horario-btn">
+          <div class="option">
+            <i class="fa-solid fa-calendar-days" title="Horario"></i>
+            <h4>Horario</h4>
+          </div>
+        </a>
+
+        <a href="" id="asistencia-btn">
+          <div class="option">
+            <i class="fa-solid fa-pen" title="Asistencia"></i>
+            <h4>Asistencia</h4>
+          </div>
+        </a>
+
+        <a href="">
+          <div class="option">
+            <i class="fa-solid fa-gear" title="Configuración"></i>
+            <h4>Configuración</h4>
+          </div>
+        </a>
+      </div>
+      <div class="exit">
+        <a href="index.php" title="H"
+          ><i class="fa-solid fa-right-from-bracket"></i
+        ></a>
+        <h4>Salir</h4>
+      </div>
+    </aside>
+
+    <!--Texto introductorio-->
+    <main id="main">
+      <img src="pA/universitario.jpg" alt="Universitario">
+      <div class="container">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
+          esse quos optio, alias odio blanditiis temporibus eos officiis saepe
+          consectetur quibusdam dolorem veritatis voluptates debitis ab dolor
+          molestiae eveniet voluptatibus. Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Voluptatum, nostrum! Quos dicta repudiandae tempore
+          numquam modi a corrupti rem possimus neque error? Cum magni quis at
+          vero pariatur fugit. Exercitationem.
+        </p>
+      </div>
+    </main>
+
+    <!--Datos personales-->
+    <div class="personal-data" id="personal-data">
+      <table>
+        <caption>
+          Tus Datos Personales
+        </caption>
+        <tr>
+          <td></td>
+          <th>Tu nombre</th>
+        </tr>
+        <tr>
+          <th>Matrícula</th>
+          <td></td>
+        </tr>
+        <tr>
+          <th>Correo Electrónico</th>
+          <td></td>
+        </tr>
+        <tr>
+          <th>
+            Fecha de Nacimiento <i class="fa-solid fa-pen" id="pen-date"></i>
+          </th>
+          <td>
+            <input
+              type="date"
+              name="fechaNac"
+              id="fechaNac"
+              title="H"
+              readonly
+            />
+          </td>
+        </tr>
+        <tr>
+          <th>Carrera <i class="fa-solid fa-pen" id="pen-degree"></i></th>
+          <td>
+            <input type="text" name="carrera" id="carrera" title="h" readonly />
+          </td>
+        </tr>
+        <tr>
+          <th>Periodo <i class="fa-solid fa-pen" id="pen-period"></i></th>
+          <td>
+            <input type="text" name="periodo" id="periodo" title="h" readonly />
+          </td>
+        </tr>
+        <tr>
+          <th>Estatus <i class="fa-solid fa-pen" id="pen-status"></i></th>
+          <td>
+            <input type="text" name="estatus" id="estatus" title="h" readonly />
+          </td>
+        </tr>
+        <tr>
+          <th>
+            Dirección física <i class="fa-solid fa-pen" id="pen-direction"></i>
+          </th>
+          <td>
+            <input
+              type="text"
+              name="direccion"
+              id="direccion"
+              title="h"
+              readonly
+            />
+          </td>
+        </tr>
+      </table>
+      <button type="submit" class="submit" id="submit" name="actualizar">
+        Actualizar datos
+      </button>
+    </div>
+
+    <div class="center-img-container">
+      <img src="pA/universitarios.png" class="img-bg active" alt="Fondo" />
+      <img src="pA/universitarios1.jpg" class="img-bg" alt="Fondo 2" />
+      <img src="pA/universitarios2.jpg" class="img-bg" alt="" />
+      <img src="pA/universitarios3.jpg" class="img-bg" alt="" />
+    </div>
+
+    <!--Horario-->
+    <embed
+      class="horario"
+      id="horario"
+      src="pA/file.pdf"
+      type="application/pdf"
+    />
+
+    <!--Asistencia-->
+    <table class="asistencia" id="asistencia">
+      <tbody>
+        <tr>
+          <th>Mes</th>
+          <th>Total de clases</th>
+          <th>Total de asistencias</th>
+          <th>Total de faltas</th>
+          <th>Porcentaje total de asistencias</th>
+        </tr>
+        <tr>
+          <td>SEPTIEMBRE</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>OCTUBRE</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>NOVIEMBRE</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>DICIEMBRE</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr class="resultado">
+          <td>Resultado</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!--Pie de página-->
+    <footer>
+      <p>Todos los derechos reservados &copy; KAMA</p>
+    </footer>
+
+    <script src="portales.js"></script>
+  </body>
+</html>
