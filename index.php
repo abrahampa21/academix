@@ -60,8 +60,10 @@ if (isset($_POST["registrar"])) {
     $datosFormulario['matricula'] = $_POST['matricula'] ?? '';
     $datosFormulario['rol'] = $_POST['rol'] ?? '';
 
-    if (isset($_POST['contraseña'], $_POST['contraseña-rpt']) &&
-        $_POST['contraseña'] !== $_POST['contraseña-rpt']) {
+    if (
+        isset($_POST['contraseña'], $_POST['contraseña-rpt']) &&
+        $_POST['contraseña'] !== $_POST['contraseña-rpt']
+    ) {
         echo "<script>alert('Las contraseñas no coinciden');</script>";
         $mostrarRegistro = true;
     } else if (isset($_POST["rol"])) {
@@ -145,7 +147,8 @@ if (isset($_POST["registrar"])) {
     <form class="log-in" method="post" action="<?php $_SERVER["PHP_SELF"]; ?>" id="log-in" autocomplete="off">
         <div class="login-container">
             <h1>Inicio de Sesión</h1>
-            <div class="input-Usuario div-input">
+            <img src="src/academix.jpg" alt="Logo página">
+            <div class="input-Usuario div-input matricula-div-login">
                 <input type="text" name="matricula" placeholder="Matrícula" required>
                 <i class="fa-solid fa-user"></i>
             </div>
