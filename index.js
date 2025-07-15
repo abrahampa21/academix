@@ -55,3 +55,7 @@ btnSignUp.addEventListener("click", () => {
   signUp.style.display = "flex";
 })
 
+//Animación
+AOS.init({
+  once: true,
+});
