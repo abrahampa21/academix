@@ -47,7 +47,7 @@ if (isset($_POST["log"])) {
     }
 
     echo "<script>
-            alert('Usuario o contraseña incorrecta');
+            alert('Error al iniciar sesión');
             window.location = 'index.php';
         </script>";
 }
@@ -106,11 +106,13 @@ if (isset($_POST["registrar"])) {
                 } else {
                     echo "<script>
                         document.addEventListener('DOMContentLoaded', function() {
-                            wal.fire({
+                            Swal.fire({
                             icon: 'error',
                             text: 'Error al registrarse'
+                            }).then(() => {
+                                window.location = 'index.php';
                             });
-                        })
+                        });
                     </script>";
                 }
             }
@@ -147,9 +149,11 @@ if (isset($_POST["registrar"])) {
                     echo"
                     <script>
                         document.addEventListener('DOMContentLoaded', function() {
-                            wal.fire({
+                            Swal.fire({
                             icon: 'error',
                             text: 'Error al registrarse'
+                            }).then(() => {
+                                window.location = 'index.php';
                             });
                         })
                     </script>";
