@@ -79,9 +79,16 @@ if (isset($_POST["registrar"])) {
             $resultadouser = $conexion->query($sqluser);
 
             if ($resultadouser->num_rows > 0) {
-                echo "<script>
-                    alert('El usuario ya existe');
-                    window.location = 'index.php';
+                echo "
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        Swal.fire({
+                            icon: 'warning',
+                            title: 'El usuario ya existe',
+                        }).then(() => {
+                            window.location = 'index.php';
+                        });
+                    });
                 </script>";
             } else {
                 $sqlusuario = "INSERT INTO alumno(nombreCompleto, email, matriculaA, password)
@@ -220,6 +227,7 @@ if (isset($_POST["registrar"])) {
             });
         </script>
     <?php endif; ?>
+
 </body>
 
 </html>
