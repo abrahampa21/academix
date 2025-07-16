@@ -95,14 +95,22 @@ if (isset($_POST["registrar"])) {
                     VALUES ('$nombre', '$correo', '$matricula', '$password_encriptada')";
                 $resultadousuario = $conexion->query($sqlusuario);
                 if ($resultadousuario > 0) {
-                    echo "<script>
-                        alert('Registro Exitoso');
-                        window.location = 'index.php';
+                    echo "
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+                            Swal.fire('Registro exitoso').then(() => {
+                                window.location = 'index.php';
+                            });
+                        });
                     </script>";
                 } else {
                     echo "<script>
-                        alert('Error al registrarse');
-                        window.location = 'index.php';
+                        document.addEventListener('DOMContentLoaded', function() {
+                            wal.fire({
+                            icon: 'error',
+                            text: 'Error al registrarse'
+                            });
+                        })
                     </script>";
                 }
             }
@@ -111,23 +119,39 @@ if (isset($_POST["registrar"])) {
             $resultadouser = $conexion->query($sqluser);
 
             if ($resultadouser->num_rows > 0) {
-                echo "<script>
-                    alert('El usuario ya existe');
-                    window.location = 'index.php';
+                echo "
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        Swal.fire({
+                            icon: 'warning',
+                            title: 'El usuario ya existe',
+                        }).then(() => {
+                            window.location = 'index.php';
+                        });
+                    });
                 </script>";
             } else {
                 $sqlusuario = "INSERT INTO profesor(nombreCompleto, email, matriculaP, password)
                     VALUES ('$nombre', '$correo', '$matricula', '$password_encriptada')";
                 $resultadousuario = $conexion->query($sqlusuario);
                 if ($resultadousuario > 0) {
-                    echo "<script>
-                        alert('Registro Exitoso');
-                        window.location = 'index.php';
+                    echo"
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+                            Swal.fire('Registro exitoso').then(() => {
+                                window.location = 'index.php';
+                            });
+                        });
                     </script>";
                 } else {
-                    echo "<script>
-                        alert('Error al registrarse');
-                        window.location = 'index.php';
+                    echo"
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+                            wal.fire({
+                            icon: 'error',
+                            text: 'Error al registrarse'
+                            });
+                        })
                     </script>";
                 }
             }
