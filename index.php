@@ -135,81 +135,81 @@ if (isset($_POST["registrar"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
-    <link rel="icon" href="src/user.png">
+    <link rel="icon" href="src/academix.jpg">
     <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="https://kit.fontawesome.com/e522357059.js" crossorigin="anonymous"></script>
-    <title>Ingresar</title>
+    <title>Academix</title>
 </head>
 
 <body>
 
     <!--Inicio de sesión-->
-    <form class="log-in" method="post" action="<?php $_SERVER["PHP_SELF"]; ?>" id="log-in" autocomplete="off">
+    <form class="log-in" method="post" action="<?php $_SERVER["PHP_SELF"]; ?>" id="log-in" autocomplete="off" data-aos="fade-down">
         <div class="login-container">
             <h1>Inicio de Sesión</h1>
             <img src="src/academix.jpg" alt="Logo página">
             <div class="input-Usuario div-input matricula-div-login">
-                <input type="text" name="matricula" placeholder="Matrícula" required>
+                <input type="text" name="matricula" class="inputs-register" placeholder="Matrícula" required>
                 <i class="fa-solid fa-user"></i>
             </div>
 
             <div class="input-Usuario div-input">
-                <input type="password" name="pass" id="login-pwd" placeholder="Contraseña" required>
-                <i class="fa-regular fa-eye-slash" id="login-pwd-icon"></i>
+                <input type="password" name="pass" class="inputs-register" id="login-pwd" placeholder="Contraseña" required>
+                <i class="fa-regular fa-eye-slash" id="login-pwd-icon" onclick="revealPasswordLogin()"></i>
             </div>
 
             <button type="submit" name="log" class="login-btn">Ingresar</button>
 
             <div class="create">
-                <p class="create">¿No tienes una cuenta? <span class="btn-sign-up" id="btn-sign-up">Create una</span></p>
+                <p class="create">¿No tienes una cuenta? <span class="btn-sign-up" id="btn-sign-up" onclick="showRegister()">Create una</span></p>
             </div>
         </div>
     </form>
 
     <!--Registro-->
     <form class="sign-up" id="sign-up" method="post" action="<?php $_SERVER["PHP_SELF"]; ?>" autocomplete="off">
-        <i id="back" class="arrow fa-solid fa-arrow-left" title="Regresar"></i>
+        <i id="back" class="arrow fa-solid fa-arrow-left" title="Regresar" onclick="showLogin()"></i>
         <h1>Registro para el portal</h1>
         <div class="inputs">
             <div class="div-name div-input">
-                <input type="text" name="nombre" placeholder="Nombre completo" id="nombre" required>
+                <input type="text" name="nombre" class="inputs-register" placeholder="Nombre completo" id="nombre" required>
                 <i class="fa-solid fa-user"></i>
             </div>
             <div class="div-email div-input">
-                <input type="email" name="email" placeholder="Correo electrónico" id="email" required>
+                <input type="email" name="email" class="inputs-register" placeholder="Correo electrónico" id="email" required>
                 <i class="fa-solid fa-envelope"></i>
             </div>
             <div class="div-user div-input">
-                <input type="text" name="matricula" placeholder="Matrícula" id="matricula" required>
+                <input type="text" name="matricula" class="inputs-register" placeholder="Matrícula" id="matricula" required>
                 <i class="fa-solid fa-pen-nib"></i>
             </div>
             <div class="input-password div-input">
-                <input type="password" name="contraseña" placeholder="Contraseña" id="contraseña" required>
-                <i class="fa-regular fa-eye-slash" id="eye-slash"></i>
+                <input type="password" name="contraseña" class="inputs-register" placeholder="Contraseña" id="contraseña" required>
+                <i class="fa-regular fa-eye-slash" id="eye-slash" onclick="revealPassword()"></i>
             </div>
             <div class="input-password div-input">
-                <input type="password" name="contraseña-rpt" placeholder="Repite la contraseña" id="contraseña-rpt" required>
-                <i class="fa-regular fa-eye-slash" id="eye-slash-rpt"></i>
+                <input type="password" name="contraseña-rpt" class="inputs-register" placeholder="Repite la contraseña" id="contraseña-rpt" required>
+                <i class="fa-regular fa-eye-slash" id="eye-slash-rpt" onclick="revealPasswordRpt()"></i>
             </div>
             <div class="checkbox">
                 <div class="alumno-div div-checkboxes">
-                    <input type="radio" placeholder="h" class="profesor checkboxes" name="rol" id="profesor" value="prof" required>
+                    <input type="radio" placeholder="h" class="profesor checkboxes inputs-register" name="rol" id="profesor" value="prof" required>
                     <label for="profesor">Profesor</label>
                 </div>
                 <div class="profesor-div div-checkboxes">
-                    <input type="radio" placeholder="h" class="alumno checkboxes" name="rol" id="alumno" value="alu" required>
+                    <input type="radio" placeholder="h" class="alumno checkboxes inputs-register" name="rol" id="alumno" value="alu" required>
                     <label for="alumno">Alumno</label>
                 </div>
             </div>
             <button type="submit" name="registrar">Registrar</button>
         </div>
-        <p class="login-p">¿Ya tienes una cuenta? <span id="back-text">Ingresa aquí</span></p>
+        <p class="login-p">¿Ya tienes una cuenta? <span id="back-text" onclick="showLogin()">Ingresa aquí</span></p>
     </form>
 
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://kit.fontawesome.com/e522357059.js" crossorigin="anonymous"></script>
     <script src="index.js"></script>
 
     <?php if ($mostrarRegistro): ?>
