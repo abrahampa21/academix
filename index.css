@@ -7,6 +7,7 @@
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 
+
 body {
   background-image: url("src/fondo2.webp");
   background-position: center;
@@ -19,6 +20,7 @@ body {
   min-height: 100vh;
 }
 
+/*Inicio de sesión*/
 .log-in {
   display: block;
 }
@@ -133,7 +135,7 @@ h1 {
   top: 50%;
   right: 12px;
   transform: translateY(-50%);
-  color: #aaa;
+  color: #555;
   font-size: 15px;
 }
 
@@ -261,14 +263,3 @@ h1 {
   cursor: pointer;
 }
 
-/*Añadiendo animación*/
-.fade-up {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.fade-up.fade-up-show {
-  opacity: 1;
-  transform: translateY(0);
-}
