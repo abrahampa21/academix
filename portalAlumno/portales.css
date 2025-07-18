@@ -164,102 +164,7 @@ a.selected {
   width: 250px;
 }
 
-/*Datos personales*/
-.personal-data {
-  display: none;
-  position: absolute;
-  top: 35%;
-  left: 40%;
-  width: 400px;
-  z-index: 400;
-}
 
-.personal-data table {
-  background-color: #fff;
-}
-
-.personal-data table caption {
-  font-size: 1.5em;
-  margin-bottom: 10px;
-  font-weight: bold;
-}
-
-.personal-data tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-.personal-data table {
-  border-collapse: collapse;
-  margin: 0 auto;
-  text-align: center;
-  width: 100%;
-}
-
-.personal-data th,
-.personal-data td {
-  border: 1px solid #000;
-}
-
-.personal-data input {
-  width: 100%;
-  padding: 6px;
-  box-sizing: border-box;
-  border: none;
-}
-
-.personal-data button {
-  width: 100%;
-  height: 30px;
-  cursor: pointer;
-}
-
-.personal-data .fa-pen {
-  cursor: pointer;
-}
-
-/*Asistencia*/
-.asistencia {
-  position: absolute;
-  top: 35%;
-  left: 23%;
-  z-index: 400;
-  border-collapse: collapse;
-  margin: 0 auto;
-  display: none;
-}
-
-.asistencia th {
-  background-color: #75787b;
-  color: #fff;
-  padding: 10px;
-}
-
-.asistencia td {
-  background-color: #fefef2;
-  padding: 5px;
-}
-
-.asistencia th,
-.asistencia td {
-  border: 1px solid #000;
-}
-
-.asistencia .resultado td {
-  background-color: #75787b;
-}
-
-/*Horario*/
-.horario {
-  position: absolute;
-  top: 12%;
-  left: 5%;
-  width: 95vw;
-  height: 84vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  display: none;
-}
 /*Pie de página*/
 footer {
   position: absolute;
@@ -353,3 +258,4 @@ main p{
     font-size: 15px;
   }
 }
+
