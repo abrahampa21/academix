@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+    />
+    <title>Horario de Clases</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        background: linear-gradient(
+          330deg,
+          #1a2d42,
+          #aab7b7,
+          #c0c8ca,
+          #d4d8dd,
+          #1a2d42
+        );
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 20px;
+      }
+
+      .horario-container {
+        background: #fff;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        max-width: 1100px;
+        width: 100%;
+      }
+
+      .horario-header {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .horario-header h1 {
+        font-size: 1.8rem;
+        color: #1a3d7c;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: center;
+        font-size: 15px;
+      }
+
+      thead {
+        background-color: #1a3d7c;
+        color: white;
+      }
+
+      th,
+      td {
+        padding: 10px;
+        border: 1px solid #ccc;
+      }
+
+      tbody tr:nth-child(even) {
+        background-color: #f8faff;
+      }
+
+      tbody tr:hover {
+        background-color: #eaf1ff;
+        transition: 0.3s ease;
+      }
+
+      .asignatura {
+        text-align: left;
+        font-weight: 600;
+      }
+
+      .profesor {
+        font-size: 0.9em;
+        color: #555;
+        font-style: italic;
+      }
+
+      caption {
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+        font-weight: 700;
+        color: #2c3e50;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="horario-container" data-aos="fade-down">
+      <div class="horario-header">
+        <h1>Horario de Clases - Mayo a Agosto</h1>
+      </div>
+      <table>
+        <caption>
+          Licenciatura en Programación y Web Master
+        </caption>
+        <thead>
+          <tr>
+            <th>Asignatura</th>
+            <th>Clave</th>
+            <th>Horas/Semana</th>
+            <th>Lunes</th>
+            <th>Martes</th>
+            <th>Miércoles</th>
+            <th>Jueves</th>
+            <th>Viernes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="asignatura">
+              Propaganda y Medios<br /><span class="profesor"
+                >Mtro. Omar Enrique Kantun</span
+              >
+            </td>
+            <td>311</td>
+            <td>3</td>
+            <td></td>
+            <td>7:00 - 9:00</td>
+            <td></td>
+            <td></td>
+            <td>8:00 - 9:00</td>
+          </tr>
+          <tr>
+            <td class="asignatura">
+              Programación de Web I<br /><span class="profesor"
+                >I.S.C. Edward Enrique Morales</span
+              >
+            </td>
+            <td>312</td>
+            <td>5</td>
+            <td></td>
+            <td>10:30 - 12:30</td>
+            <td>11:30 - 12:30</td>
+            <td></td>
+            <td>9:30 - 11:30</td>
+          </tr>
+          <tr>
+            <td class="asignatura">
+              Redes I<br /><span class="profesor"
+                >I.S.C. Luis Manuel Cambranis</span
+              >
+            </td>
+            <td>313</td>
+            <td>5</td>
+            <td></td>
+            <td>9:30 - 11:30</td>
+            <td></td>
+            <td>9:30 - 11:30</td>
+            <td>7:00 - 8:00</td>
+          </tr>
+          <tr>
+            <td class="asignatura">
+              Lenguaje PHP y Java<br /><span class="profesor"
+                >Lic. Cesar Ricardo Cen Poot</span
+              >
+            </td>
+            <td>314</td>
+            <td>6</td>
+            <td></td>
+            <td></td>
+            <td>9:30 - 11:30</td>
+            <td>11:30 - 13:30</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="asignatura">
+              Diseño de Páginas Web<br /><span class="profesor"
+                >Mtro. Abraham Izoteco Valle</span
+              >
+            </td>
+            <td>315</td>
+            <td>4</td>
+            <td></td>
+            <td></td>
+            <td>7:00 - 9:00</td>
+            <td>7:00 - 9:00</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  </body>
+</html>

@@ -75,8 +75,6 @@ header h1 {
   color: #fff;
 }
 
-.menu-side
-
 /*Ocultar scroll*/
 .menu-side::-webkit-scrollbar {
   display: none;
@@ -104,8 +102,14 @@ header h1 {
   margin-right: 20px;
 }
 
+.user{
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+}
+
 .options-menu {
-  padding: 20px 25px;
+  padding: 50px 25px;
   position: absolute;
   top: 80px;
 }
