@@ -4,195 +4,191 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="src/academix.jpg" />
-    <link rel="stylesheet" href="/portalAlumno/portales.css" />
+    <link rel="stylesheet" href="portalAlumno/portales.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
     />
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script
       src="https://kit.fontawesome.com/e522357059.js"
       crossorigin="anonymous"
     ></script>
-    <title>Panel del Profesor</title>
+    <title>Portal del Profesor</title>
   </head>
   <body>
     <header>
-      <h1>Bienvenido al Portal del Profesor</h1>
+      <nav class="nav-bar">
+        <div class="title">
+          <img src="src/academix.jpg" class="logo" alt="Logo" />
+          <h1>ACADEMIX</h1>
+        </div>
+        <ul class="links">
+          <li><a href="#about-us" title="menu">Sobre Nosotros</a></li>
+          <li><a href="#focus" title="menu">Enfoque</a></li>
+          <li><a href="#contacto" title="menu">Contacto</a></li>
+        </ul>
+      </nav>
     </header>
 
-    <!--Menú lateral-->
+    <!-- Menú lateral -->
     <aside class="menu-side" id="menu-side">
       <div class="name-page">
         <i class="fa-solid fa-house" title="Panel"></i>
         <h4>Menú</h4>
       </div>
-
+      <div class="user name-page">
+        <i class="fa-solid fa-user-graduate"></i>
+        <h4>Profesor</h4>
+      </div>
       <div class="options-menu">
-        <a href="" id="data-student">
+        <a href="portalAlumno/datosPersonales.html" id="data-student">
           <div class="option">
             <i class="fa-solid fa-address-card"></i>
             <h4>Datos Personales</h4>
           </div>
         </a>
-
-        <a href="" id="horario-btn">
+        <a href="portalAlumno/horario.html" id="horario-btn">
           <div class="option">
-            <i class="fa-solid fa-calendar-days" title="Horario"></i>
+            <i class="fa-solid fa-calendar-days"></i>
             <h4>Horario</h4>
           </div>
         </a>
-
-        <a href="" id="asistencia-btn">
+        <a href="portalAlumno/asistencia.html" id="asistencia-btn">
           <div class="option">
-            <i class="fa-solid fa-pen" title="Asistencia"></i>
-            <h4>Asistencia</h4>
+            <i class="fa-solid fa-pen"></i>
+            <h4>Alumnos</h4>
           </div>
         </a>
-
-        <a href="">
+        <a href="portalAlumno/calificaciones.html">
           <div class="option">
-            <i class="fa-solid fa-gear" title="Configuración"></i>
-            <h4>Configuración</h4>
+            <i class="fa-solid fa-book"></i>
+            <h4>Nómina</h4>
           </div>
         </a>
       </div>
       <div class="exit">
-        <a href="index.php" title="H"><i class="fa-solid fa-right-from-bracket"></i></a>
+        <a href="index.php" title="Salir">
+          <i class="fa-solid fa-right-from-bracket"></i>
+        </a>
         <h4>Salir</h4>
       </div>
     </aside>
 
-    <!--Datos personales-->
-    <div class="personal-data" id="personal-data">
-      <table>
-        <caption>
-          Tus Datos Personales
-        </caption>
-        <tr>
-          <td></td>
-          <th>Tu nombre</th>
-        </tr>
-        <tr>
-          <th>Matrícula</th>
-          <td></td>
-        </tr>
-        <tr>
-          <th>Correo Electrónico</th>
-          <td></td>
-        </tr>
-        <tr>
-          <th>
-            Fecha de Nacimiento <i class="fa-solid fa-pen" id="pen-date"></i>
-          </th>
-          <td>
-            <input
-              type="date"
-              name="fechaNac"
-              id="fechaNac"
-              title="H"
-              readonly
-            />
-          </td>
-        </tr>
-        <tr>
-          <th>Carrera <i class="fa-solid fa-pen" id="pen-degree"></i></th>
-          <td>
-            <input type="text" name="carrera" id="carrera" title="h" readonly />
-          </td>
-        </tr>
-        <tr>
-          <th>Periodo <i class="fa-solid fa-pen" id="pen-period"></i></th>
-          <td>
-            <input type="text" name="periodo" id="periodo" title="h" readonly />
-          </td>
-        </tr>
-        <tr>
-          <th>Estatus <i class="fa-solid fa-pen" id="pen-status"></i></th>
-          <td>
-            <input type="text" name="estatus" id="estatus" title="h" readonly />
-          </td>
-        </tr>
-        <tr>
-          <th>
-            Dirección física <i class="fa-solid fa-pen" id="pen-direction"></i>
-          </th>
-          <td>
-            <input
-              type="text"
-              name="direccion"
-              id="direccion"
-              title="h"
-              readonly
-            />
-          </td>
-        </tr>
-      </table>
-      <button type="submit" class="submit" id="submit" name="actualizar">
-        Actualizar datos
-      </button>
-    </div>
+    <!-- Contenido principal -->
+    <main id="main">
+      <section class="intro">
+        <div class="intro-content">
+          <h2>Bienvenido a ACADEMIX</h2>
+          <p>
+            Academix es una plataforma educativa diseñada para facilitar la
+            gestión académica de manera eficiente y centralizada. Aquí, tanto
+            alumnos como profesores pueden consultar, modificar y actualizar
+            cualquier criterio sin tener que acudir físicamente a ningún
+            departamento. Todo el proceso se realiza en línea, de forma segura,
+            rápida y accesible desde cualquier dispositivo.
+          </p>
+          <a href="#about" class="btn-intro">Conoce más</a>
+        </div>
+      </section>
+      <section class="about-us" id="about-us">
+        <div class="about-content">
+          <h2>Sobre los desarrolladores</h2>
+          <p>
+            Este portal fue diseñado y desarrollado por un equipo apasionado de
+            estudiantes y profesionales de desarrollo web, con el objetivo de
+            mejorar la experiencia digital de los alumnos. Nos enfocamos en
+            crear una plataforma intuitiva, segura y moderna, alineada con las
+            necesidades reales de la comunidad educativa.
+          </p>
+          <p>
+            Nuestra misión es demostrar cómo la tecnología bien aplicada puede
+            transformar la educación, optimizando procesos, acercando a
+            estudiantes y docentes, y facilitando el acceso a la información.
+          </p>
+        </div>
+      </section>
+      <section class="focus" id="focus">
+        <h2>En lo que nos enfocamos</h2>
+        <p>
+          Nuestro proyecto llamado Academix tiene como compromiso brindar una
+          educación de calidad que prepare a nuestros estudiantes para los
+          desafíos del mundo actual. Nos enfocamos en:
+        </p>
+        <ul>
+          <li>
+            <strong>Innovación educativa:</strong> Incorporamos metodologías
+            modernas y tecnología para ofrecer una experiencia de aprendizaje
+            dinámica y efectiva.
+          </li>
+          <li>
+            <strong>Desarrollo integral:</strong> Fomentamos tanto el
+            crecimiento académico como personal, promoviendo valores como la
+            responsabilidad, el trabajo en equipo y la creatividad.
+          </li>
+          <li>
+            <strong>Atención personalizada:</strong> Adaptamos nuestros
+            programas a las necesidades individuales de cada estudiante para
+            potenciar sus fortalezas y superar sus retos.
+          </li>
+          <li>
+            <strong>Calidad y excelencia:</strong> Contamos con un equipo
+            docente altamente capacitado y recursos actualizados para garantizar
+            una formación de primer nivel.
+          </li>
+        </ul>
+        <p>
+          Nuestro objetivo es desarrollar software que se adapte a las
+          necesidades académicas de cualquier escuela.
+        </p>
+      </section>
+    </main>
 
-    <div class="center-img-container">
-      <img src="pA/universitarios.png" class="img-bg" alt="Fondo" />
-    </div>
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section about">
+          <h3>Alpha Coders</h3>
+          <p>
+            Somos un equipo comprometido con la excelencia del desarrollo de
+            software. Brindamos excelentes servicios relacionados a la
+            tecnología, para solucionar los problemas de cualquier empresa.
+          </p>
+        </div>
 
-    <!--Horario-->
-    <embed class="horario" id="horario" src="pA/Proyecto final - Control de Acceso Escolar.pdf" type="application/pdf">
+        <div class="footer-section contact-info">
+          <h4>Contacto</h4>
+          <p>📍 Av. Gobernadores 1234, Campeche</p>
+          <p>📞 (123) 456-7890</p>
+          <p>📧 contacto@academix.edu</p>
+        </div>
 
-    <!--Asistencia-->
-    <table class="asistencia" id="asistencia">
-      <tbody>
-        <tr>
-          <th>Mes</th>
-          <th>Total de clases</th>
-          <th>Total de asistencias</th>
-          <th>Total de faltas</th>
-          <th>Porcentaje total de asistencias</th>
-        </tr>
-        <tr>
-          <td>SEPTIEMBRE</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>OCTUBRE</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>NOVIEMBRE</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>DICIEMBRE</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr class="resultado">
-          <td>Resultado</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-      </tbody>
-    </table>
+        <div class="footer-section links">
+          <h4>Enlaces útiles</h4>
+          <ul>
+            <li><a href="#">Opiniones</a></li>
+            <li><a href="#">Empleados</a></li>
+            <li><a href="#">Convenios con Empresas</a></li>
+            <li><a href="#">Preguntas frecuentes</a></li>
+          </ul>
+        </div>
 
-    <!--Pie de página-->
-    <footer>
-      <p>Todos los derechos reservados &copy; KAMA</p>
+        <div class="footer-section social">
+          <h4>Síguenos</h4>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f" title="Facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter" title="Twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram" title="Instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube" title="YouTube"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>Desarrollado por el equipo de estudiantes de Academix — 2025</p>
+        <p>© Todos los derechos reservados</p>
+      </div>
     </footer>
 
-    <script src="portales.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="portalAlumno/portales.js"></script>
   </body>
 </html>
