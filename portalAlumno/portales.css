@@ -214,11 +214,10 @@ footer {
   opacity: 1;
 }
 
-/*Texto introductorio*/
-main{
-  position: absolute;
-  top: 30%;
-  left: 20%;
+main {
+  position: relative;
+  margin-left: 120px; /* espacio para el menú lateral */
+  margin-top: 100px;  /* espacio para el header fijo */
   z-index: 100;
   display: flex;
   gap: 8rem;
