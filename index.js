@@ -1,4 +1,4 @@
-//Prueba de commit
+//Prueba de commit aaaaaaaa
 
 //REGISTRO
 const signUp = document.getElementById("sign-up");
