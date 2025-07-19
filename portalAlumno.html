@@ -5,32 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="src/academix.jpg" />
     <link rel="stylesheet" href="portalAlumno/portales.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
-    />
-    <script
-      src="https://kit.fontawesome.com/e522357059.js"
-      crossorigin="anonymous"
-    ></script>
-    <title>Panel del alumno</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+    <script src="https://kit.fontawesome.com/e522357059.js" crossorigin="anonymous"></script>
+    <title>Portal del Alumno</title>
   </head>
   <body>
     <header>
-      <h1>Bienvenido al Portal del Alumno</h1>
+      <img src="src/academix.jpg" class="logo" alt="Logo">
+      <h1>Portal Académico del Alumno</h1>
     </header>
 
-    <!--Menú lateral-->
+    <!-- Menú lateral -->
     <aside class="menu-side" id="menu-side">
       <div class="name-page">
-        <i class="fa-solid fa-house" id="home" title="Panel"></i>
-        <h4>Menú</h4>
+        <i class="fa-solid fa-house" title="Panel"></i>
+        <h4>Panel</h4>
       </div>
-      <div class="user">
-        <i class="fa-solid fa-user"></i>
-        <h4></h4>
+      <div class="user name-page">
+        <i class="fa-solid fa-user-graduate"></i>
+        <h4>Alumno</h4>
       </div>
-
       <div class="options-menu">
         <a href="portalAlumno/datosPersonales.html" id="data-student">
           <div class="option">
@@ -38,21 +32,18 @@
             <h4>Datos Personales</h4>
           </div>
         </a>
-
         <a href="portalAlumno/horario.html" id="horario-btn">
           <div class="option">
-            <i class="fa-solid fa-calendar-days" title="Horario"></i>
+            <i class="fa-solid fa-calendar-days"></i>
             <h4>Horario</h4>
           </div>
         </a>
-
         <a href="portalAlumno/asistencia.html" id="asistencia-btn">
           <div class="option">
-            <i class="fa-solid fa-pen" title="Asistencia"></i>
+            <i class="fa-solid fa-pen"></i>
             <h4>Asistencia</h4>
           </div>
         </a>
-
         <a href="portalAlumno/calificaciones.html">
           <div class="option">
             <i class="fa-solid fa-book"></i>
@@ -61,45 +52,36 @@
         </a>
       </div>
       <div class="exit">
-        <a href="index.php" title="H"
-          ><i class="fa-solid fa-right-from-bracket"></i
-        ></a>
+        <a href="index.php" title="Salir">
+          <i class="fa-solid fa-right-from-bracket"></i>
+        </a>
         <h4>Salir</h4>
       </div>
     </aside>
 
-    <!--Texto introductorio-->
+    <!-- Contenido principal -->
     <main id="main">
-      <img src="portalAlumno/src/universitario.jpg" alt="Universitario" />
-      <div class="container">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
-          esse quos optio, alias odio blanditiis temporibus eos officiis saepe
-          consectetur quibusdam dolorem veritatis voluptates debitis ab dolor
-          molestiae eveniet voluptatibus. Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Voluptatum, nostrum! Quos dicta repudiandae tempore
-          numquam modi a corrupti rem possimus neque error? Cum magni quis at
-          vero pariatur fugit. Exercitationem.
-        </p>
-      </div>
+      <section class="intro">
+        <div class="intro-text" data-aos="fade-up">
+          <h2>Bienvenido al Portal Académico</h2>
+          <p>
+            Desde aquí podrás gestionar tu información personal, revisar tu horario,
+            consultar tus calificaciones y más. Este espacio está diseñado para
+            simplificar tu experiencia académica.
+          </p>
+        </div>
+        <img src="portalAlumno/src/universitario.jpg" alt="Universitario" class="main-img" data-aos="zoom-in"/>
+      </section>
     </main>
 
+    <!-- Carrusel -->
     <div class="center-img-container">
-      <img
-        src="portalAlumno/src/universitarios.png"
-        class="img-bg active"
-        alt="Fondo"
-      />
-      <img
-        src="portalAlumno/src/universitarios1.jpg"
-        class="img-bg"
-        alt="Fondo 2"
-      />
-      <img src="portalAlumno/src/universitarios2.jpg" class="img-bg" alt="" />
-      <img src="portalAlumno/src/universitarios3.jpg" class="img-bg" alt="" />
+      <img src="portalAlumno/src/universitarios.png" class="img-bg active" alt="Fondo" />
+      <img src="portalAlumno/src/universitarios1.jpg" class="img-bg" alt="Fondo 2" />
+      <img src="portalAlumno/src/universitarios2.jpg" class="img-bg" alt="Fondo 3" />
+      <img src="portalAlumno/src/universitarios3.jpg" class="img-bg" alt="Fondo 4" />
     </div>
 
-    <!--Pie de página-->
     <footer>
       <p>Todos los derechos reservados &copy; KAMA</p>
     </footer>
