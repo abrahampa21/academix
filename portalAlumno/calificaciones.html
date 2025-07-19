@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+    />
+    <link rel="icon" href="../src/academix.jpg" />
+    <title>Tabla de Calificaciones</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        background: linear-gradient(
+          330deg,
+          #1a2d42,
+          #aab7b7,
+          #c0c8ca,
+          #d4d8dd,
+          #1a2d42
+        );
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        padding: 20px;
+      }
+
+      .tabla-container {
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        overflow-x: auto;
+      }
+
+      .tabla-calificaciones {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: center;
+        font-size: 16px;
+        min-width: 600px;
+      }
+
+      .tabla-calificaciones caption {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 15px;
+        color: #2c3e50;
+      }
+
+      .tabla-calificaciones thead {
+        background-color: #2c5db7;
+        color: #ffffff;
+      }
+
+      .tabla-calificaciones th,
+      .tabla-calificaciones td {
+        padding: 12px 15px;
+        border: 1px solid #ddd;
+      }
+
+      .tabla-calificaciones tbody tr:nth-child(even) {
+        background-color: #f4f8ff;
+      }
+
+      .tabla-calificaciones tbody tr:hover {
+        background-color: #e6f0ff;
+        transition: 0.3s ease;
+      }
+
+      .tabla-calificaciones tfoot {
+        background-color: #dbe8ff;
+        font-weight: 700;
+      }
+
+      .tabla-calificaciones tfoot th {
+        color: #1a3d7c;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tabla-container" data-aos="fade-down">
+      <table class="tabla-calificaciones">
+        <caption>
+          Calificaciones del Alumno
+        </caption>
+        <thead>
+          <tr>
+            <th>Materia</th>
+            <th>Parcial 1</th>
+            <th>Parcial 2</th>
+            <th>Parcial 3</th>
+            <th>Promedio Final</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Matemáticas</td>
+            <td>8.5</td>
+            <td>9.0</td>
+            <td>8.7</td>
+            <td>8.7</td>
+          </tr>
+          <tr>
+            <td>Historia</td>
+            <td>9.2</td>
+            <td>9.5</td>
+            <td>9.0</td>
+            <td>9.2</td>
+          </tr>
+          <tr>
+            <td>Ciencias</td>
+            <td>8.0</td>
+            <td>8.5</td>
+            <td>9.0</td>
+            <td>8.5</td>
+          </tr>
+          <tr>
+            <td>Inglés</td>
+            <td>9.0</td>
+            <td>9.3</td>
+            <td>9.1</td>
+            <td>9.1</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th colspan="4">Promedio General</th>
+            <th>8.9</th>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  </body>
+</html>

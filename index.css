@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+body {
+  background-image: url("src/fondo2.webp");
+  background-position: center;
+  background-size: cover;
+  backdrop-filter: blur(5px);
+  filter: hue-rotate(325deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/*Inicio de sesión*/
+.log-in {
+  display: block;
+}
+
+.login-container {
+  background-color: #ffffff;
+  padding: 2.5rem;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  width: 360px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.login-container img {
+  width: 90px;
+  margin-bottom: 10px;
+  border-radius: 9999px;
+  margin: 0 auto;
+}
+
+.login-container .matricula-div-login {
+  margin-top: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #2a3d66;
+  font-weight: 700;
+  text-align: center;
+}
+
+.input-Usuario {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-Usuario input {
+  height: 40px;
+  background-color: #eef3f7;
+  border: 1px solid #cfdce7;
+  border-radius: 8px;
+  padding: 0 10px;
+  color: #2a3d66;
+  width: 100%;
+  font-size: 15px;
+}
+
+.show-password {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #555;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.opciones {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  margin-bottom: 25px;
+  color: #2a3d66;
+}
+
+.opciones label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.forgot {
+  color: #1c88e5;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.forgot:hover {
+  text-decoration: underline;
+}
+
+.login-btn {
+  background-color: #1c88e5;
+  border: none;
+  color: #fff;
+  padding: 10px 0;
+  width: 100%;
+  border-radius: 25px;
+  margin: 10px 0px 25px;
+  font-weight: bold;
+  transition: 0.3s;
+  font-size: 16px;
+}
+
+.login-btn:hover {
+  background-color: #156dc1;
+  cursor: pointer;
+}
+
+.div-input {
+  position: relative;
+}
+
+.div-input input {
+  padding-right: 35px;
+  width: 100%;
+}
+
+.div-input i {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  color: #555;
+  font-size: 15px;
+}
+
+.div-user i,
+.div-email i,
+.div-name i {
+  cursor: default;
+}
+
+.create p {
+  color: #2a3d66;
+}
+
+.create p span {
+  color: #1c88e5;
+  font-weight: 600;
+}
+
+.create span:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.create .create {
+  text-align: center;
+}
+
+/* Registro */
+.sign-up {
+  display: none;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 19px 32px;
+  color: #2a3d66;
+  gap: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.sign-up h1 {
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 28px;
+}
+
+.sign-up p {
+  color: #5a5a5a;
+  font-size: 14px;
+}
+
+.sign-up p span {
+  color: #1c88e5;
+  font-weight: 600;
+}
+
+.sign-up .inputs {
+  display: flex;
+  flex-direction: column;
+  padding: 7px 0;
+  gap: 15px;
+}
+
+.fa-eye-slash,
+.fa-eye {
+  cursor: pointer;
+}
+
+.sign-up .inputs input {
+  height: 40px;
+  background-color: #eef3f7;
+  border: 1px solid #cfdce7;
+  border-radius: 8px;
+  padding: 0 10px;
+  color: #2a3d66;
+  font-size: 15px;
+}
+
+.sign-up .inputs .checkboxes {
+  margin-right: 4px;
+  cursor: pointer;
+}
+
+.sign-up .inputs .checkbox {
+  display: flex;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.sign-up .inputs .div-checkboxes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign-up span:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.sign-up .login-p {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.sign-up .inputs button {
+  background-color: #1c88e5;
+  border: none;
+  color: #fff;
+  padding: 10px;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: 0.3s;
+  font-size: 16px;
+}
+
+.sign-up .inputs button:hover {
+  background-color: #156dc1;
+  cursor: pointer;
+}
+
+.sign-up .fa-arrow-left {
+  color: #2a3d66;
+  font-size: 18px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}

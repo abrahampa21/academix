@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="src/academix.jpg" />
+    <link rel="stylesheet" href="portalAlumno/portales.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+    <script src="https://kit.fontawesome.com/e522357059.js" crossorigin="anonymous"></script>
+    <title>Portal del Alumno</title>
+  </head>
+  <body>
+    <header>
+      <img src="src/academix.jpg" class="logo" alt="Logo">
+      <h1>Portal Académico del Alumno</h1>
+    </header>
+
+    <!-- Menú lateral -->
+    <aside class="menu-side" id="menu-side">
+      <div class="name-page">
+        <i class="fa-solid fa-house" title="Panel"></i>
+        <h4>Panel</h4>
+      </div>
+      <div class="user name-page">
+        <i class="fa-solid fa-user-graduate"></i>
+        <h4>Alumno</h4>
+      </div>
+      <div class="options-menu">
+        <a href="portalAlumno/datosPersonales.html" id="data-student">
+          <div class="option">
+            <i class="fa-solid fa-address-card"></i>
+            <h4>Datos Personales</h4>
+          </div>
+        </a>
+        <a href="portalAlumno/horario.html" id="horario-btn">
+          <div class="option">
+            <i class="fa-solid fa-calendar-days"></i>
+            <h4>Horario</h4>
+          </div>
+        </a>
+        <a href="portalAlumno/asistencia.html" id="asistencia-btn">
+          <div class="option">
+            <i class="fa-solid fa-pen"></i>
+            <h4>Asistencia</h4>
+          </div>
+        </a>
+        <a href="portalAlumno/calificaciones.html">
+          <div class="option">
+            <i class="fa-solid fa-book"></i>
+            <h4>Calificaciones</h4>
+          </div>
+        </a>
+      </div>
+      <div class="exit">
+        <a href="index.php" title="Salir">
+          <i class="fa-solid fa-right-from-bracket"></i>
+        </a>
+        <h4>Salir</h4>
+      </div>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main id="main">
+      <section class="intro">
+        <div class="intro-text" data-aos="fade-up">
+          <h2>Bienvenido al Portal Académico</h2>
+          <p>
+            Desde aquí podrás gestionar tu información personal, revisar tu horario,
+            consultar tus calificaciones y más. Este espacio está diseñado para
+            simplificar tu experiencia académica.
+          </p>
+        </div>
+        <img src="portalAlumno/src/universitario.jpg" alt="Universitario" class="main-img" data-aos="zoom-in"/>
+      </section>
+    </main>
+
+    <!-- Carrusel -->
+    <div class="center-img-container">
+      <img src="portalAlumno/src/universitarios.png" class="img-bg active" alt="Fondo" />
+      <img src="portalAlumno/src/universitarios1.jpg" class="img-bg" alt="Fondo 2" />
+      <img src="portalAlumno/src/universitarios2.jpg" class="img-bg" alt="Fondo 3" />
+      <img src="portalAlumno/src/universitarios3.jpg" class="img-bg" alt="Fondo 4" />
+    </div>
+
+    <footer>
+      <p>Todos los derechos reservados &copy; KAMA</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="portalAlumno/portales.js"></script>
+  </body>
+</html>
