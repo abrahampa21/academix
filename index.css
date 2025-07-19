@@ -7,7 +7,6 @@
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 
-
 body {
   background-image: url("src/fondo2.webp");
   background-position: center;
@@ -262,4 +261,3 @@ h1 {
   margin-bottom: 10px;
   cursor: pointer;
 }
-

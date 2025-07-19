@@ -98,7 +98,7 @@ if (isset($_POST["registrar"])) {
                     echo "
                     <script>
                         document.addEventListener('DOMContentLoaded', function() {
-                            Swal.fire('Registro exitoso').then(() => {
+                            Swal.fire('Registro exitoso!').then(() => {
                                 window.location = 'index.php';
                             });
                         });
@@ -137,16 +137,16 @@ if (isset($_POST["registrar"])) {
                     VALUES ('$nombre', '$correo', '$matricula', '$password_encriptada')";
                 $resultadousuario = $conexion->query($sqlusuario);
                 if ($resultadousuario > 0) {
-                    echo"
+                    echo "
                     <script>
                         document.addEventListener('DOMContentLoaded', function() {
-                            Swal.fire('Registro exitoso').then(() => {
+                            Swal.fire('Registro exitoso!').then(() => {
                                 window.location = 'index.php';
                             });
                         });
                     </script>";
                 } else {
-                    echo"
+                    echo "
                     <script>
                         document.addEventListener('DOMContentLoaded', function() {
                             Swal.fire({
@@ -223,6 +223,7 @@ if (isset($_POST["registrar"])) {
                 <input type="password" name="contraseña" class="inputs-register" placeholder="Contraseña" id="contraseña" required>
                 <i class="fa-regular fa-eye-slash" id="eye-slash" onclick="revealPassword()"></i>
             </div>
+            <p id="passwordMessage" class="error"></p>
             <div class="input-password div-input">
                 <input type="password" name="contraseña-rpt" class="inputs-register" placeholder="Repite la contraseña" id="contraseña-rpt" required>
                 <i class="fa-regular fa-eye-slash" id="eye-slash-rpt" onclick="revealPasswordRpt()"></i>
@@ -255,6 +256,33 @@ if (isset($_POST["registrar"])) {
             });
         </script>
     <?php endif; ?>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const passwordInput = document.getElementById("contraseña");
+            const messageDiv = document.getElementById("passwordMessage");
+
+            const regex = /^(?=.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>/?])(?=.*[A-Za-z]).{8,}$/;
+
+            if (passwordInput) {
+                passwordInput.addEventListener("input", function() {
+                    const value = passwordInput.value;
+
+                    if (regex.test(value)) {
+                        messageDiv.textContent = "Contraseña válida.";
+                        messageDiv.style.color = "green";
+                        messageDiv.style.fontSize = "12px";
+                    } else {
+                        messageDiv.textContent = "Debe tener al menos 8 caracteres, una letra y un carácter especial.";
+                        messageDiv.style.color = "red";
+                        messageDiv.style.fontSize = "12px";
+                        messageDiv.style.width = "280px";
+
+                    }
+                });
+            }
+        });
+    </script>
+
 
 </body>
 
