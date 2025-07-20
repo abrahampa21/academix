@@ -32,13 +32,14 @@ function showRegister() {
 }
 
 //Dirigirse al componente de recuperar contraseña
-function showRecoverPass(){
+function showRecoverPass() {
   login.style.display = "none";
   recoverPassword.style.display = "flex";
 
   inputsLogin.forEach((input) => {
     input.value = "";
   });
+
 }
 
 //Mostrando contraseña sin ocultar
@@ -68,7 +69,4 @@ function revealPasswordRpt() {
   showPasswordRpt.classList.toggle("fa-eye-slash");
 }
 
-//Animación
 AOS.init();
-
-
