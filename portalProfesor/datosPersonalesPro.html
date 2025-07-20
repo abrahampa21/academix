@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="../src/academix.jpg">
+    <link rel="stylesheet" href="datosPersonalesPro.css" />
+    <title>Datos Personales</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #1a2a3b;
+        animation: gradient 15s ease infinite;
+      }
+
+      .data-teacher {
+        background-color: white;
+        padding: 2rem;
+        border-radius: 20px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        max-width: 700px;
+        width: 90%;
+      }
+
+      .data-teacher table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 1rem;
+      }
+
+      .data-teacher caption {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #1a2a3b;
+        padding-bottom: 1rem;
+        text-align: center;
+        border-bottom: 2px solid #d0d7de;
+      }
+
+      .data-teacher th,
+      .data-teacher td {
+        text-align: left;
+        padding: 1rem;
+        border-bottom: 1px solid #e2e8f0;
+        vertical-align: middle;
+      }
+
+      .data-teacher th {
+        font-weight: 600;
+        color: #334155;
+        width: 40%;
+      }
+
+      .data-teacher td {
+        color: #475569;
+      }
+
+      .data-teacher input[type="text"],
+      .data-teacher input[type="date"] {
+        width: 100%;
+        padding: 0.5rem 0.75rem;
+        border: 1px solid #cbd5e1;
+        border-radius: 10px;
+        font-size: 1rem;
+        background-color: #f1f5f9;
+        color: #1e293b;
+      }
+
+      .data-teacher input[readonly] {
+        background-color: #e2e8f0;
+        cursor: not-allowed;
+      }
+
+      .data-teacher i.fa-pen {
+        margin-left: 0.5rem;
+        color: #14b8a6;
+        cursor: pointer;
+        transition: color 0.3s;
+      }
+
+      .data-teacher i.fa-pen:hover {
+        color: #0d9488;
+      }
+
+      .submit {
+        margin-top: 2rem;
+        width: 100%;
+        padding: 0.75rem;
+        font-size: 1rem;
+        font-weight: 600;
+        background-color: #14b8a6;
+        color: white;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .submit:hover {
+        background-color: #0d9488;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="data-teacher" id="data-teacher" data-aos="fade-down">
+      <table>
+        <caption>
+          Tus Datos Personales
+        </caption>
+        <tr>
+          <td></td>
+          <th>Tu nombre</th>
+        </tr>
+        <tr>
+          <th>Matrícula</th>
+          <td></td>
+        </tr>
+        <tr>
+          <th>Correo Electrónico</th>
+          <td></td>
+        </tr>
+        <tr>
+          <th>
+            Fecha de Nacimiento <i class="fa-solid fa-pen" id="pen-date"></i>
+          </th>
+          <td>
+            <input
+              type="date"
+              class="dp-inputs"
+              name="fechaNac"
+              id="fechaNac"
+              readonly
+              title="u"
+              onclick="modifyInfo()"
+            />
+          </td>
+        </tr>
+      </table>
+      <button type="submit" class="submit" id="submit" name="actualizar">
+        Actualizar datos
+      </button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="secciones.js"></script>
+  </body>
+</html>

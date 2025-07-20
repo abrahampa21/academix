@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="../src/academix.jpg" />
+    <title>Asistencias</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 2rem;
+        height: 100vh;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        background:linear-gradient(330deg,#1a2d42,#aab7b7,#c0c8ca,#d4d8dd,#1a2d42);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .alumnos {
+        width: 100%;
+        max-width: 900px;
+        border-collapse: collapse;
+        background-color: #ffffff;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 2px 2px 10px 0 #000;
+      }
+
+      .alumnos th {
+        background-color: #1e3a8a;
+        color: #ffffff;
+        font-weight: 600;
+        text-align: left;
+        padding: 1rem;
+        font-size: 1rem;
+      }
+
+      .alumnos td {
+        padding: 1rem;
+        font-size: 0.95rem;
+        color: #1f2937;
+        border-top: 1px solid #e5e7eb;
+      }
+
+      @media (max-width: 768px) {
+        .alumnos {
+          font-size: 0.85rem;
+          display: block;
+          overflow-x: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <table class="alumnos" data-aos="fade-down" id="alumnos">
+      <tbody>
+        <tr>
+          <th>Alumno</th>
+          <th>Asistencia</th>
+          <th>Faltas</th>
+          <th>Calificacion</th>
+          <th>Puntos extras</th>
+        </tr>
+        <tr>
+          <td>Alvares Barrera Jose Manuel</td>
+          <td>5</td>
+          <td>0</td>
+          <td>10</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</html>
