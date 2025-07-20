@@ -162,6 +162,17 @@ h1 {
   text-align: center;
 }
 
+.forgot-pass {
+  margin: -10px 0 15px;
+  font-size: 15px;
+  text-decoration: none;
+  color: #1c88e5;
+}
+
+.forgot-pass:hover {
+  text-decoration: underline;
+}
+
 /* Registro */
 .sign-up {
   display: none;
@@ -260,4 +271,58 @@ h1 {
   font-size: 18px;
   margin-bottom: 10px;
   cursor: pointer;
+}
+
+/*Recuperar contraseña*/
+.recuperar-pass {
+  display: none;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 19px 30px;
+  color: #2a3d66;
+  gap: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.recuperar-pass i{
+  cursor: pointer;
+}
+
+.recuperar-pass p {
+  color: #5a5a5a;
+  font-size: 14px;
+  width: 300px;
+}
+
+.recuperar-pass .input-button {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.recuperar-pass .input-button button {
+  background-color: #1c88e5;
+  border: none;
+  color: #fff;
+  padding: 10px;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: 0.3s;
+  font-size: 16px;
+}
+
+.recuperar-pass .input-button button:hover{
+  background-color: #156dc1;
+  cursor: pointer;
+}
+
+.recuperar-pass .input-button input{
+    height: 40px;
+  background-color: #eef3f7;
+  border: 1px solid #cfdce7;
+  border-radius: 8px;
+  padding: 0 10px;
+  color: #2a3d66;
+  font-size: 15px;
 }

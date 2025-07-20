@@ -182,17 +182,19 @@ if (isset($_POST["registrar"])) {
     <!--Inicio de sesión-->
     <form class="log-in" method="post" action="<?php $_SERVER["PHP_SELF"]; ?>" id="log-in" autocomplete="off" data-aos="fade-down">
         <div class="login-container">
-            <h1>Inicio de Sesión</h1>
+            <h1>Inicio de Sesión </h1>
             <img src="src/academix.jpg" alt="Logo página">
             <div class="input-Usuario div-input matricula-div-login">
-                <input type="text" name="matricula" class="inputs-register" placeholder="Matrícula" required>
+                <input type="text" name="matricula" class="inputs-login" placeholder="Matrícula" required>
                 <i class="fa-solid fa-user"></i>
             </div>
 
             <div class="input-Usuario div-input">
-                <input type="password" name="pass" class="inputs-register" id="login-pwd" placeholder="Contraseña" required>
+                <input type="password" name="pass" class="inputs-login" id="login-pwd" placeholder="Contraseña" required>
                 <i class="fa-regular fa-eye-slash" id="login-pwd-icon" onclick="revealPasswordLogin()"></i>
             </div>
+
+            <a href="#" class="forgot-pass" onclick="showRecoverPass()">Olvidé mi contraseña</a>
 
             <button type="submit" name="log" class="login-btn">Ingresar</button>
 
@@ -241,6 +243,17 @@ if (isset($_POST["registrar"])) {
             <button type="submit" name="registrar">Registrar</button>
         </div>
         <p class="login-p">¿Ya tienes una cuenta? <span id="back-text" onclick="showLogin()">Ingresa aquí</span></p>
+    </form>
+
+    <!--Recuperar contraseña-->
+    <form action="" class="recuperar-pass" id="recuperar-contraseña">
+        <i id="back" class="arrow fa-solid fa-arrow-left" title="Regresar" onclick="showLogin()"></i>
+        <h1>Recuperar contraseña</h1>
+        <p>Ingresa tu correo electronico para recibir las instrucciones</p>
+        <div class="input-button">
+            <input type="email" name="recuperar-contraseña" id="">
+            <button type="submit">Enviar</button>
+        </div>
     </form>
 
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>

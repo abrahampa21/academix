@@ -1,9 +1,7 @@
-//Evita que el formulario se pierda
-window.onbeforeunload = () => "¿Estás seguro que quieres salir?";
-
 //REGISTRO
 const signUp = document.getElementById("sign-up");
 const login = document.getElementById("log-in");
+const recoverPassword = document.getElementById("recuperar-contraseña");
 const password = document.getElementById("contraseña");
 const passwordRpt = document.getElementById("contraseña-rpt");
 const showPassword = document.getElementById("eye-slash");
@@ -16,6 +14,7 @@ const inputsLogin = document.querySelectorAll(".inputs-login");
 function showLogin() {
   signUp.style.display = "none";
   login.style.display = "block";
+  recoverPassword.style.display = "none";
 
   inputsRegister.forEach((input) => {
     input.value = "";
@@ -26,6 +25,16 @@ function showLogin() {
 function showRegister() {
   login.style.display = "none";
   signUp.style.display = "flex";
+
+  inputsLogin.forEach((input) => {
+    input.value = "";
+  });
+}
+
+//Dirigirse al componente de recuperar contraseña
+function showRecoverPass(){
+  login.style.display = "none";
+  recoverPassword.style.display = "flex";
 
   inputsLogin.forEach((input) => {
     input.value = "";
@@ -60,8 +69,6 @@ function revealPasswordRpt() {
 }
 
 //Animación
-AOS.init({
-  once: true,
-});
+AOS.init();
 
 
