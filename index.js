@@ -1,3 +1,5 @@
+//Este es un comentario de prueba
+
 //REGISTRO
 const signUp = document.getElementById("sign-up");
 const login = document.getElementById("log-in");
