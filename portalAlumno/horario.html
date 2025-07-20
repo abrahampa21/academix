@@ -8,6 +8,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
     />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <title>Horario de Clases</title>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap");
@@ -98,14 +99,31 @@
         font-weight: 700;
         color: #2c3e50;
       }
+
+      #botoncito{
+        font-family: "Plus Jakarta Sans", sans-serif;
+        width: 150px;
+        height: 40px;
+        border: 0px;
+        border-radius: 3px;
+      }
+
+      #botoncito:hover{
+        cursor: pointer;
+        background-color: #1a3d7c;
+        color: #fff;
+      }
+
     </style>
   </head>
   <body>
     <div class="horario-container" data-aos="fade-down">
       <div class="horario-header">
         <h1>Horario de Clases - Mayo a Agosto</h1>
+        <br>
+        <button id="botoncito" onclick="descargarPDF()">Descargar como PDF</button>
       </div>
-      <table>
+      <table id="horario">
         <caption>
           Licenciatura en Programación y Web Master
         </caption>
@@ -199,6 +217,18 @@
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init();
+
+    function descargarPDF() {
+      const tabla = document.getElementById('horario');
+      const opciones = {
+        margin:       0.5,
+        filename:     'horario.pdf',
+        image:        { type: 'jpeg', quality: 0.98 },
+        html2canvas:  { scale: 2 },
+        jsPDF:        { unit: 'in', format: 'letter', orientation: 'landscape' }
+      };
+      html2pdf().set(opciones).from(horario).save();
+    }
   </script>
   </body>
 </html>
