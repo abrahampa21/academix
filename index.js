@@ -1,4 +1,5 @@
-//Este es un comentario de prueba
+//Evita que el formulario se pierda
+window.onbeforeunload = () => "¿Estás seguro que quieres salir?";
 
 //REGISTRO
 const signUp = document.getElementById("sign-up");
