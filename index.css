@@ -11,6 +11,7 @@ body {
   background-image: url("src/fondo2.webp");
   background-position: center;
   background-size: cover;
+  -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
   filter: hue-rotate(325deg);
   display: flex;
