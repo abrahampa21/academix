@@ -99,13 +99,29 @@
         font-weight: 700;
         color: #2c3e50;
       }
+
+      #botoncito{
+        font-family: "Plus Jakarta Sans", sans-serif;
+        width: 150px;
+        height: 40px;
+        border: 0px;
+        border-radius: 3px;
+      }
+
+      #botoncito:hover{
+        cursor: pointer;
+        background-color: #1a3d7c;
+        color: #fff;
+      }
+
     </style>
   </head>
   <body>
     <div class="horario-container" data-aos="fade-down">
       <div class="horario-header">
         <h1>Horario de Clases - Mayo a Agosto</h1>
-        <button onclick="descargarPDF()">Descargar como PDF</button>
+        <br>
+        <button id="botoncito" onclick="descargarPDF()">Descargar como PDF</button>
       </div>
       <table id="horario">
         <caption>
@@ -206,12 +222,12 @@
       const tabla = document.getElementById('horario');
       const opciones = {
         margin:       0.5,
-        filename:     'tabla.pdf',
+        filename:     'horario.pdf',
         image:        { type: 'jpeg', quality: 0.98 },
         html2canvas:  { scale: 2 },
         jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
       };
-      html2pdf().set(opciones).from(tabla).save();
+      html2pdf().set(opciones).from(horario).save();
     }
   </script>
   </body>
