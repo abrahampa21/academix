@@ -246,7 +246,7 @@ if (isset($_POST["registrar"])) {
     </form>
 
     <!--Recuperar contraseña-->
-    <form action="" class="recuperar-pass" id="recuperar-contraseña">
+    <form action="" class="recuperar-pass" id="recuperar-contraseña" data-aos="flip-right">
         <i id="back" class="arrow fa-solid fa-arrow-left" title="Regresar" onclick="showLogin()"></i>
         <h1>Recuperar contraseña</h1>
         <p>Ingresa tu correo electronico para recibir las instrucciones</p>
