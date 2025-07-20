@@ -1,3 +1,6 @@
+//Evita que el formulario se pierda
+window.onbeforeunload = () => "¿Estás seguro que quieres salir?";
+
 //REGISTRO
 const signUp = document.getElementById("sign-up");
 const login = document.getElementById("log-in");
