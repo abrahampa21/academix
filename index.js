@@ -1,5 +1,6 @@
 //REGISTRO
 //Yo Abraham
+//hola soy giovanni
 const signUp = document.getElementById("sign-up");
 const login = document.getElementById("log-in");
 const recoverPassword = document.getElementById("recuperar-contraseña");
