@@ -118,7 +118,7 @@
     </style>
   </head>
   <body>
-    <div class="personal-data" id="personal-data" data-aos="fade-down">
+    <form onsubmit="confirmation(event)" class="personal-data" id="personal-data" data-aos="fade-down">
       <table>
         <caption>
           Tus Datos Personales
@@ -210,10 +210,16 @@
       <button type="submit" class="submit" id="submit" name="actualizar">
         Actualizar datos
       </button>
-    </div>
+    </form>
 
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
+      function confirmation(event) {
+        const message = confirm("¿Realmente quieres modificar los datos?");
+        if (!message) {
+          event.preventDefault();
+        }
+      }
       AOS.init();
     </script>
   </body>
