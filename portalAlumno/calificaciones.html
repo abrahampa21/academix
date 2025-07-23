@@ -8,86 +8,8 @@
       href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
     />
     <link rel="icon" href="../src/academix.jpg" />
+    <link rel="stylesheet" href="../assets/css/portalAlumno/calificaciones.css">
     <title>Tabla de Calificaciones</title>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap");
-
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        font-family: "Plus Jakarta Sans", sans-serif;
-        background: linear-gradient(
-          330deg,
-          #1a2d42,
-          #aab7b7,
-          #c0c8ca,
-          #d4d8dd,
-          #1a2d42
-        );
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        padding: 20px;
-      }
-
-      .tabla-container {
-        background: #ffffff;
-        padding: 20px;
-        border-radius: 15px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        overflow-x: auto;
-      }
-
-      .tabla-calificaciones {
-        width: 100%;
-        border-collapse: collapse;
-        text-align: center;
-        font-size: 16px;
-        min-width: 600px;
-      }
-
-      .tabla-calificaciones caption {
-        font-size: 1.5rem;
-        font-weight: 700;
-        margin-bottom: 15px;
-        color: #2c3e50;
-      }
-
-      .tabla-calificaciones thead {
-        background-color: #2c5db7;
-        color: #ffffff;
-      }
-
-      .tabla-calificaciones th,
-      .tabla-calificaciones td {
-        padding: 12px 15px;
-        border: 1px solid #ddd;
-      }
-
-      .tabla-calificaciones tbody tr:nth-child(even) {
-        background-color: #f4f8ff;
-      }
-
-      .tabla-calificaciones tbody tr:hover {
-        background-color: #e6f0ff;
-        transition: 0.3s ease;
-      }
-
-      .tabla-calificaciones tfoot {
-        background-color: #dbe8ff;
-        font-weight: 700;
-      }
-
-      .tabla-calificaciones tfoot th {
-        color: #1a3d7c;
-      }
-    </style>
   </head>
   <body>
     <div class="tabla-container" data-aos="fade-down">
@@ -144,8 +66,6 @@
     </div>
 
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+  <script src="../assets/js/portalAlumno/calificaciones.js"></script>
   </body>
 </html>
