@@ -1,5 +1,5 @@
 //REGISTRO
-//Yo Abraham
+//Yo Abraham Pech Ayil
 //yo alambrito
 //hola soy giovanni
 const signUp = document.getElementById("sign-up");
