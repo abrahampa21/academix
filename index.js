@@ -1,5 +1,6 @@
 //REGISTRO
 //Yo Abraham
+//yo alambrito
 //hola soy giovanni
 const signUp = document.getElementById("sign-up");
 const login = document.getElementById("log-in");
