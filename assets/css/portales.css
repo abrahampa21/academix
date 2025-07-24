@@ -236,7 +236,7 @@ a.selected {
   content: "";
   position: absolute;
   inset: 0;
-  background: url(src/universitarios.png) center/cover no-repeat;
+  background: url(../../portalAlumno/src/universitarios.png) center/cover no-repeat;
   filter: blur(4px);
   z-index: 0;
 }
@@ -278,7 +278,7 @@ a.selected {
 
 /*Sobre nosotros*/
 .about-us {
-  background: url("src/workteam.jpg") center/cover no-repeat;
+  background: url("../../portalAlumno/src/workteam.jpg") center/cover no-repeat;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -321,7 +321,7 @@ a.selected {
 
 /*Enfoque*/
 .focus {
-  background: url("src/code.jpg") center/cover no-repeat;
+  background: url("../../portalAlumno/src/code.jpg") center/cover no-repeat;
   padding: 80px 20px;
   position: relative;
   color: #fff;

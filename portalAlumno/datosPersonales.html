@@ -16,106 +16,8 @@
       rel="stylesheet"
     />
     <link rel="icon" href="../src/academix.jpg" />
+    <link rel="stylesheet" href="../assets/css/portalAlumno/datosPersonales.css">
     <title>Datos Personales</title>
-    <style>
-      body {
-        margin: 0;
-        height: 100vh;
-        font-family: "Plus Jakarta Sans", sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #1a2a3b;
-        animation: gradient 15s ease infinite;
-      }
-
-      .personal-data {
-        background-color: white;
-        padding: 2rem;
-        border-radius: 20px;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-        max-width: 700px;
-        width: 90%;
-      }
-
-      .personal-data table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 1rem;
-      }
-
-      .personal-data caption {
-        font-size: 1.5rem;
-        font-weight: 600;
-        color: #1a2a3b;
-        padding-bottom: 1rem;
-        text-align: center;
-        border-bottom: 2px solid #d0d7de;
-      }
-
-      .personal-data th,
-      .personal-data td {
-        text-align: left;
-        padding: 1rem;
-        border-bottom: 1px solid #e2e8f0;
-        vertical-align: middle;
-      }
-
-      .personal-data th {
-        font-weight: 600;
-        color: #334155;
-        width: 40%;
-      }
-
-      .personal-data td {
-        color: #475569;
-      }
-
-      .personal-data input[type="text"],
-      .personal-data input[type="date"] {
-        width: 100%;
-        padding: 0.5rem 0.75rem;
-        border: 1px solid #cbd5e1;
-        border-radius: 10px;
-        font-size: 1rem;
-        background-color: #f1f5f9;
-        color: #1e293b;
-      }
-
-      .personal-data input[readonly] {
-        background-color: #e2e8f0;
-        cursor: not-allowed;
-      }
-
-      .personal-data i.fa-pen {
-        margin-left: 0.5rem;
-        color: #14b8a6;
-        cursor: pointer;
-        transition: color 0.3s;
-      }
-
-      .personal-data i.fa-pen:hover {
-        color: #0d9488;
-      }
-
-      .submit {
-        margin-top: 2rem;
-        width: 100%;
-        padding: 0.75rem;
-        font-size: 1rem;
-        font-weight: 600;
-        background-color: #14b8a6;
-        color: white;
-        border: none;
-        border-radius: 12px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-      }
-
-      .submit:hover {
-        background-color: #0d9488;
-      }
-    </style>
   </head>
   <body>
     <form onsubmit="confirmation(event)" class="personal-data" id="personal-data" data-aos="fade-down">
@@ -213,14 +115,6 @@
     </form>
 
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script>
-      function confirmation(event) {
-        const message = confirm("¿Realmente quieres modificar los datos?");
-        if (!message) {
-          event.preventDefault();
-        }
-      }
-      AOS.init();
-    </script>
+    <script src="../assets/js/portalAlumno/datosPersonales.js"></script>
   </body>
 </html>

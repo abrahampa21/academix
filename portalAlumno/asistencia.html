@@ -12,71 +12,8 @@
       rel="stylesheet"
     />
     <link rel="icon" href="../src/academix.jpg" />
+    <link rel="stylesheet" href="../assets/css/portalAlumno/asistencia.css">
     <title>Asistencias</title>
-    <style>
-      body {
-        margin: 0;
-        padding: 2rem;
-        height: 100vh;
-        font-family: "Plus Jakarta Sans", sans-serif;
-        background:linear-gradient(330deg,#1a2d42,#aab7b7,#c0c8ca,#d4d8dd,#1a2d42);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .asistencia {
-        width: 100%;
-        max-width: 900px;
-        border-collapse: collapse;
-        background-color: #ffffff;
-        border-radius: 12px;
-        overflow: hidden;
-        box-shadow: 2px 2px 10px 0 #000;
-      }
-
-      .asistencia th {
-        background-color: #1e3a8a;
-        color: #ffffff;
-        font-weight: 600;
-        text-align: left;
-        padding: 1rem;
-        font-size: 1rem;
-      }
-
-      .asistencia td {
-        padding: 1rem;
-        font-size: 0.95rem;
-        color: #1f2937;
-        border-top: 1px solid #e5e7eb;
-      }
-
-      .asistencia tr:nth-child(even):not(.resultado) {
-        background-color: #f9fafb;
-      }
-
-      .asistencia tr:hover:not(.resultado):not(:first-child) {
-        background-color: #e0e7ff;
-      }
-
-      .asistencia .resultado {
-        background-color: #e0f2fe;
-        color: #0f172a;
-        font-weight: bold;
-      }
-
-      .asistencia .resultado td {
-        border-top: 2px solid #cbd5e1;
-      }
-
-      @media (max-width: 768px) {
-        .asistencia {
-          font-size: 0.85rem;
-          display: block;
-          overflow-x: auto;
-        }
-      }
-    </style>
   </head>
   <body>
     <table class="asistencia" data-aos="fade-down" id="asistencia">
@@ -128,7 +65,5 @@
   </body>
 
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+  <script src="../assets/js/portalAlumno/asistencia.js"></script>
 </html>
