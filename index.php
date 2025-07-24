@@ -32,7 +32,8 @@ if (isset($_POST["log"])) {
     if ($resultado->num_rows > 0) {
         $row = $resultado->fetch_assoc();
         $_SESSION['id_matricula'] = $row['matriculaA'];
-        header("Location: portalAlumno.html");
+        $SESSION['id_usuario'] = $row['nombreUsuario'];
+        header("Location: portalAlumno.php");
         exit;
     }
 
