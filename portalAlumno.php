@@ -1,3 +1,11 @@
+<?php
+  include("conexion.php");
+  if (!isset($_SESSION['matriculaA'])) {
+    echo "<script>alert('Por favor, inicie sesión primero'); window.location.href='index.php';</script>";
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="es">
   <head>
