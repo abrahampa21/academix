@@ -1,24 +1,17 @@
-const pencil = document.querySelectorAll("i[data-input]");
+//Variables principales
 const btnTop = document.getElementById("scrollTopBtn");
 const toggle = document.getElementById("toggle");
 const menu = document.getElementById("menu");
 const bar = document.getElementById("bars");
 
-document.addEventListener("DOMContentLoaded", () =>{
-  btnTop.style.display = "none";
-})
+//Inicializando las animaciones
+AOS.init();
 
-//Poder editar los datos de la tabla
-pencil.forEach((pen) => {
-  pen.addEventListener("click", () => {
-    const inputId = pen.getAttribute("data-input");
-    const input = document.getElementById(inputId);
-    if (input) {
-      input.readOnly = false;
-    }
-  });
+document.addEventListener("DOMContentLoaded", () => {
+  btnTop.style.display = "none";
 });
 
+//Función para que aparezca el botón de volver al top de la página
 window.onscroll = function () {
   scrollFunction();
 };
@@ -38,7 +31,6 @@ document.getElementById("scrollTopBtn").addEventListener("click", function () {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-
 //Mostrar el menú con la responsividad
 toggle.addEventListener("click", () => {
   menu.classList.toggle("menu-open");
@@ -47,5 +39,11 @@ toggle.addEventListener("click", () => {
   bar.classList = barOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars";
 });
 
+//Función para confirmar salida
+function exit() {
+  const message = confirm("¿Realmente quieres salir del sitio?");
 
-AOS.init();
+  if (message) {
+    window.location.href = "index.php";
+  }
+}

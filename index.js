@@ -72,4 +72,18 @@ function revealPasswordRpt() {
   showPasswordRpt.classList.toggle("fa-eye-slash");
 }
 
+//Cambio de fondo cada cierto tiempo
+const backgroundImages = ['src/fondo2.webp', 'src/fondo1.jpg'];
+
+let cont = 0;
+
+function changeBackground(){
+  document.body.style.backgroundImage = `url("${backgroundImages[cont]}")`;
+  cont = (cont+1) % backgroundImages.length;
+}
+
+setInterval(changeBackground, 3000);
+
+window.onload = changeBackground;
+
 AOS.init();
