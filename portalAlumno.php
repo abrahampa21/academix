@@ -96,7 +96,7 @@
         </a>
       </div>
       <div class="exit">
-        <a href="index.php" title="Salir" onclick="exit()" >
+        <a href="#" title="Salir" onclick="exit()" >
           <i class="fa-solid fa-right-from-bracket"></i>
         </a>
         <h4>Salir</h4>
@@ -113,7 +113,7 @@
     <!-- Contenido principal -->
     <main id="main">
       <section class="intro">
-        <div class="intro-content" data-aos="fade-down">
+        <div class="intro-content" data-aos="fade-down" data-aos-duration="1000">
           <h2>Bienvenido a ACADEMIX</h2>
           <p>
             Academix es una plataforma educativa diseñada para facilitar la
@@ -182,7 +182,7 @@
     </main>
 
     <footer class="footer" id="contacto">
-      <div class="footer-content">
+      <div class="footer-content" data-aos="fade-right">
         <div class="footer-section about">
           <h3>Alpha Coders</h3>
           <p>

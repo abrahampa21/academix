@@ -105,6 +105,24 @@ body {
 
 .modal textarea{
   width: 100%;
+  margin-top: 10px;
+}
+
+.modal .destinatario{
+  margin: 1rem 0 .5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.modal .destinatario input{
+  width: 100%;
+  border: .5px solid #000;
+  border-radius: 5px;
+  height: 1.5rem;
+  padding-left: 3px;
+  margin: -1rem 0 1rem;
+
 }
 
 .modal-content {

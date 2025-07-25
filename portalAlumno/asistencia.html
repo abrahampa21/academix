@@ -12,58 +12,88 @@
       rel="stylesheet"
     />
     <link rel="icon" href="../src/academix.jpg" />
-    <link rel="stylesheet" href="../assets/css/portalAlumno/asistencia.css">
+    <link rel="stylesheet" href="../assets/css/portalAlumno/asistencia.css" />
     <title>Asistencias</title>
   </head>
   <body>
-    <table class="asistencia" data-aos="fade-down" id="asistencia">
-      <tbody>
-        <tr>
-          <th>Mes</th>
-          <th>Total de clases</th>
-          <th>Total de asistencias</th>
-          <th>Total de faltas</th>
-          <th>Porcentaje total de asistencias</th>
-        </tr>
-        <tr>
-          <td>SEPTIEMBRE</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>OCTUBRE</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>NOVIEMBRE</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>DICIEMBRE</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr class="resultado">
-          <td>Resultado</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-      </tbody>
-    </table>
-  </body>
+    <div class="container">
+      <table class="asistencia" data-aos="fade-down" id="asistencia">
+        <tbody>
+          <tr>
+            <th>Mes</th>
+            <th>Total de clases</th>
+            <th>Total de asistencias</th>
+            <th>Total de faltas</th>
+            <th>Porcentaje total de asistencias</th>
+          </tr>
+          <tr>
+            <td>SEPTIEMBRE</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>OCTUBRE</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>NOVIEMBRE</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>DICIEMBRE</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr class="resultado">
+            <td>Resultado</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <br />
+      <button class="btn" onclick="abrirModal()">Reportar un problema</button>
+    </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script src="../assets/js/portalAlumno/asistencia.js"></script>
+    <!--Reporte -->
+    <div class="modal" id="modalReporte">
+      <form class="modal-content">
+        <span class="close" onclick="cerrarModal()">&times;</span>
+        <h3>Reportar Problema</h3>
+        <div class="destinatario">
+          <h4>Destinatario</h4>
+          <input
+            type="email"
+            name=""
+            title="u"
+            placeholder="eg. itesrenedescartes.edu.mx"
+            id=""
+            required
+          />
+        </div>
+        <textarea
+          rows="5"
+          placeholder="Describe el problema..."
+          required
+        ></textarea>
+        <br /><br />
+        <button class="btn" type="submit">Enviar Reporte</button>
+      </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="../assets/js/portalAlumno/asistencia.js"></script>
+  </body>
 </html>

@@ -175,13 +175,14 @@ if (isset($_POST["registrar"])) {
     <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+    <script src="https://kit.fontawesome.com/e522357059.js" crossorigin="anonymous"></script>
     <title>Academix</title>
 </head>
 
 <body>
 
     <!--Inicio de sesión-->
-    <form class="log-in" method="post" action="<?php $_SERVER["PHP_SELF"]; ?>" id="log-in" autocomplete="off" data-aos="fade-down">
+    <form class="log-in" method="post" action="<?php $_SERVER["PHP_SELF"]; ?>" id="log-in" autocomplete="off" data-aos="fade-down" data-aos-duration="800">
         <div class="login-container">
             <h1>Inicio de Sesión </h1>
             <img src="src/academix.jpg" alt="Logo página">
@@ -206,7 +207,7 @@ if (isset($_POST["registrar"])) {
     </form>
 
     <!--Registro-->
-    <form class="sign-up" id="sign-up" method="post" action="<?php $_SERVER["PHP_SELF"]; ?>" autocomplete="off">
+    <form class="sign-up" id="sign-up" method="post" action="<?php $_SERVER["PHP_SELF"]; ?>" data-aos="fade-down" autocomplete="off">
         <i id="back" class="arrow fa-solid fa-arrow-left" title="Regresar" onclick="showLogin()"></i>
         <h1>Registro para el portal</h1>
         <div class="inputs">
@@ -252,14 +253,13 @@ if (isset($_POST["registrar"])) {
         <h1>Recuperar contraseña</h1>
         <p>Ingresa tu correo electronico para recibir las instrucciones</p>
         <div class="input-button">
-            <input type="email" name="recuperar-contraseña" id="">
+            <input type="email" name="recuperar-contraseña" id="" required>
             <button type="submit">Enviar</button>
         </div>
     </form>
 
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="https://kit.fontawesome.com/e522357059.js" crossorigin="anonymous"></script>
     <script src="index.js"></script>
 
     <?php if ($mostrarRegistro): ?>
@@ -271,6 +271,7 @@ if (isset($_POST["registrar"])) {
         </script>
     <?php endif; ?>
     <script>
+        AOS.init();
         document.addEventListener("DOMContentLoaded", function() {
             const passwordInput = document.getElementById("contraseña");
             const messageDiv = document.getElementById("passwordMessage");

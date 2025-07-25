@@ -1,7 +1,4 @@
 //REGISTRO
-//Yo Abraham Pech Ayil
-//yo alambrito
-//hola soy giovanni
 const signUp = document.getElementById("sign-up");
 const login = document.getElementById("log-in");
 const recoverPassword = document.getElementById("recuperar-contraseña");
@@ -42,7 +39,6 @@ function showRecoverPass() {
   inputsLogin.forEach((input) => {
     input.value = "";
   });
-
 }
 
 //Mostrando contraseña sin ocultar
@@ -73,17 +69,19 @@ function revealPasswordRpt() {
 }
 
 //Cambio de fondo cada cierto tiempo
-const backgroundImages = ['src/fondo2.webp', 'src/fondo1.jpg', 'src/fondo3.png'];
+const backgroundImages = [
+  "src/fondo2.webp",
+  "src/fondo1.jpg",
+  "src/fondo3.png",
+];
 
 let cont = 0;
 
-function changeBackground(){
+function changeBackground() {
   document.body.style.backgroundImage = `url("${backgroundImages[cont]}")`;
-  cont = (cont+1) % backgroundImages.length;
+  cont = (cont + 1) % backgroundImages.length;
 }
 
 setInterval(changeBackground, 3000);
 
 window.onload = changeBackground;
-
-AOS.init();
