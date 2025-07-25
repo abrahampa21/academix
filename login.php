@@ -1,5 +1,5 @@
 <?php
-include("conexion.php");
+include("src/conexion.php");
 session_start();
 
 $mostrarRegistro = false;
@@ -49,7 +49,7 @@ if (isset($_POST["log"])) {
 
     echo "<script>
             alert('Error al iniciar sesión');
-            window.location = 'index.php';
+            window.location = 'login.php';
         </script>";
 }
 
@@ -87,7 +87,7 @@ if (isset($_POST["registrar"])) {
                             icon: 'warning',
                             title: 'El usuario ya existe',
                         }).then(() => {
-                            window.location = 'index.php';
+                            window.location = 'login.php';
                         });
                     });
                 </script>";
@@ -100,7 +100,7 @@ if (isset($_POST["registrar"])) {
                     <script>
                         document.addEventListener('DOMContentLoaded', function() {
                             Swal.fire('Registro exitoso!').then(() => {
-                                window.location = 'index.php';
+                                window.location = 'login.php';
                             });
                         });
                     </script>";
@@ -111,7 +111,7 @@ if (isset($_POST["registrar"])) {
                             icon: 'error',
                             text: 'Error al registrarse'
                             }).then(() => {
-                                window.location = 'index.php';
+                                window.location = 'login.php';
                             });
                         });
                     </script>";
@@ -129,7 +129,7 @@ if (isset($_POST["registrar"])) {
                             icon: 'warning',
                             title: 'El usuario ya existe',
                         }).then(() => {
-                            window.location = 'index.php';
+                            window.location = 'login.php';
                         });
                     });
                 </script>";
@@ -142,7 +142,7 @@ if (isset($_POST["registrar"])) {
                     <script>
                         document.addEventListener('DOMContentLoaded', function() {
                             Swal.fire('Registro exitoso!').then(() => {
-                                window.location = 'index.php';
+                                window.location = 'login.php';
                             });
                         });
                     </script>";
@@ -154,7 +154,7 @@ if (isset($_POST["registrar"])) {
                             icon: 'error',
                             text: 'Error al registrarse'
                             }).then(() => {
-                                window.location = 'index.php';
+                                window.location = 'login.php';
                             });
                         })
                     </script>";
@@ -170,7 +170,7 @@ if (isset($_POST["registrar"])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="assets/css/login.css">
     <link rel="icon" href="src/academix.jpg">
     <link
         rel="stylesheet"
@@ -260,7 +260,7 @@ if (isset($_POST["registrar"])) {
 
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="index.js"></script>
+    <script src="assets/js/login.js"></script>
 
     <?php if ($mostrarRegistro): ?>
         <script>
