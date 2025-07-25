@@ -1,10 +1,11 @@
 <?php
-  include("conexion.php");
+/*include("conexion.php"); comenté el código para que no me impida trabajar
   if (!isset($_SESSION['matriculaA'])) {
     echo "<script>alert('Por favor, inicie sesión primero'); window.location.href='index.php';</script>";
     exit();
-}
+}*/
 ?>
+
 
 <!DOCTYPE html>
 <html lang="es">
