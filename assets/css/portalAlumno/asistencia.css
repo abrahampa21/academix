@@ -17,7 +17,7 @@ body {
 }
 
 .container{
-    background: #ffffff;
+  background: #ffffff;
   padding: 20px;
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -129,6 +129,15 @@ body {
   float: right;
   font-size: 1.5rem;
   cursor: pointer;
+}
+
+.container-profesor{
+  display: none;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
 }
 
 @media (max-width: 768px) {

@@ -16,9 +16,62 @@
     <title>Asistencias</title>
   </head>
   <body>
-    <div class="container" data-aos="fade-down" data-aos-duration="800">
+    <div class="container" id="asistencias-alumno" data-aos="fade-down" data-aos-duration="800">
       <h4>Alumno:</h4>
       <h4>Matrícula:</h4>
+      <table class="asistencia" id="asistencia">
+        <tbody>
+          <tr>
+            <th>Mes</th>
+            <th>Total de clases</th>
+            <th>Total de asistencias</th>
+            <th>Total de faltas</th>
+            <th>Porcentaje total de asistencias</th>
+          </tr>
+          <tr>
+            <td>SEPTIEMBRE</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>OCTUBRE</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>NOVIEMBRE</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>DICIEMBRE</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr class="resultado">
+            <td>Resultado</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <br />
+      <button class="btn" onclick="abrirModal()">Reportar un problema</button>
+    </div>
+
+    <div class="container-profesor" id="asistencias-profesor" data-aos="fade-down" data-aos-duration="800">
+      <h4>Alumno:<span>Nombre</span> </h4>
+      <h4>Matrícula: <span>Su matrícula</span></h4>
       <table class="asistencia" id="asistencia">
         <tbody>
           <tr>
@@ -96,6 +149,6 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script src="../assets/js/portalAlumno/asistencia.js"></script>
+    <script type="module" src="../assets/js/portalAlumno/asistencia.js"></script>
   </body>
 </html>
