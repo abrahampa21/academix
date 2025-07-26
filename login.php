@@ -13,9 +13,9 @@ $datosFormulario = [
 // Si ya está logueado, redirige
 if (isset($_SESSION['id_usuario'])) {
     if ($_SESSION['rol'] === 'alu') {
-        header("Location: portalAlumno.html");
+        header("Location: portalAlumno.php");
     } elseif ($_SESSION['rol'] === 'prof') {
-        header("Location: portalProfesor.html");
+        header("Location: portalProfesor.php");
     }
     exit;
 }
@@ -44,7 +44,7 @@ if (isset($_POST["log"])) {
         $row2 = $resultado2->fetch_assoc();
         $_SESSION['id_matricula'] = $row2['matriculaP'];
          $_SESSION['rol'] = 'prof';
-        header("Location: portalProfesor.html");
+        header("Location: portalProfesor.php");
         exit;
     }
 
