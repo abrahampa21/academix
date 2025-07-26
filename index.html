@@ -5,6 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/css/index.css" />
     <link rel="icon" href="src/ites.jpg" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
     <script
       src="https://kit.fontawesome.com/e522357059.js"
       crossorigin="anonymous"
@@ -55,16 +74,75 @@
     </div>
 
     <main>
-      <div class="content">
-        <h1>Tu futuro es brillante es nuestra misión</h1>
-        <p>
-          Nuestra institución se encarga de forjar profesionistas de calidad,
-          los cuales están aptos para cubrir las necesidades que la empresa
-          requiera en cada una de sus áreas
-        </p>
+      <div class="background-blur"></div>
+      <div class="carousel" id="carousel">
+        <div class="content">
+          <h1>Tu futuro es brillante es nuestra misión</h1>
+          <p>
+            Nuestra institución se encarga de forjar profesionistas de calidad,
+            los cuales están aptos para cubrir las necesidades que la empresa
+            requiera en cada una de sus áreas
+          </p>
+        </div>
+        <div class="content">
+          <h1>Vinculación Académica</h1>
+          <p>
+            Contamos con vinculación con empresas para que así nuestros
+            educandos puedan desempeñarse en el ámbito laboral desde inicios de
+            la carrera
+          </p>
+        </div>
+        <div class="content">
+          <h1>¡APOYAMOS TU EDUCACIÓN!</h1>
+          <p>
+            Conoce por nuestro sistema de becas y de las promociones que puedes
+            gozar al integrarte con nosotros
+          </p>
+        </div>
       </div>
     </main>
 
+    <section class="licenciaturas">
+      <div class="lic-content" data-aos="fade-up">
+        <h2>Licenciaturas</h2>
+        <p>
+          Nuestra institución se encarga de forjar profesionistas de calidad los
+          cuales están aptos para cubrir las necesidades que la empresa requiera
+          en cada una de sus áreas
+        </p>
+      </div>
+    </section>
+
+    <section class="posgrados">
+      <div class="posgrados-content" data-aos="fade-up">
+        <h2>Posgrados</h2>
+        <p>
+          Nuestra institución se encarga de forjar profesionistas de calidad los
+          cuales están aptos para cubrir las necesidades que la empresa requiera
+          en cada una de sus áreas
+        </p>
+      </div>
+    </section>
+
+    <section class="vinculacion">
+      <div class="vinculacion-content" data-aos="fade-up">
+        <h2>Vinculación Académica</h2>
+        <p>
+          Contamos con vinculación con empresas para que así nuestros educandos
+          puedan desempeñarse en el ámbito laboral desde inicios de la carrera
+        </p>
+      </div>
+    </section>
+
+    <section class="inscribete">
+      <div class="inscribete-content" data-aos="fade-up">
+        <h2>Inscríbete</h2>
+        <p>
+          No te quedes fuera. Pregunta por nuestro sistema de becas y de las
+          promociones que puedes gozar al integrarte con nosotros
+        </p>
+      </div>
+    </section>
     <footer>
       <div class="contact">
         <img src="src/logo.png" alt="logo ites" />
@@ -85,5 +163,24 @@
         </div>
       </div>
     </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".carousel").slick({
+          dots: true,
+          infinite: true,
+          speed: 500,
+          fade: false,
+          cssEase: "linear",
+          prevArrow:
+            '<button type="button" class="slick-prev">&#8592;</button>',
+          nextArrow:
+            '<button type="button" class="slick-next">&#8594;</button>',
+        });
+      });
+
+      AOS.init();
+    </script>
   </body>
 </html>
