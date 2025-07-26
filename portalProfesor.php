@@ -8,6 +8,12 @@
         </script>";
   exit();
 }
+
+$matricula = $SESSION['matriculaA'];
+
+$query = "SELECT * FROM profesor WHERE matriculaA ='$matricula'";
+$resultado = mysqli_query($enlace, $query);
+$cliente = mysqli_fetch_assoc($resultado);
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -60,7 +66,7 @@
       </div>
       <div class="user-page">
         <i class="fa-solid fa-user-graduate"></i>
-        <h4>Profesor</h4>
+        <h4><?php echo $matricula['nombreCompleto']?></h4>
       </div>
       <div class="options-menu">
         <a href="portalProfesor/datosPersonalesPro.html" id="data-student">
