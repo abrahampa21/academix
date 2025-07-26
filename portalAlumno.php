@@ -1,9 +1,13 @@
 <?php
-/*include("conexion.php"); comenté el código para que no me impida trabajar
-  if (!isset($_SESSION['matriculaA'])) {
-    echo "<script>alert('Por favor, inicie sesión primero'); window.location.href='index.php';</script>";
-    exit();
-}*/
+  session_start();
+  include("conexion.php"); 
+  if (!isset($_SESSION['id_matricula']) || $_SESSION['rol'] !== 'alu') {
+    echo "<script>
+          alert('Por favor, registrese primero');
+          window.location.href='login.php';
+        </script>";
+  exit();
+}
 ?>
 
 
