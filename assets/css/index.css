@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", "Montserrat", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*Header*/
+header {
+  width: 100%;
+}
+
+header .header {
+  background-color: #13235b;
+  color: #fff;
+  padding: 1rem;
+  width: 100%;
+}
+
+header .header .links {
+  display: flex;
+  gap: 2rem;
+  justify-content: flex-end;
+}
+
+header .header .links-header {
+  transition: 0.3s ease-in-out;
+  font-size: 0.8rem;
+}
+
+header .header .links-header a {
+  transition: 0.3s ease-in-out;
+}
+
+header .header .links-header:hover {
+  color: #af000b;
+  cursor: pointer;
+}
+
+header .header .links-header a:hover {
+  color: #af000b;
+}
+
+header .header a {
+  color: #fff;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 110px;
+}
+
+.navbar .links {
+  display: flex;
+  gap: 2rem;
+  font-size: 1.2rem;
+}
+
+.navbar .links a {
+  color: rgba(0, 0, 0, 0.8);
+  transition: 0.3s ease-in-out;
+}
+
+.navbar .links li {
+  list-style: none;
+}
+
+.navbar .links a:hover {
+  color: #af000b;
+}
+
+.navbar .login {
+  display: flex;
+}
+
+.navbar .img-icon img {
+  width: 270px;
+}
+
+/*Main*/
+main {
+  background-image: url(../../src/fondoescuela.jpg);
+  background-position: center;
+  background-size: cover;
+  filter: blur(5px);
+  width: 100%;
+  height: 500px;
+}
+
+/*íconos de redes sociales fijas*/
+.si-fixed {
+  position: fixed;
+  top: 45%;
+  right: 1%;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  gap: .2rem;
+  text-align: center;
+}
+
+.si-fixed a{
+    font-size: 2rem;
+    color: #fff;
+    background-color: #e2211c;
+    padding: .2rem .5rem;
+    border-radius: 9999px;
+    transition: 0.5s;
+}
+
+.si-fixed a:hover{
+    background-color: #007bff;
+}
+
+/*Footer*/
+footer {
+  background-color: #13235b;
+  color: #fff;
+}
+
+footer .contact {
+  border-bottom: 1px solid #fff;
+  margin-bottom: 1rem;
+  padding: 2.5rem;
+}
+
+footer .footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 2.5rem;
+}
+
+footer .contact p {
+  width: 400px;
+}
+
+footer .social-icons {
+  display: flex;
+  gap: 1.2rem;
+}
+
+footer .footer-bottom a {
+  color: #ffbc3b;
+  font-size: 1.5rem;
+}
+/*Medias queries*/
