@@ -1,6 +1,6 @@
 <?php
   session_start();
-  include("conexion.php"); 
+  include("src/conexion.php"); 
   if (!isset($_SESSION['id_matricula']) || $_SESSION['rol'] !== 'prof') {
     echo "<script>
           alert('Por favor, registrese primero');
@@ -9,11 +9,11 @@
   exit();
 }
 
-$matricula = $SESSION['matriculaA'];
+$idprofe = $_SESSION['id_matricula'];
 
-$query = "SELECT * FROM profesor WHERE matriculaA ='$matricula'";
-$resultado = mysqli_query($enlace, $query);
-$cliente = mysqli_fetch_assoc($resultado);
+$sql = "SELECT * FROM profesor WHERE matriculaP = '$idprofe'";
+$resultado = mysqli_query($conexion, $sql);
+$row = mysqli_fetch_assoc($resultado);
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -66,7 +66,7 @@ $cliente = mysqli_fetch_assoc($resultado);
       </div>
       <div class="user-page">
         <i class="fa-solid fa-user-graduate"></i>
-        <h4><?php echo $matricula['nombreCompleto']?></h4>
+        <h4><?php echo $row['nombreCompleto']?></h4>
       </div>
       <div class="options-menu">
         <a href="portalProfesor/datosPersonalesPro.html" id="data-student">
