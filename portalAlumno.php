@@ -1,15 +1,20 @@
 <?php
   session_start();
-  include("conexion.php"); 
-  if (!isset($_SESSION['id_matricula']) || $_SESSION['rol'] !== 'alu') {
+  include("src/conexion.php"); 
+  if (!isset($_SESSION['id_matricula']) || $_SESSION['rol'] !== 'prof') {
     echo "<script>
           alert('Por favor, registrese primero');
           window.location.href='login.php';
         </script>";
   exit();
 }
-?>
 
+$idprofe = $_SESSION['id_matricula'];
+
+$sql = "SELECT * FROM profesor WHERE matriculaP = '$idprofe'";
+$resultado = mysqli_query($conexion, $sql);
+$row = mysqli_fetch_assoc($resultado);
+?>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -65,7 +70,7 @@
       </div>
       <div class="user-page">
         <i class="fa-solid fa-user-graduate" title="Ícono del alumno"></i>
-        <h4>Alumno</h4>
+        <h4><?php echo $row['nombreCompleto']?></h4>
       </div>
       <div class="options-menu">
         <a href="portalAlumno/datosPersonales.html" id="data-student">
