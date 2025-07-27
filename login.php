@@ -43,7 +43,7 @@ if (isset($_POST["log"])) {
     if ($resultado2->num_rows > 0) {
         $row2 = $resultado2->fetch_assoc();
         $_SESSION['id_matricula'] = $row2['matriculaP'];
-         $_SESSION['rol'] = 'prof';
+        $_SESSION['rol'] = 'prof';
         header("Location: portalProfesor.php");
         exit;
     }
