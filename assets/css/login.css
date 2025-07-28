@@ -46,6 +46,15 @@ body {
   margin-top: 20px;
 }
 
+.login-container img{
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.login-container img:hover{
+  transform: rotate(180deg);
+}
+
 h1 {
   margin-bottom: 20px;
   color: #2a3d66;
