@@ -11,3 +11,28 @@ function descargarPDF() {
   };
   html2pdf().set(opciones).from(horario).save();
 }
+
+function abrirModal() {
+  document.getElementById("modalReporte").style.display = "flex";
+}
+
+function cerrarModal() {
+  document.getElementById("modalReporte").style.display = "none";
+}
+
+function authorized() {
+  Swal.fire({
+    title: "¿Ya te autorizaron los cambios?",
+    showDenyButton: true,
+    showCancelButton: true,
+    confirmButtonText: "Sí",
+    denyButtonText: `No`,
+  }).then((result) => {
+    /* Read more about isConfirmed, isDenied below */
+    if (result.isConfirmed) {
+      Swal.fire("Autorizado!", "", "success");
+    } else if (result.isDenied) {
+      Swal.fire("No tienes permiso de modificar", "", "info");
+    }
+  });
+}

@@ -9,15 +9,20 @@
       href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-    <link rel="stylesheet" href="../assets/css/portalAlumno/horario.css">
+    <link rel="stylesheet" href="../assets/css/portalAlumno/horario.css" />
     <title>Horario de Clases</title>
   </head>
   <body>
     <div class="horario-container" data-aos="fade-down">
       <div class="horario-header">
         <h1>Horario de Clases - Mayo a Agosto</h1>
-        <br>
-        <button id="botoncito" onclick="descargarPDF()">Descargar como PDF</button>
+        <br />
+        <div class="buttons-modified">
+          <button class="botoncitos" id="botoncito" onclick="descargarPDF()">
+            Descargar como PDF
+          </button>
+          <button class="botoncitos" onclick="authorized()">Modificar Horario</button>
+        </div>
       </div>
       <table id="horario">
         <caption>
@@ -108,9 +113,41 @@
           </tr>
         </tbody>
       </table>
+
+      <div class="buttons-submit">
+        <button class="btn" onclick="abrirModal()">Reportar un problema</button>
+        <button class="btn">Enviar horario modificado</button>
+      </div>
     </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script src="../assets/js/portalAlumno/calificaciones.js"></script>
+    <!--Reporte -->
+    <div class="modal" id="modalReporte">
+      <form class="modal-content">
+        <span class="close" onclick="cerrarModal()">&times;</span>
+        <h3>Reportar Problema</h3>
+        <div class="destinatario">
+          <h4>Destinatario</h4>
+          <input
+            type="email"
+            name=""
+            title="u"
+            placeholder="eg. itesrenedescartes.edu.mx"
+            id=""
+            required
+          />
+        </div>
+        <textarea
+          rows="5"
+          placeholder="Describe el problema..."
+          required
+        ></textarea>
+        <br /><br />
+        <button class="btn" type="submit">Enviar Reporte</button>
+      </form>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="../assets/js/portalAlumno/horario.js"></script>
   </body>
 </html>

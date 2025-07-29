@@ -3,18 +3,13 @@ body {
   padding: 2rem;
   height: 100vh;
   font-family: "Plus Jakarta Sans", sans-serif;
-  background: linear-gradient(
-    330deg,
-    #1a2d42,
-    #aab7b7,
-    #c0c8ca,
-    #d4d8dd,
-    #1a2d42
-  );
+  background: radial-gradient(circle at top left, #eaeaea, #d1d5db, #cbd5e1);
+  background-attachment: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 
 .container{
   background: #ffffff;
