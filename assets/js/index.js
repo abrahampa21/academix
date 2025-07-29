@@ -1,10 +1,34 @@
 //Definiendo funciones
+const btnTop = document.getElementById("scrollTopBtn");
 const toggle = document.getElementById("toggle");
 const menu = document.getElementById("menu");
 const bar = document.getElementById("bars");
 
-
 AOS.init();
+
+document.addEventListener("DOMContentLoaded", () => {
+  btnTop.style.display = "none";
+});
+
+//Función para que aparezca el botón de volver al top de la página
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  const triggerElement = document.getElementById("lic-content");
+
+  if (triggerElement.getBoundingClientRect().top < window.innerHeight / 2) {
+    btnTop.style.display = "block";
+  } else {
+    btnTop.style.display = "none";
+  }
+}
+
+// Función para volver arriba
+document.getElementById("scrollTopBtn").addEventListener("click", function () {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
 
 //Función para el carrusel
 $(document).ready(function () {

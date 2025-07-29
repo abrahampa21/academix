@@ -4,10 +4,12 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Poppins", "Montserrat", sans-serif;
 }
 
+html,
 body {
-  font-family: "Poppins", "Montserrat", sans-serif;
+  overflow-x: hidden;
 }
 
 a {
@@ -418,6 +420,26 @@ footer .footer-bottom a {
   font-size: 1.5rem;
 }
 
+/*Boton para regresar al inicio*/
+.scrollTopBtn {
+  position: fixed;
+  bottom: 3%;
+  left: 3%;
+  z-index: 1;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  padding: 22px 25px;
+  border-radius: 50%;
+  display: none;
+}
+
+.scrollTopBtn:hover {
+  background-color: #0056b3;
+}
 
 /*Responsividad*/
 .toggle {
@@ -455,17 +477,31 @@ footer .footer-bottom a {
   pointer-events: auto;
 }
 
-@media (max-width: 1060px){
-  .navbar{
-    justify-content: space-around;
+@media (max-width: 1060px) {
+  .navbar {
+    justify-content: space-evenly;
   }
 
-  .navbar .links{
+  .navbar .links {
     display: none;
   }
-  .toggle{
+  .toggle {
     display: block;
     font-size: 2.7rem;
   }
 }
 
+@media (max-width: 560px) {
+  header .header .links-header {
+    font-size: 0.6rem;
+  }
+  .navbar .img-icon img {
+    width: 230px;
+  }
+}
+
+@media (max-width: 400px) {
+  header .header .links-header {
+    font-size: 0.52rem;
+  }
+}
