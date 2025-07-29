@@ -31,6 +31,7 @@ document.getElementById("scrollTopBtn").addEventListener("click", function () {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
+
 //Mostrar el menú con la responsividad
 toggle.addEventListener("click", () => {
   menu.classList.toggle("menu-open");
