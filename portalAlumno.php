@@ -72,7 +72,7 @@ $row = mysqli_fetch_assoc($resultado);
       <h4><?php echo $row['nombreCompleto'] ?></h4>
     </div>
     <div class="options-menu">
-      <a href="portalAlumno/datosPersonales.html" id="data-student">
+      <a href="portalAlumno/datosPersonales.php" id="data-student">
         <div class="option">
           <i class="fa-solid fa-address-card"></i>
           <h4>Datos Personales</h4>
