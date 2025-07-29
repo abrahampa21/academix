@@ -510,7 +510,26 @@ a.selected {
   background-color: #0056b3;
 }
 
+/*Botón salir con la responsividad*/
+.exit-rsp{
+  position: fixed;
+  bottom: 5%;
+  left: 5%;
+  z-index: 2;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  background-color: #da1111;
+  color: white;
+  cursor: pointer;
+  padding: 22px;
+  border-radius: 50%;
+  display: none;
+}
 
+.exit-rsp i{
+  color: white;
+}
 
 /*Responsividad*/
 @media screen and (max-width: 760px) {
@@ -561,6 +580,12 @@ a.selected {
     display: block;
     font-size: 30px;
     margin-right: 50px;
+  }
+}
+
+@media (max-width: 500px){
+  .exit-rsp{
+    display: block;
   }
 }
 
