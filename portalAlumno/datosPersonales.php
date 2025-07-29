@@ -55,7 +55,7 @@
         </tr>
         <tr>
           <th>Correo Electrónico</th>
-          <td></td>
+          <td><?php echo $row['email'] ?></td>
         </tr>
         <tr>
           <th>
