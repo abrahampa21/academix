@@ -1,3 +1,23 @@
+<?php
+  session_start();
+  include("../src/conexion.php");
+  
+  
+  if (!isset($_SESSION['id_matricula']) || $_SESSION['rol'] !== 'alu') {
+    echo "<script>
+          alert('Por favor, inicie sesión primero');
+          window.location.href='login.php';
+        </script>";
+    exit();
+  } 
+
+  $idalum = $_SESSION['id_matricula'];
+
+  $sql = "SELECT * FROM alumno WHERE matriculaA = '$idalum'";
+  $resultado = mysqli_query($conexion, $sql);
+  $row = mysqli_fetch_assoc($resultado);
+?>
+
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -26,8 +46,8 @@
           Tus Datos Personales
         </caption>
         <tr>
-          <td></td>
-          <th>Tu nombre</th>
+          <th>Nombre:</th>
+          <td><?php echo isset($row['nombreCompleto']) ? $row['nombreCompleto'] : 'Nombre no disponible'; ?></td>
         </tr>
         <tr>
           <th>Matrícula</th>
