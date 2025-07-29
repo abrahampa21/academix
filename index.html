@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="assets/css/index.css" />
+    <link rel="stylesheet" href="assets/css/index.css?v=1.0" />
     <link rel="icon" href="src/ites.jpg" />
     <link
       rel="stylesheet"
@@ -57,12 +57,24 @@
         <div class="img-icon">
           <img src="src/logoites.png" alt="logo escuela" />
         </div>
+        <div class="toggle" id="toggle">
+          <i class="fa-solid fa-bars" id="bars"></i>
+        </div>
         <ul class="links">
           <li><a href="#">CONÓCENOS</a></li>
           <li><a href="#">OFERTA EDUCATIVA</a></li>
           <li><a href="#">ADMISIÓN</a></li>
           <li><a href="#">PUBLICACIONES</a></li>
           <li><a href="#">EGRESADOS</a></li>
+        </ul>
+        <ul class="menu" id="menu">
+          <li>
+            <a href="#">Cónocenos</a>
+          </li>
+          <li><a href="#">Oferta Educativa</a></li>
+          <li><a href="#">Admisión</a></li>
+          <li><a href="#">Publicaciones</a></li>
+          <li><a href="#">Egresados</a></li>
         </ul>
       </nav>
     </header>
@@ -166,22 +178,6 @@
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      $(document).ready(function () {
-        $(".carousel").slick({
-          dots: true,
-          infinite: true,
-          speed: 500,
-          fade: false,
-          cssEase: "linear",
-          prevArrow:
-            '<button type="button" class="slick-prev">&#8592;</button>',
-          nextArrow:
-            '<button type="button" class="slick-next">&#8594;</button>',
-        });
-      });
-
-      AOS.init();
-    </script>
+    <script src="assets/js/index.js"></script>
   </body>
 </html>

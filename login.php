@@ -171,7 +171,7 @@ if (isset($_POST["registrar"])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="stylesheet" href="assets/css/login.css?v=1.0">
     <link rel="icon" href="src/academix.jpg">
     <link
         rel="stylesheet"
@@ -185,7 +185,7 @@ if (isset($_POST["registrar"])) {
     <!--Inicio de sesión-->
     <form class="log-in" method="post" action="<?php $_SERVER["PHP_SELF"]; ?>" id="log-in" autocomplete="off" data-aos="fade-down" data-aos-duration="800">
         <div class="login-container">
-            <h1>Inicio de Sesión </h1>
+            <h1>Inicio de Sesión</h1>
             <img src="src/academix.jpg" alt="Logo página">
             <div class="input-Usuario div-input matricula-div-login">
                 <input type="text" name="matricula" class="inputs-login" placeholder="Matrícula" required>

@@ -132,12 +132,12 @@ body {
 }
 
 .container-profesor{
-  display: none;
   background: #ffffff;
   padding: 20px;
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   overflow-x: auto;
+  display: none;
 }
 
 @media (max-width: 768px) {

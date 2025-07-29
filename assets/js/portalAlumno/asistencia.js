@@ -1,12 +1,13 @@
-export const asistenciasAlumno = document.getElementById("asistencias-alumno");
-export const asistenciasProfesor = document.getElementById("asistencias-profesor");
+const asistenciasAlumno = document.getElementById("asistencias-alumno"); 
+const asistenciasProfesor = document.getElementById("asistencias-profesor");
 
 AOS.init();
 
-function abrirModal() {
+//Agregando el objeto window para que reconoza las funciones
+function abrirModal(){
   document.getElementById("modalReporte").style.display = "flex";
 }
 
-function cerrarModal() {
+function cerrarModal(){
   document.getElementById("modalReporte").style.display = "none";
 }
