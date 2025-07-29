@@ -53,7 +53,7 @@ $row = mysqli_fetch_assoc($resultado);
         <li><a href="#contacto" title="menu">Contacto</a></li>
       </ul>
       <ul class="menu" id="menu">
-        <li><a href="portalAlumno/datosPersonales.html">Datos Personales</a></li>
+        <li><a href="portalAlumno/datosPersonales.php">Datos Personales</a></li>
         <li><a href="portalAlumno/horario.html">Horario</a></li>
         <li><a href="portalAlumno/asistencia.html">Asistencia</a></li>
         <li><a href="portalAlumno/calificaciones.html">Calificaciones</a></li>
