@@ -47,11 +47,11 @@
         </caption>
         <tr>
           <th>Nombre:</th>
-          <td><?php echo isset($row['nombreCompleto']) ? $row['nombreCompleto'] : 'Nombre no disponible'; ?></td>
+          <td><?php echo $row['nombreCompleto'] ?></td>
         </tr>
         <tr>
           <th>Matrícula</th>
-          <td></td>
+          <td><?php echo $row['matriculaA'] ?></td>
         </tr>
         <tr>
           <th>Correo Electrónico</th>
