@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap");
 
 * {
   margin: 0;
@@ -42,13 +42,25 @@ nav {
   margin-left: 5rem;
 }
 
+.nav-bar .fa-bell {
+  font-size: 1.8rem;
+  color: #ffcc00;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+  transition: 0.3s;
+}
+
+.nav-bar .fa-bell:hover{
+  transform: scale(1.3);
+}
+
 .nav-bar .title img {
   width: 50px;
   border-radius: 9999px;
 }
 .nav-bar .title h1 {
   color: #333;
-  font-family: 'Roboto Slab', sans-serif;
+  font-family: "Roboto Slab", sans-serif;
 }
 
 .nav-bar .links {
@@ -161,8 +173,6 @@ nav .links li:hover {
   margin-top: -5px;
 }
 
-
-
 .options-menu {
   padding: 50px 25px;
   position: absolute;
@@ -241,7 +251,8 @@ a.selected {
   content: "";
   position: absolute;
   inset: 0;
-  background: url(../../portalAlumno/src/universitarios.png) center/cover no-repeat;
+  background: url(../../portalAlumno/src/universitarios.png) center/cover
+    no-repeat;
   filter: blur(4px);
   z-index: 0;
 }
@@ -511,7 +522,7 @@ a.selected {
 }
 
 /*Botón salir con la responsividad*/
-.exit-rsp{
+.exit-rsp {
   position: fixed;
   bottom: 5%;
   left: 5%;
@@ -527,7 +538,7 @@ a.selected {
   display: none;
 }
 
-.exit-rsp i{
+.exit-rsp i {
   color: white;
 }
 
@@ -578,13 +589,13 @@ a.selected {
 
   header .toggle {
     display: block;
-    font-size: 30px;
+    font-size: 2rem;
     margin-right: 50px;
   }
 }
 
-@media (max-width: 500px){
-  .exit-rsp{
+@media (max-width: 500px) {
+  .exit-rsp {
     display: block;
   }
 }

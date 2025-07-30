@@ -1,4 +1,5 @@
 AOS.init();
+const btnModifiedSchedule = document.getElementById("btn-modified-schedule")
 
 function descargarPDF() {
   const tabla = document.getElementById("horario");
@@ -20,6 +21,51 @@ function cerrarModal() {
   document.getElementById("modalReporte").style.display = "none";
 }
 
+function editarHorario() {
+  const tabla = document.getElementById("horario");
+  const filas = tabla.querySelectorAll("tbody tr");
+
+  filas.forEach(fila => {
+    const celdas = fila.querySelectorAll("td");
+
+    celdas.forEach(td => {
+      // Evitar duplicar inputs si ya está editando
+      if (td.querySelector('input')) return;
+
+      const valor = td.innerHTML.trim();
+      const textoPlano = td.innerText.trim();
+
+      const input = document.createElement("input");
+      input.type = "text";
+      input.value = textoPlano;
+      input.style.width = "100%";
+      input.style.border = "1px solid #aaa";
+
+      td.innerHTML = "";
+      td.appendChild(input);
+    });
+  });
+}
+
+function guardarHorario() {
+  const tabla = document.getElementById("horario");
+  const filas = tabla.querySelectorAll("tbody tr");
+
+  filas.forEach(fila => {
+    const celdas = fila.querySelectorAll("td");
+
+    celdas.forEach(td => {
+      const input = td.querySelector("input");
+      if (input) {
+        td.textContent = input.value.trim();
+      }
+    });
+  });
+
+  Swal.fire("Horario enviado", "Tus cambios han sido guardados.", "success");
+}
+
+//Función para preguntar si tiene autorización de cambios
 function authorized() {
   Swal.fire({
     title: "¿Ya te autorizaron los cambios?",
@@ -28,11 +74,12 @@ function authorized() {
     confirmButtonText: "Sí",
     denyButtonText: `No`,
   }).then((result) => {
-    /* Read more about isConfirmed, isDenied below */
     if (result.isConfirmed) {
       Swal.fire("Autorizado!", "", "success");
+      btnModifiedSchedule.setAttribute("onclick","guardarHorario()");
+      editarHorario();
     } else if (result.isDenied) {
-      Swal.fire("No tienes permiso de modificar", "", "info");
+      Swal.fire("No tienes permiso de modificar");
     }
   });
 }
