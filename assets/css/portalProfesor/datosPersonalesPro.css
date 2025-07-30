@@ -95,3 +95,29 @@ body {
 .submit:hover {
   background-color: #0d9488;
 }
+
+/*Botón para regresar*/
+.exit-rsp {
+  position: fixed;
+  top: 2%;
+  left: 2%;
+  z-index: 2;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  padding: 12px 15px;
+  border-radius: 50%;
+  transition: 0.3s ease-in-out;
+}
+
+.exit-rsp i {
+  color: white;
+}
+
+.exit-rsp:hover{
+  background-color: #0056b3;
+
+}

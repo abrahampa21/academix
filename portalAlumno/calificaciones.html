@@ -12,6 +12,10 @@
       rel="stylesheet"
       href="../assets/css/portalAlumno/calificaciones.css"
     />
+        <script
+      src="https://kit.fontawesome.com/e522357059.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Tabla de Calificaciones</title>
   </head>
   <body>
@@ -71,6 +75,13 @@
       <button class="btn" onclick="abrirModal()">Reportar un problema</button>
     </div>
 
+    <!--Botón salir-->
+    <div class="exit-rsp">
+      <a href="../portalAlumno.php" title="Salir">
+        <i class="fa-solid fa-arrow-left"></i>
+      </a>
+    </div>
+
     <!--Reporte -->
     <div class="modal" id="modalReporte">
       <form class="modal-content">
@@ -78,9 +89,20 @@
         <h3>Reportar Problema</h3>
         <div class="destinatario">
           <h4>Destinatario</h4>
-          <input type="email" name="" title="u" placeholder="eg. itesrenedescartes.edu.mx" id="" required>
+          <input
+            type="email"
+            name=""
+            title="u"
+            placeholder="eg. itesrenedescartes.edu.mx"
+            id=""
+            required
+          />
         </div>
-        <textarea rows="5" placeholder="Describe el problema..." required></textarea>
+        <textarea
+          rows="5"
+          placeholder="Describe el problema..."
+          required
+        ></textarea>
         <br /><br />
         <button class="btn" type="submit">Enviar Reporte</button>
       </form>
