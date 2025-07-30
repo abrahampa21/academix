@@ -47,6 +47,9 @@ $row = mysqli_fetch_assoc($resultado);
         <li><a href="#focus" title="menu">Enfoque</a></li>
         <li><a href="#contacto" title="menu">Contacto</a></li>
       </ul>
+      <i class="fa-solid fa-bell"></i>
+
+      <!--Menú responsivo-->
       <ul class="menu" id="menu">
         <li>
           <a href="portalProfesor/datosPersonalesPro.html">Datos Personales</a>
