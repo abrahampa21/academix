@@ -16,6 +16,19 @@
   $sql = "SELECT * FROM alumno WHERE matriculaA = '$idalum'";
   $resultado = mysqli_query($conexion, $sql);
   $row = mysqli_fetch_assoc($resultado);
+
+  //Actualizar Datos Personales
+  if(isset($_POST["actualizar"])){
+    $fechaNac = mysqli_real_escape_string($conexion, $_POST['fechaNac']);
+    $carrera = mysqli_real_escape_string($conexion, $_POST['carrera']);
+    $periodo = mysqli_real_escape_string($conexion, $_POST['periodo']);
+    $status = mysqli_real_escape_string($conexion, $_POST['estatus']);
+    $direccion = mysqli_real_escape_string($conexion, $_POST['direccion']);
+
+    $sql = "";
+    $result = mysqli_query($conexion, $sql);
+    $row2 = mysqli_fetch_assoc($result);
+  }
 ?>
 
 <!DOCTYPE html>
@@ -70,6 +83,7 @@
               id="fechaNac"
               readonly
               title="u"
+              value="<?php echo $row['fechaNac'] ?>"
             />
           </td>
         </tr>
@@ -83,6 +97,7 @@
               id="carrera"
               readonly
               title="u"
+              value="<?php echo $row['carrera'] ?>"
             />
           </td>
         </tr>
@@ -96,6 +111,7 @@
               id="periodo"
               readonly
               title="u"
+              value="<?php echo $row['periodo'] ?>"
             />
           </td>
         </tr>
@@ -109,6 +125,7 @@
               id="estatus"
               readonly
               title="u"
+              value="<?php echo $row['fechaNac'] ?>"
             />
           </td>
         </tr>
@@ -125,6 +142,7 @@
               id="direccion"
               readonly
               title="u"
+              value="<?php echo $row['direccion'] ?>"
             />
           </td>
         </tr>
