@@ -14,9 +14,6 @@
   $idalum = $_SESSION['id_matricula'];
 
 
-  $sql = "SELECT * FROM alumno WHERE matriculaA = '$idalum'";
-  $resultado = mysqli_query($conexion, $sql);
-  $row = mysqli_fetch_assoc($resultado);
 
   //Actualizar Datos Personales
   if(isset($_POST["actualizar"])){
@@ -32,8 +29,12 @@
               'periodo'  = '$periodo',
               'estatus'  = '$status',
               'direccion' = '$direccion' WHERE matriculaA = '$idalum'" ;
-    
+    mysqli_query($conexion, $sql);
   }
+  
+  $sql = "SELECT * FROM alumno WHERE matriculaA = '$idalum'";
+  $resultado = mysqli_query($conexion, $sql);
+  $row = mysqli_fetch_assoc($resultado);
 ?>
 
 <!DOCTYPE html>
