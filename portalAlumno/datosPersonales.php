@@ -14,10 +14,6 @@
   $idalum = $_SESSION['id_matricula'];
 
 
-  $sql = "SELECT * FROM alumno WHERE matriculaA = '$idalum'";
-  $resultado = mysqli_query($conexion, $sql);
-  $row = mysqli_fetch_assoc($resultado);
-
   //Actualizar Datos Personales
   if(isset($_POST["actualizar"])){
     $fechaNac = mysqli_real_escape_string($conexion, $_POST['fechaNac']);
@@ -27,13 +23,18 @@
     $direccion = mysqli_real_escape_string($conexion, $_POST['direccion']);
 
     $sql = "UPDATE alumno SET
-              'fechaNac' = '$fechaNac',
-              'carrera'  = '$carrera',
-              'periodo'  = '$periodo',
-              'estatus'  = '$status',
-              'direccion' = '$direccion' WHERE matriculaA = '$idalum'" ;
+              fechaNac = '$fechaNac',
+              carrera  = '$carrera',
+              periodo  = '$periodo',
+              estatus  = '$status',
+              direccion = '$direccion' WHERE matriculaA = '$idalum'";
     
+    mysqli_query($conexion, $sql);
   }
+
+  $sql = "SELECT * FROM alumno WHERE matriculaA = '$idalum'";
+  $resultado = mysqli_query($conexion, $sql);
+  $row = mysqli_fetch_assoc($resultado);
 ?>
 
 <!DOCTYPE html>
@@ -59,7 +60,7 @@
     <title>Datos Personales</title>
   </head>
   <body>
-    <form onsubmit="confirmation(event)" method="POST" class="personal-data" id="personal-data" data-aos="fade-down">
+    <form onsubmit=" return confirmation(event)" method="POST" class="personal-data" id="personal-data" data-aos="fade-down">
       <table>
         <caption>
           Tus Datos Personales
