@@ -78,7 +78,7 @@ header {
 }
 
 .navbar .links a {
-  color: rgba(0, 0, 0, 0.8);
+  color: #13235b;
   transition: 0.3s ease-in-out;
 }
 
@@ -109,7 +109,7 @@ main {
 .background-blur {
   position: absolute;
   inset: 0;
-  background: url(../../src/fondoescuela.jpg) center/cover no-repeat;
+  background: url(../../src/img/fondoescuela.jpg) center/cover no-repeat;
   filter: blur(6px);
   z-index: 0;
 }
@@ -137,9 +137,10 @@ main {
 }
 
 .carousel .content h1 {
-  font-size: 1.8rem;
+  font-size: 2.35rem;
   font-weight: 700;
   margin-bottom: 15px;
+  text-transform: uppercase;
 }
 
 .carousel .content p {
@@ -192,7 +193,7 @@ main {
 
 /*Sección de licenciaturas*/
 .licenciaturas {
-  background: url("../../src/licenciaturas.jpg") center/cover no-repeat;
+  background: url("../../src/img/licenciaturas.jpg") center/cover no-repeat;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -224,18 +225,20 @@ main {
 }
 
 .lic-content h2 {
-  font-size: 2.5rem;
+  font-size: 1.9rem;
   margin-bottom: 20px;
+  text-transform: uppercase;
 }
 
 .lic-content p {
   font-size: 1.2rem;
   line-height: 1.6;
+  text-align: justify;
 }
 
 /*Sección de posgrados*/
 .posgrados {
-  background: url("../../src/posgrados.jpg") center/cover no-repeat;
+  background: url("../../src/img/posgrados.jpg") center/cover no-repeat;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -267,18 +270,21 @@ main {
 }
 
 .posgrados-content h2 {
-  font-size: 2.5rem;
+  font-size: 1.9rem;
   margin-bottom: 20px;
+  text-transform: uppercase;
 }
 
 .posgrados-content p {
   font-size: 1.2rem;
   line-height: 1.6;
+  text-align: justify;
+
 }
 
 /*Sección de vinculación*/
 .vinculacion {
-  background: url("../../src/vinculacion.jpg") center/cover no-repeat;
+  background: url("../../src/img/vinculacion.jpg") center/cover no-repeat;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -310,18 +316,21 @@ main {
 }
 
 .vinculacion-content h2 {
-  font-size: 2.5rem;
+  font-size: 1.9rem;
   margin-bottom: 20px;
+  text-transform: uppercase;
 }
 
 .vinculacion-content p {
   font-size: 1.2rem;
   line-height: 1.6;
+  text-align: justify;
+
 }
 
 /*Sección de inscribete*/
 .inscribete {
-  background: url("../../src/inscripcion.jpg") center/cover no-repeat;
+  background: url("../../src/img/inscripcion.jpg") center/cover no-repeat;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -353,19 +362,22 @@ main {
 }
 
 .inscribete-content h2 {
-  font-size: 2.5rem;
+  font-size: 1.9rem;
   margin-bottom: 20px;
+  text-transform: uppercase;
 }
 
 .inscribete-content p {
   font-size: 1.2rem;
   line-height: 1.6;
+  text-align: justify;
+
 }
 
 /*íconos de redes sociales fijas*/
 .si-fixed {
   position: fixed;
-  top: 45%;
+  top: 37%;
   right: 1%;
   display: flex;
   flex-direction: column;
@@ -423,8 +435,8 @@ footer .footer-bottom a {
 /*Boton para regresar al inicio*/
 .scrollTopBtn {
   position: fixed;
-  bottom: 3%;
-  left: 3%;
+  bottom: 11%;
+  right: 1%;
   z-index: 1;
   font-size: 20px;
   border: none;
@@ -432,7 +444,7 @@ footer .footer-bottom a {
   background-color: #007bff;
   color: white;
   cursor: pointer;
-  padding: 22px 25px;
+  padding: 18px 21px;
   border-radius: 50%;
   display: none;
 }

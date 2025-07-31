@@ -172,7 +172,7 @@ if (isset($_POST["registrar"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/login.css?v=1.0">
-    <link rel="icon" href="src/academix.jpg">
+    <link rel="icon" href="src/img/academix.jpg">
     <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
@@ -186,7 +186,7 @@ if (isset($_POST["registrar"])) {
     <form class="log-in" method="post" action="<?php $_SERVER["PHP_SELF"]; ?>" id="log-in" autocomplete="off" data-aos="fade-down" data-aos-duration="800">
         <div class="login-container">
             <h1>Inicio de Sesión</h1>
-            <img src="src/academix.jpg" alt="Logo página">
+            <img src="src/img/academix.jpg" alt="Logo página">
             <div class="input-Usuario div-input matricula-div-login">
                 <input type="text" name="matricula" class="inputs-login" placeholder="Matrícula" required>
                 <i class="fa-solid fa-user"></i>
@@ -197,7 +197,7 @@ if (isset($_POST["registrar"])) {
                 <i class="fa-regular fa-eye-slash" id="login-pwd-icon" onclick="revealPasswordLogin()"></i>
             </div>
 
-            <a href="src/restablecer.php" class="forgot-pass" onclick="showRecoverPass()">Olvidé mi contraseña</a>
+            <a href="#" class="forgot-pass" onclick="showRecoverPass()">Olvidé mi contraseña</a>
 
             <button type="submit" name="log" class="login-btn">Ingresar</button>
 
@@ -249,12 +249,12 @@ if (isset($_POST["registrar"])) {
     </form>
 
     <!--Recuperar contraseña-->
-    <form action="" class="recuperar-pass" id="recuperar-contraseña" data-aos="flip-right">
+    <form action="src/restablecerPHP.php" method="POST" class="recuperar-pass" id="recuperar-contraseña" data-aos="flip-right">
         <i id="back" class="arrow fa-solid fa-arrow-left" title="Regresar" onclick="showLogin()"></i>
         <h1>Recuperar contraseña</h1>
         <p>Ingresa tu correo electronico para recibir las instrucciones</p>
         <div class="input-button">
-            <input type="email" name="recuperar-contraseña" id="" required>
+            <input type="email" name="email" id="" required>
             <button type="submit">Enviar</button>
         </div>
     </form>

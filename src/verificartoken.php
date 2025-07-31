@@ -31,7 +31,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cambiar password </title>
+    <title>Cambiar Contraseña </title>
     <!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 </head>
@@ -40,14 +40,14 @@
         <div class="row justify-content-md-center" style="margin-top:15%">
             <?php if($correcto){ ?>
                 <form class="col-3" action="./cambiarpassword.php" method="POST">
-                    <h2>Restablecer Password</h2>
+                    <h2>Restablecer Contraseña</h2>
                     <div class="mb-3">
-                        <label for="c" class="form-label">Nuevo Password</label>
+                        <label for="c" class="form-label">IEscribe tu nueva contraseña</label>
                         <input type="password" class="form-control" id="c" name="p1">
                     
                     </div>
                     <div class="mb-3">
-                        <label for="c" class="form-label">Confirmar Password</label>
+                        <label for="c" class="form-label">Confirmar la contraseña</label>
                         <input type="password" class="form-control" id="c" name="p2">
                         <input type="hidden" class="form-control" id="c" name="email" value="<?php echo $email?>">
 
