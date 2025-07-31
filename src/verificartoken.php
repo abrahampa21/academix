@@ -1,5 +1,5 @@
 <?php 
-    include "./conexion.php";
+    include "conexion.php";
     $email =$_POST['email'];
     $token =$_POST['token'];
     $codigo =$_POST['codigo'];
