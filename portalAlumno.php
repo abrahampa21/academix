@@ -14,6 +14,10 @@ $idalum = $_SESSION['id_matricula'];
 $sql = "SELECT * FROM alumno WHERE matriculaA = '$idalum'";
 $resultado = mysqli_query($conexion, $sql);
 $row = mysqli_fetch_assoc($resultado);
+
+if(isset($_POST["salir"])){
+  session_destroy();
+}
 ?>
 
 <!DOCTYPE html>
@@ -106,7 +110,7 @@ $row = mysqli_fetch_assoc($resultado);
       </a>
     </div>
     <div class="exit">
-      <a href="#" title="Salir" onclick="exit()">
+      <a href="#" title="Salir" onclick="exit()" name="salir">
         <i class="fa-solid fa-right-from-bracket"></i>
       </a>
       <h4>Salir</h4>
