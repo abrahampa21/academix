@@ -1,5 +1,39 @@
 <?php
-  
+  session_start();
+  include("../src/conexion.php");
+
+
+  if (!isset($_SESSION['id_matricula']) || $_SESSION['rol'] !== 'prof') {
+    echo "<script>
+            alert('Por favor, inicie sesión primero');
+            window.location.href='login.php';
+          </script>";
+    exit();
+  }
+
+  $idprofe = $_SESSION['id_matricula'];
+
+
+  //Actualizar Datos Personales
+  if(isset($_POST["actualizar"])){
+    $fechaNac = mysqli_real_escape_string($conexion, $_POST['fechaNac']);
+    
+    if(empty($fechaNac)){
+    echo "<script>
+            alert('Por favor, complete todos los campos');
+            window.location.href='datosPersonalesPro.php';
+          </script>";
+    exit();
+    } 
+
+    $sql = "UPDATE profesor SET fechaNac  = '$fechaNac' WHERE matriculaP = '$idprofe'";
+    
+    mysqli_query($conexion, $sql);
+  }
+
+  $sql = "SELECT * FROM profesor WHERE matriculaP = '$idprofe'";
+  $resultado = mysqli_query($conexion, $sql);
+  $row = mysqli_fetch_assoc($resultado);
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -32,6 +66,7 @@
   <body>
     <form
       onsubmit="confirmation(event)"
+      method="POST"
       class="data-teacher"
       id="data-teacher"
       data-aos="fade-down"
@@ -41,16 +76,16 @@
           Tus Datos Personales
         </caption>
         <tr>
-          <td></td>
           <th>Tu nombre</th>
+          <td><?php echo $row['nombreCompleto']?></td>
         </tr>
         <tr>
           <th>Matrícula</th>
-          <td></td>
+          <td><?php echo $row['matriculaP']?></td>
         </tr>
         <tr>
           <th>Correo Electrónico</th>
-          <td></td>
+          <td><?php echo $row['email']?></td>
         </tr>
         <tr>
           <th>
@@ -65,6 +100,7 @@
               readonly
               title="u"
               onclick="modifyInfo()"
+              value="<?php echo $row['fechaNac']?>"
             />
           </td>
         </tr>
