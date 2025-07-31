@@ -3,7 +3,7 @@
 $para .= 'wez@example.com';
 
 // título
-$título = 'Restablecer password empresa';
+$título = 'Restablecer tu contraseña';
 $codigo= rand(1000,9999);
 
 
@@ -11,16 +11,16 @@ $codigo= rand(1000,9999);
 $mensaje = '
 <html>
 <head>
-  <title>Restablecer</title>
+  <title>Restablecer tu contraseña</title>
 </head>
 <body>
-    <h1>Nombre de la empresa</h1>
+    <h1>Academix: Tu Portal Ideal</h1>
     <div style="text-align:center; background-color:#ccc">
         <p>Restablecer contraseña</p>
         <h3>'.$codigo.'</h3>
         <p> <a 
             href="http://127.0.0.1/academix/src/reset.php?email='.$email.'&token='.$token.'"> 
-            para restablecer da click aqui </a> </p>
+            Da click aquí para reestablecer tu contraseña </a> </p>
         <p> <small>Si usted no envio este codigo favor de omitir</small> </p>
     </div>
 </body>
@@ -29,7 +29,7 @@ $mensaje = '
 
 // Para enviar un correo HTML, debe establecerse la cabecera Content-type
 $cabeceras  = 'MIME-Version: 1.0' . "\r\n";
-$cabeceras .= 'From: Recordatorio <postmaster@localhost>' . "\r\n";
+$cabeceras .= 'From: Academix <postmaster@localhost>' . "\r\n";
 $cabeceras .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 /*
 // Cabeceras adicionales
