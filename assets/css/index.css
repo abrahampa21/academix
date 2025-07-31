@@ -109,7 +109,7 @@ main {
 .background-blur {
   position: absolute;
   inset: 0;
-  background: url(../../src/fondoescuela.jpg) center/cover no-repeat;
+  background: url(../../src/img/fondoescuela.jpg) center/cover no-repeat;
   filter: blur(6px);
   z-index: 0;
 }
@@ -193,7 +193,7 @@ main {
 
 /*Sección de licenciaturas*/
 .licenciaturas {
-  background: url("../../src/licenciaturas.jpg") center/cover no-repeat;
+  background: url("../../src/img/licenciaturas.jpg") center/cover no-repeat;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -238,7 +238,7 @@ main {
 
 /*Sección de posgrados*/
 .posgrados {
-  background: url("../../src/posgrados.jpg") center/cover no-repeat;
+  background: url("../../src/img/posgrados.jpg") center/cover no-repeat;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -284,7 +284,7 @@ main {
 
 /*Sección de vinculación*/
 .vinculacion {
-  background: url("../../src/vinculacion.jpg") center/cover no-repeat;
+  background: url("../../src/img/vinculacion.jpg") center/cover no-repeat;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -330,7 +330,7 @@ main {
 
 /*Sección de inscribete*/
 .inscribete {
-  background: url("../../src/inscripcion.jpg") center/cover no-repeat;
+  background: url("../../src/img/inscripcion.jpg") center/cover no-repeat;
   height: 100vh;
   display: flex;
   align-items: center;

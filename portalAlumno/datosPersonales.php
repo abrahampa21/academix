@@ -54,7 +54,7 @@
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="icon" href="../src/academix.jpg" />
+    <link rel="icon" href="../src/img/academix.jpg" />
     <link rel="stylesheet" href="../assets/css/portalAlumno/datosPersonales.css">
     <title>Datos Personales</title>
   </head>

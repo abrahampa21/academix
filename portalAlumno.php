@@ -22,7 +22,7 @@ $row = mysqli_fetch_assoc($resultado);
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="src/academix.jpg" />
+  <link rel="icon" href="src/img/academix.jpg" />
   <link rel="stylesheet" href="Assets/css/portales.css?v=1.0" />
   <link
     rel="stylesheet"
@@ -38,7 +38,7 @@ $row = mysqli_fetch_assoc($resultado);
     <nav class="nav-bar">
       <div class="title">
         <img
-          src="src/academix.jpg"
+          src="src/img/academix.jpg"
           class="logo"
           alt="Logo"
           draggable="false" />
