@@ -3,6 +3,7 @@ const btnTop = document.getElementById("scrollTopBtn");
 const toggle = document.getElementById("toggle");
 const menu = document.getElementById("menu");
 const bar = document.getElementById("bars");
+const iconSocialMedia = document.getElementById("si-fixed");
 
 AOS.init();
 
@@ -13,15 +14,26 @@ document.addEventListener("DOMContentLoaded", () => {
 //Función para que aparezca el botón de volver al top de la página
 window.onscroll = function () {
   scrollFunction();
+  scrollFunctionIcons();
 };
 
 function scrollFunction() {
-  const triggerElement = document.getElementById("lic-content");
+  const triggerElement = document.getElementById("licenciaturas");
 
   if (triggerElement.getBoundingClientRect().top < window.innerHeight / 2) {
     btnTop.style.display = "block";
   } else {
     btnTop.style.display = "none";
+  }
+}
+
+function scrollFunctionIcons() {
+  const triggerElement = document.getElementById("inscribete");
+
+  if (triggerElement.getBoundingClientRect().top < window.innerHeight / 2) {
+    iconSocialMedia.style.display = "none";
+  } else {
+    iconSocialMedia.style.display = "flex";
   }
 }
 
