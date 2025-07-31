@@ -52,7 +52,7 @@ $row = mysqli_fetch_assoc($resultado);
       <!--Menú responsivo-->
       <ul class="menu" id="menu">
         <li>
-          <a href="portalProfesor/datosPersonalesPro.html">Datos Personales</a>
+          <a href="portalProfesor/datosPersonalesPro.php">Datos Personales</a>
         </li>
         <li><a href="portalProfesor/horarioPro.html">Horario</a></li>
         <li><a href="portalProfesor/alumnos.html">Alumnos</a></li>
@@ -72,7 +72,7 @@ $row = mysqli_fetch_assoc($resultado);
       <h4><?php echo $row['nombreCompleto'] ?></h4>
     </div>
     <div class="options-menu">
-      <a href="portalProfesor/datosPersonalesPro.html" id="data-student">
+      <a href="portalProfesor/datosPersonalesPro.php" id="data-student">
         <div class="option">
           <i class="fa-solid fa-address-card"></i>
           <h4>Datos Personales</h4>
