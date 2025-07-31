@@ -197,7 +197,7 @@ if (isset($_POST["registrar"])) {
                 <i class="fa-regular fa-eye-slash" id="login-pwd-icon" onclick="revealPasswordLogin()"></i>
             </div>
 
-            <a href="src/restablecer.php" class="forgot-pass" onclick="showRecoverPass()">Olvidé mi contraseña</a>
+            <a href="#" class="forgot-pass" onclick="showRecoverPass()">Olvidé mi contraseña</a>
 
             <button type="submit" name="log" class="login-btn">Ingresar</button>
 
@@ -249,12 +249,12 @@ if (isset($_POST["registrar"])) {
     </form>
 
     <!--Recuperar contraseña-->
-    <form action="" class="recuperar-pass" id="recuperar-contraseña" data-aos="flip-right">
+    <form action="src/restablecerPHP.php" method="POST" class="recuperar-pass" id="recuperar-contraseña" data-aos="flip-right">
         <i id="back" class="arrow fa-solid fa-arrow-left" title="Regresar" onclick="showLogin()"></i>
         <h1>Recuperar contraseña</h1>
         <p>Ingresa tu correo electronico para recibir las instrucciones</p>
         <div class="input-button">
-            <input type="email" name="recuperar-contraseña" id="" required>
+            <input type="email" name="email" id="" required>
             <button type="submit">Enviar</button>
         </div>
     </form>
