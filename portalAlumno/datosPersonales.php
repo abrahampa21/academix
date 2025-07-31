@@ -22,6 +22,14 @@
     $status = mysqli_real_escape_string($conexion, $_POST['estatus']);
     $direccion = mysqli_real_escape_string($conexion, $_POST['direccion']);
 
+    if(empty($fechaNac) || empty($carrera) || empty($periodo) || empty($status) || empty($direccion)){
+    echo "<script>
+            alert('Por favor, complete todos los campos');
+            window.location.href='datosPersonales.php';
+          </script>";
+    exit();
+    } 
+
     $sql = "UPDATE alumno SET
               fechaNac = '$fechaNac',
               carrera  = '$carrera',
