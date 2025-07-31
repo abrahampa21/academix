@@ -37,19 +37,6 @@ function bloquearCopiadoRegistroRpt(passwordRpt) {
   });
 }
 
-function bloquearCopiadoLogin(loginPwd) {
-  loginPwd.addEventListener("copy", (e) => e.preventDefault());
-  loginPwd.addEventListener("contextmenu", (e) => e.preventDefault());
-  loginPwd.addEventListener("keydown", (e) => {
-    if (
-      (e.ctrlKey || e.metaKey) &&
-      ["c", "x", "a"].includes(e.key.toLowerCase())
-    ) {
-      e.preventDefault();
-    }
-  });
-}
-
 //Mostrando el login
 function showLogin() {
   signUp.style.display = "none";
@@ -100,9 +87,6 @@ function revealPasswordLogin() {
   showPassword.classList.toggle("fa-eye");
   showPassword.classList.toggle("fa-eye-slash");
 
-  if (isPassword) {
-    bloquearCopiadoLogin(loginPwd);
-  }
 }
 
 //Mostrar la otra contraseña sin ocultar

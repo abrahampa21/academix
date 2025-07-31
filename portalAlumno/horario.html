@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="../src/academix.jpg" />
+    <script
+      src="https://kit.fontawesome.com/e522357059.js"
+      crossorigin="anonymous"
+    ></script>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
@@ -21,7 +25,9 @@
           <button class="botoncitos" id="botoncito" onclick="descargarPDF()">
             Descargar como PDF
           </button>
-          <button class="botoncitos" onclick="authorized()">Modificar Horario</button>
+          <button class="botoncitos" onclick="authorized()">
+            Modificar Horario
+          </button>
         </div>
       </div>
       <table id="horario">
@@ -116,8 +122,17 @@
 
       <div class="buttons-submit">
         <button class="btn" onclick="abrirModal()">Reportar un problema</button>
-        <button class="btn" id="btn-modified-schedule">Enviar horario modificado</button>
+        <button class="btn" id="btn-modified-schedule">
+          Enviar horario modificado
+        </button>
       </div>
+    </div>
+
+    <!--Botón salir-->
+    <div class="exit-rsp">
+      <a href="../portalAlumno.php" title="Salir">
+        <i class="fa-solid fa-arrow-left"></i>
+      </a>
     </div>
 
     <!--Reporte -->
@@ -145,7 +160,7 @@
         <button class="btn" type="submit">Enviar Reporte</button>
       </form>
     </div>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script src="../assets/js/portalAlumno/horario.js"></script>

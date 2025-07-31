@@ -197,7 +197,7 @@ if (isset($_POST["registrar"])) {
                 <i class="fa-regular fa-eye-slash" id="login-pwd-icon" onclick="revealPasswordLogin()"></i>
             </div>
 
-            <a href="#" class="forgot-pass" onclick="showRecoverPass()">Olvidé mi contraseña</a>
+            <a href="src/restablecer.php" class="forgot-pass" onclick="showRecoverPass()">Olvidé mi contraseña</a>
 
             <button type="submit" name="log" class="login-btn">Ingresar</button>
 

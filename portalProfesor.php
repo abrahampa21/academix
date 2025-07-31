@@ -43,9 +43,9 @@ $row = mysqli_fetch_assoc($resultado);
         <i class="fa-solid fa-bars" id="bars"></i>
       </div>
       <ul class="links">
-        <li><a href="#about-us" title="menu">Sobre Nosotros</a></li>
-        <li><a href="#focus" title="menu">Enfoque</a></li>
-        <li><a href="#contacto" title="menu">Contacto</a></li>
+        <li><a href="#about-us">Sobre Nosotros</a></li>
+        <li><a href="#focus">Enfoque</a></li>
+        <li><a href="#contacto">Contacto</a></li>
       </ul>
       <i class="fa-solid fa-bell"></i>
 
