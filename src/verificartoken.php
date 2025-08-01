@@ -33,7 +33,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cambiar Contraseña </title>
     <!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<link rel="stylesheet" href="../assets/css/recuperacion.css">
+<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous"> -->
 </head>
 <body>
     <div class="container">
@@ -42,12 +43,12 @@
                 <form class="col-3" action="./cambiarpassword.php" method="POST">
                     <h2>Restablecer Contraseña</h2>
                     <div class="mb-3">
-                        <label for="c" class="form-label">IEscribe tu nueva contraseña</label>
+                        <label for="c" class="form-label2">Escribe tu nueva contraseña</label>
                         <input type="password" class="form-control" id="c" name="p1">
                     
                     </div>
                     <div class="mb-3">
-                        <label for="c" class="form-label">Confirmar la contraseña</label>
+                        <label for="c" class="form-label2">Confirmar la contraseña</label>
                         <input type="password" class="form-control" id="c" name="p2">
                         <input type="hidden" class="form-control" id="c" name="email" value="<?php echo $email?>">
 
