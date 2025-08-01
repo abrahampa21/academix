@@ -62,13 +62,21 @@ if (isset($_POST["registrar"])) {
     $datosFormulario['matricula'] = $_POST['matricula'] ?? '';
     $datosFormulario['rol'] = $_POST['rol'] ?? '';
 
-    if (
-        isset($_POST['contraseña'], $_POST['contraseña-rpt']) &&
-        $_POST['contraseña'] !== $_POST['contraseña-rpt']
-    ) {
-        echo "<script>alert('Las contraseñas no coinciden');</script>";
+    // Validar formato de contraseña
+    if (!preg_match('/^(?=.*[\W_])(?=.*[A-Za-z]).{10,}$/', $_POST['contraseña'])) {
+        echo "<script>
+            alert('La contraseña debe tener al menos 10 caracteres, letras y un carácter especial.');
+        </script>";
         $mostrarRegistro = true;
-    } else if (isset($_POST["rol"])) {
+
+    // Validar coincidencia de contraseñas
+    } elseif ($password !== $passwordRpt) {
+        echo "<script>
+            alert('Las contraseñas no coinciden');
+        </script>";
+        $mostrarRegistro = true;
+
+    } else {
         $alu_prof = $_POST["rol"];
         $nombre = mysqli_real_escape_string($conexion, $_POST['nombre']);
         $correo = mysqli_real_escape_string($conexion, $_POST['email']);
@@ -213,15 +221,15 @@ if (isset($_POST["registrar"])) {
         <h1>Registro para el portal</h1>
         <div class="inputs">
             <div class="div-name div-input">
-                <input type="text" name="nombre" class="inputs-register" placeholder="Nombre completo" id="nombre" required>
+                <input type="text" name="nombre" class="inputs-register" placeholder="Nombre completo" id="nombre" required value="<?php echo $datosFormulario['nombre']?>">
                 <i class="fa-solid fa-user"></i>
             </div>
             <div class="div-email div-input">
-                <input type="email" name="email" class="inputs-register" placeholder="Correo electrónico" id="email" required>
+                <input type="email" name="email" class="inputs-register" placeholder="Correo electrónico" id="email" required value="<?php echo $datosFormulario['email']?>">
                 <i class="fa-solid fa-envelope"></i>
             </div>
             <div class="div-user div-input">
-                <input type="text" name="matricula" class="inputs-register" placeholder="Matrícula" id="matricula" required>
+                <input type="text" name="matricula" class="inputs-register" placeholder="Matrícula" id="matricula" required value="<?php echo $datosFormulario['matricula']?>">
                 <i class="fa-solid fa-pen-nib"></i>
             </div>
             <div class="input-password div-input">
@@ -235,11 +243,11 @@ if (isset($_POST["registrar"])) {
             </div>
             <div class="checkbox">
                 <div class="alumno-div div-checkboxes">
-                    <input type="radio" placeholder="h" class="profesor checkboxes inputs-register" name="rol" id="profesor" value="prof" required>
+                    <input type="radio" placeholder="h" class="profesor checkboxes inputs-register" name="rol" id="profesor" value="prof" required <?= $datosFormulario['rol'] === 'prof' ? 'checked' : '' ?>>
                     <label for="profesor">Profesor</label>
                 </div>
                 <div class="profesor-div div-checkboxes">
-                    <input type="radio" placeholder="h" class="alumno checkboxes inputs-register" name="rol" id="alumno" value="alu" required>
+                    <input type="radio" placeholder="h" class="alumno checkboxes inputs-register" name="rol" id="alumno" value="alu" required <?= $datosFormulario['rol'] === 'alu' ? 'checked' : '' ?>>
                     <label for="alumno">Alumno</label>
                 </div>
             </div>
