@@ -100,7 +100,7 @@ if (isset($_POST["registrar"])) {
                     echo "
                     <script>
                         document.addEventListener('DOMContentLoaded', function() {
-                            Swal.fire('Registro exitoso!').then(() => {
+                            Swal.fire('¡Registro exitoso!').then(() => {
                                 window.location = 'login.php';
                             });
                         });
@@ -142,7 +142,7 @@ if (isset($_POST["registrar"])) {
                     echo "
                     <script>
                         document.addEventListener('DOMContentLoaded', function() {
-                            Swal.fire('Registro exitoso!').then(() => {
+                            Swal.fire('¡Registro exitoso!').then(() => {
                                 window.location = 'login.php';
                             });
                         });
@@ -277,21 +277,21 @@ if (isset($_POST["registrar"])) {
             const passwordInput = document.getElementById("contraseña");
             const messageDiv = document.getElementById("passwordMessage");
 
-            const regex = /^(?=.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>/?])(?=.*[A-Za-z]).{8,}$/;
+            const regex = /^(?=.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>/?])(?=.*[A-Za-z]).{10,}$/;
 
             if (passwordInput) {
                 passwordInput.addEventListener("input", function() {
                     const value = passwordInput.value;
 
                     if (regex.test(value)) {
-                        messageDiv.textContent = "Contraseña válida.";
+                        messageDiv.textContent = "Contraseña válida";
                         messageDiv.style.color = "green";
                         messageDiv.style.fontSize = "12px";
                     } else {
-                        messageDiv.textContent = "Debe tener al menos 8 caracteres, una letra y un carácter especial.";
+                        messageDiv.textContent = "Debe tener al menos 10 caracteres, letras y caractéres especiales";
                         messageDiv.style.color = "red";
                         messageDiv.style.fontSize = "12px";
-                        messageDiv.style.width = "280px";
+                        messageDiv.style.width = "300px";
 
                     }
                 });

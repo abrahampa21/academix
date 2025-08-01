@@ -118,3 +118,4 @@ function changeBackground() {
 setInterval(changeBackground, 3000);
 
 window.onload = changeBackground;
+
