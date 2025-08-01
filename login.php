@@ -84,11 +84,16 @@ if (isset($_POST["registrar"])) {
         $password = mysqli_real_escape_string($conexion, $_POST['contraseña']);
         $password_encriptada = sha1($password);
 
+        $sqluser_alumno = "SELECT matriculaA FROM alumno WHERE matriculaA = '$matricula'";
+        $sqluser_profesor = "SELECT matriculaP FROM profesor WHERE matriculaP = '$matricula'";
+        $resultadouser_alumno = $conexion->query($sqluser_alumno);
+        $resultadouser_profesor = $conexion->query($sqluser_profesor);
+
         if ($alu_prof == "alu") {
             $sqluser = "SELECT matriculaA FROM alumno WHERE matriculaA = '$matricula'";
             $resultadouser = $conexion->query($sqluser);
 
-            if ($resultadouser->num_rows > 0) {
+            if ($resultadouser->num_rows > 0 || $resultadouser_profesor->num_rows > 0) {
                 echo "
                 <script>
                     document.addEventListener('DOMContentLoaded', function() {
@@ -130,7 +135,7 @@ if (isset($_POST["registrar"])) {
             $sqluser = "SELECT matriculaP FROM profesor WHERE matriculaP = '$matricula'";
             $resultadouser = $conexion->query($sqluser);
 
-            if ($resultadouser->num_rows > 0) {
+            if ($resultadouser->num_rows > 0 || $resultadouser_profesor->num_rows > 0) {
                 echo "
                 <script>
                     document.addEventListener('DOMContentLoaded', function() {
