@@ -5,8 +5,15 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #1a2a3b;
   animation: gradient 15s ease infinite;
+  background: linear-gradient(
+    330deg,
+    #1a2d42,
+    #aab7b7,
+    #c0c8ca,
+    #d4d8dd,
+    #1a2d42
+  );
 }
 
 .personal-data {
@@ -14,7 +21,7 @@ body {
   padding: 2rem;
   border-radius: 20px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  max-width: 700px;
+  max-width: 580px;
   width: 90%;
 }
 
@@ -49,6 +56,15 @@ body {
 
 .personal-data td {
   color: #475569;
+}
+
+.personal-data .status{
+  padding: .5rem 5rem;
+  font-size: 16px;
+  border-radius: 5px;
+  background-color: #e2e8f0;
+  color: #000;
+
 }
 
 .personal-data input[type="text"],
@@ -117,7 +133,6 @@ body {
   color: white;
 }
 
-.exit-rsp:hover{
+.exit-rsp:hover {
   background-color: #0056b3;
-
 }
