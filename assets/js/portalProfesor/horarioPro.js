@@ -1,5 +1,6 @@
 const btnModifiedSchedule = document.getElementById("btn-modified-schedule");
 
+
 AOS.init();
 
 function descargarPDF() {
@@ -23,9 +24,33 @@ function cerrarModal() {
   document.getElementById("modalReporte").style.display = "none";
 }
 
+function agregarMateria() {
+  const tabla = document.getElementById("horario").querySelector("tbody");
+
+  const nuevaFila = document.createElement("tr");
+
+  // Crea 9 celdas vacías (igual que el número de columnas)
+  for (let i = 0; i < 9; i++) {
+    const td = document.createElement("td");
+    td.classList.add("asignatura");
+    const input = document.createElement("input");
+    input.type = "text";
+    input.style.width = "100%";
+    input.style.border = "1px solid #aaa";
+    td.appendChild(input);
+    nuevaFila.appendChild(td);
+  }
+
+  tabla.appendChild(nuevaFila);
+}
+
+
 function editarHorario() {
   const tabla = document.getElementById("horario");
   const filas = tabla.querySelectorAll("tbody tr");
+  const addSubject = document.getElementById("add-subject");
+
+  addSubject.style.display = "block";
 
   filas.forEach(fila => {
     const celdas = fila.querySelectorAll("td");

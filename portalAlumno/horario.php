@@ -1,3 +1,22 @@
+<?php
+session_start();
+include("../src/conexion.php");
+
+if (!isset($_SESSION['id_matricula']) || $_SESSION['rol'] !== 'alu') {
+  echo "<script>
+            alert('Por favor, inicie sesión primero');
+            window.location.href='login.php';
+          </script>";
+  exit();
+}
+
+$idalum = $_SESSION['id_matricula'];
+
+$sql = "SELECT * FROM alumno WHERE matriculaA = '$idalum'";
+$resultado = mysqli_query($conexion, $sql);
+$row = mysqli_fetch_assoc($resultado);
+?>
+
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -32,7 +51,7 @@
       </div>
       <table id="horario">
         <caption>
-          Licenciatura en Programación y Web Master
+          <?php echo $row['carrera'] ?>
         </caption>
         <thead>
           <tr>

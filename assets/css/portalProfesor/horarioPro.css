@@ -112,7 +112,7 @@ caption {
   background-color: #fff;
 }
 
-/*Botón reportar algún problema*/
+/*Botones para modificar horario*/
 .btn {
   background-color: #0073e6;
   color: white;
@@ -127,6 +127,18 @@ caption {
 .btn:hover {
   background-color: #005bb5;
 }
+
+.container-submit{
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.add-subject{
+  margin-left: auto;
+  display: none;
+}
+
 
 .modal {
   display: none;
@@ -176,11 +188,6 @@ caption {
   cursor: pointer;
 }
 
-.buttons-submit{
-  display: flex;
-  gap: 1rem;
-  margin-top: 1rem;
-}
 
 
 /*Botón para regresar*/

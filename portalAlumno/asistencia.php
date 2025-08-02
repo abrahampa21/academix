@@ -2,7 +2,7 @@
 session_start();
 include("../src/conexion.php");
 
-if (!isset($_SESSION['id_matricula']) || $_SESSION['rol'] !== 'prof') {
+if (!isset($_SESSION['id_matricula']) || $_SESSION['rol'] !== 'alu') {
   echo "<script>
             alert('Por favor, inicie sesión primero');
             window.location.href='login.php';
@@ -129,7 +129,8 @@ $row = mysqli_fetch_assoc($resultado);
         <button class="btn" type="submit">Enviar Reporte</button>
       </form>
     </div>
-
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script src="../assets/js/portalAlumno/asistencia.js"></script>
   </body>

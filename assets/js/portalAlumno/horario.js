@@ -15,6 +15,11 @@ function descargarPDF() {
 
 function abrirModal() {
   document.getElementById("modalReporte").style.display = "flex";
+  document.getElementById("modalReporte").addEventListener("submit", (e) => {
+    e.preventDefault();
+    Swal.fire("Reporte enviado exitosamente");
+    cerrarModal();
+  })
 }
 
 function cerrarModal() {
@@ -25,12 +30,12 @@ function editarHorario() {
   const tabla = document.getElementById("horario");
   const filas = tabla.querySelectorAll("tbody tr");
 
-  filas.forEach(fila => {
+  filas.forEach((fila) => {
     const celdas = fila.querySelectorAll("td");
 
-    celdas.forEach(td => {
+    celdas.forEach((td) => {
       // Evitar duplicar inputs si ya está editando
-      if (td.querySelector('input')) return;
+      if (td.querySelector("input")) return;
 
       const valor = td.innerHTML.trim();
       const textoPlano = td.innerText.trim();
@@ -51,10 +56,10 @@ function guardarHorario() {
   const tabla = document.getElementById("horario");
   const filas = tabla.querySelectorAll("tbody tr");
 
-  filas.forEach(fila => {
+  filas.forEach((fila) => {
     const celdas = fila.querySelectorAll("td");
 
-    celdas.forEach(td => {
+    celdas.forEach((td) => {
       const input = td.querySelector("input");
       if (input) {
         td.textContent = input.value.trim();
@@ -76,7 +81,7 @@ function authorized() {
   }).then((result) => {
     if (result.isConfirmed) {
       Swal.fire("Autorizado!", "", "success");
-      btnModifiedSchedule.setAttribute("onclick","guardarHorario()");
+      btnModifiedSchedule.setAttribute("onclick", "guardarHorario()");
       editarHorario();
     } else if (result.isDenied) {
       Swal.fire("No tienes permiso de modificar");

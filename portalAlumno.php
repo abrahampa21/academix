@@ -84,7 +84,7 @@ if(isset($_POST["salir"])){
           <h4>Datos Personales</h4>
         </div>
       </a>
-      <a href="portalAlumno/horario.html" id="horario-btn">
+      <a href="portalAlumno/horario.php" id="horario-btn">
         <div class="option">
           <i class="fa-solid fa-calendar-days"></i>
           <h4>Horario</h4>

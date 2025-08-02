@@ -33,12 +33,12 @@ if (isset($_POST["actualizar"])) {
   echo "<script>
           document.addEventListener('DOMContentLoaded', function() {
               Swal.fire('¡Datos enviados exitosamente a la escuela!').then(() => {
-                  window.location.href = 'datosPersonales.php';
+                  window.location.href = 'datosPersonalesPro.php';
               });
           });
   </script>";
 
-  $sql = "UPDATE profesor SET fechaNac  = '$fechaNac', periodo  = '$periodo', estatus  = '$status', direccion = '$direccion' WHERE matriculaP = '$idprofe'";
+  $sql = "UPDATE profesor SET fechaNac  = '$fechaNac', periodo  = '$periodo', estatus  = '$status', domicilio = '$direccion' WHERE matriculaP = '$idprofe'";
 
   mysqli_query($conexion, $sql);
 }
@@ -53,6 +53,7 @@ $row = mysqli_fetch_assoc($resultado);
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -97,7 +98,7 @@ $row = mysqli_fetch_assoc($resultado);
       </tr>
       <tr>
         <th>
-          Fecha de Nacimiento <i class="fa-solid fa-pen" id="pen-date" data-input="fecha-nac"></i>
+          Fecha de Nacimiento <i class="fa-solid fa-pen" id="pen-date" data-input="fechaNac"></i>
         </th>
         <td>
           <input
@@ -107,7 +108,8 @@ $row = mysqli_fetch_assoc($resultado);
             id="fechaNac"
             readonly
             title="u"
-            onclick="modifyInfo()" />
+            onclick="modifyInfo()" 
+            value="<?php echo $row['fechaNac'] ?>"/>
         </td>
       </tr>
       <tr>
@@ -119,16 +121,17 @@ $row = mysqli_fetch_assoc($resultado);
             name="periodo"
             id="periodo"
             readonly
-            required />
+            required
+            value="<?php echo $row['periodo'] ?>" />
         </td>
       </tr>
       <tr>
         <th>Estatus <i class="fa-solid fa-pen" data-input="estatus"></i></th>
         <td>
           <select name="estatus" class="status" id="estatus" disabled>
-            <option value="contrato">Contrato</option>
-            <option value="medio-tiempo">Medio tiempo</option>
-            <option value="tiempo-completo">Tiempo completo</option>
+            <option value="Contrato" <?= strtolower(trim($row['estatus'])) === 'contrato' ? 'selected' : '' ?>>Contrato</option>
+            <option value="Medio tiempo" <?= strtolower(trim($row['estatus'])) === 'medio tiempo' ? 'selected' : '' ?>>Medio tiempo</option>
+            <option value="Tiempo completo" <?= strtolower(trim($row['estatus'])) === 'tiempo completo' ? 'selected' : '' ?>>Tiempo completo</option>
           </select>
         </td>
       </tr>
@@ -144,7 +147,8 @@ $row = mysqli_fetch_assoc($resultado);
             name="direccion"
             id="direccion"
             readonly
-            required />
+            required
+            value="<?php echo $row['domicilio'] ?>" />
         </td>
       </tr>
     </table>
