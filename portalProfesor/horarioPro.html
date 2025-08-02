@@ -21,7 +21,14 @@
       <div class="horario-header">
         <h1>Horario de Clases - Mayo a Agosto</h1>
         <br>
-        <button id="botoncito" onclick="descargarPDF()">Descargar como PDF</button>
+        <div class="buttons-modified">
+          <button class="botoncitos" id="botoncito" onclick="descargarPDF()">
+            Descargar como PDF
+          </button>
+          <button class="botoncitos" onclick="authorized()">
+            Modificar Horario
+          </button>
+        </div>
       </div>
       <table id="horario">
         <caption>
@@ -85,15 +92,49 @@
           </tr>
         </tbody>
       </table>
+
+      <div class="buttons-submit">
+        <button class="btn" onclick="abrirModal()">Reportar un problema</button>
+        <button class="btn" id="btn-modified-schedule">
+          Enviar horario modificado
+        </button>
+      </div>
     </div>
 
-        <!--Botón salir-->
+      <!--Botón salir-->
     <div class="exit-rsp">
       <a href="../portalProfesor.php" title="Salir">
         <i class="fa-solid fa-arrow-left"></i>
       </a>
     </div>
 
+    <!--Reporte -->
+    <div data-aos="zoom-in" class="modal" id="modalReporte">
+      <form class="modal-content">
+        <span class="close" onclick="cerrarModal()">&times;</span>
+        <h3>Reportar Problema</h3>
+        <div class="destinatario">
+          <h4>Destinatario</h4>
+          <input
+            type="email"
+            name=""
+            title="u"
+            placeholder="eg. itesrenedescartes.edu.mx"
+            id=""
+            required
+          />
+        </div>
+        <textarea
+          rows="5"
+          placeholder="Describe el problema..."
+          required
+        ></textarea>
+        <br /><br />
+        <button class="btn" type="submit">Enviar Reporte</button>
+      </form>
+    </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script src="../assets/js/portalProfesor/horarioPro.js"></script>
   </body>

@@ -71,7 +71,7 @@ if(isset($_POST["salir"])){
   <aside class="menu-side" id="menu-side">
     <div class="name-page">
       <i class="fa-solid fa-house" title="Panel"></i>
-      <h4>Menú</h4>
+      <h4 class="menu-title">Menú</h4>
     </div>
     <div class="user-page">
       <i class="fa-solid fa-user-graduate" title="Ícono del alumno"></i>
@@ -90,7 +90,7 @@ if(isset($_POST["salir"])){
           <h4>Horario</h4>
         </div>
       </a>
-      <a href="portalAlumno/asistencia.html" id="asistencia-btn">
+      <a href="portalAlumno/asistencia.php" id="asistencia-btn">
         <div class="option">
           <i class="fa-solid fa-pen"></i>
           <h4>Asistencia</h4>

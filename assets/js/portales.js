@@ -17,7 +17,7 @@ window.onscroll = function () {
 };
 
 function scrollFunction() {
-  const triggerElement = document.getElementById("about-us");
+  const triggerElement = document.getElementById("focus");
 
   if (triggerElement.getBoundingClientRect().top < window.innerHeight / 2) {
     btnTop.style.display = "block";

@@ -1,5 +1,5 @@
 AOS.init();
-const btnModifiedSchedule = document.getElementById("btn-modified-schedule")
+const btnModifiedSchedule = document.getElementById("btn-modified-schedule");
 
 function descargarPDF() {
   const tabla = document.getElementById("horario");

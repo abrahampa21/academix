@@ -1,10 +1,19 @@
-const pencilDate = document.getElementById("pen-date");
+const pencil = document.querySelectorAll("i[data-input]");
+
 //Poder editar los datos de la tabla
-pencilDate.addEventListener("click", () => {
-  const input = document.getElementById("fechaNac");
-  if (input) {
-    input.readOnly = false;
-  }
+pencil.forEach((pen) => {
+  pen.addEventListener("click", () => {
+    const inputId = pen.getAttribute("data-input");
+    const element = document.getElementById(inputId);
+
+    if (!element) return;
+
+    if (element.tagName === "SELECT") {
+      element.disabled = false; 
+    } else if (element.tagName === "INPUT") {
+      element.readOnly = false; 
+    }
+  });
 });
 
 function confirmation(event) {

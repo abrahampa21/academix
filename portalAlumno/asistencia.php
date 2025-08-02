@@ -1,3 +1,22 @@
+<?php
+session_start();
+include("../src/conexion.php");
+
+if (!isset($_SESSION['id_matricula']) || $_SESSION['rol'] !== 'prof') {
+  echo "<script>
+            alert('Por favor, inicie sesión primero');
+            window.location.href='login.php';
+          </script>";
+  exit();
+}
+
+$idalum = $_SESSION['id_matricula'];
+
+$sql = "SELECT * FROM alumno WHERE matriculaA = '$idalum'";
+$resultado = mysqli_query($conexion, $sql);
+$row = mysqli_fetch_assoc($resultado);
+?>
+
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -16,7 +35,7 @@
       crossorigin="anonymous"
     ></script>
     <link rel="icon" href="../src/img/academix.jpg" />
-    <link rel="stylesheet" href="../assets/css/portalAlumno/asistencia.css" />
+    <link rel="stylesheet" href="../assets/css/portalAlumno/asistencia.css?v=1.0" />
     <title>Asistencias</title>
   </head>
   <body>
@@ -26,8 +45,8 @@
       data-aos="fade-down"
       data-aos-duration="800"
     >
-      <h4>Alumno:</h4>
-      <h4>Matrícula:</h4>
+      <h4>Alumno: <?php echo $row['nombreCompleto'] ?></h4>
+      <h4>Matrícula: <?php echo $row['matriculaA'] ?></h4>
       <table class="asistencia" id="asistencia">
         <tbody>
           <tr>
@@ -39,38 +58,38 @@
           </tr>
           <tr>
             <td>SEPTIEMBRE</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>12</td>
+            <td>12</td>
+            <td>0</td>
+            <td>100%</td>
           </tr>
           <tr>
             <td>OCTUBRE</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>12</td>
+            <td>12</td>
+            <td>0</td>
+            <td>100%</td>
           </tr>
           <tr>
             <td>NOVIEMBRE</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>12</td>
+            <td>12</td>
+            <td>0</td>
+            <td>100%</td>
           </tr>
           <tr>
             <td>DICIEMBRE</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>12</td>
+            <td>11</td>
+            <td>1</td>
+            <td>91.7%</td>
           </tr>
           <tr class="resultado">
             <td>Resultado</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>48</td>
+            <td>47</td>
+            <td>1</td>
+            <td>97.9%</td>
           </tr>
         </tbody>
       </table>

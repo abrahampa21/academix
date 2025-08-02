@@ -16,7 +16,7 @@ html {
 /*Barra de navegación y menú*/
 header {
   position: relative;
-  height: 70px;
+  height: 90px;
   background: #c9c3c3;
   display: flex;
   align-items: center;
@@ -38,7 +38,7 @@ nav {
 .nav-bar .title {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 1rem;
   margin-left: 5rem;
 }
 
@@ -61,6 +61,7 @@ nav {
 .nav-bar .title h1 {
   color: #333;
   font-family: "Roboto Slab", sans-serif;
+  font-size: 1.8rem;
 }
 
 .nav-bar .links {
@@ -146,7 +147,8 @@ nav .links li:hover {
 .menu-side {
   -ms-overflow-style: none;
   scrollbar-width: none;
-  transition: width 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  
+  transition: 0.3s ease-in-out;
 }
 
 .menu-side:hover {
@@ -157,8 +159,9 @@ nav .links li:hover {
   padding: 20px 30px;
   display: flex;
   align-items: center;
-  margin-top: 7px;
+  margin-bottom: .6rem;
 }
+
 
 .name-page i {
   width: 20px;
@@ -173,10 +176,19 @@ nav .links li:hover {
   margin-top: -5px;
 }
 
+.name-page, .user-page{
+  width: 420px;
+  font-size: 1.1rem;
+}
+
+.name-page h4{
+  font-size: 1.5rem;
+}
+
 .options-menu {
-  padding: 50px 25px;
+  padding: 50px 20px;
   position: absolute;
-  top: 80px;
+  top: 115px;
 }
 
 .options-menu a {
@@ -185,11 +197,15 @@ nav .links li:hover {
   display: block;
   position: relative;
   width: 210px;
+  transition: 0.2s ease-in-out;
+  padding: 0 .8rem;
 }
 
 .options-menu a:hover {
   color: #fff;
   background-color: rgba(255, 255, 255, 0.2);
+  border-radius: .4rem;
+
 }
 
 .options-menu .option {
@@ -253,7 +269,7 @@ a.selected {
   inset: 0;
   background: url(../../portalAlumno/src/universitarios.png) center/cover
     no-repeat;
-  filter: blur(4px);
+  filter: blur(7px);
   z-index: 0;
 }
 
@@ -309,7 +325,7 @@ a.selected {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.5);
-  -webkit-backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(7px);
   backdrop-filter: blur(4px);
   z-index: 0;
 }
@@ -349,7 +365,7 @@ a.selected {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.6);
-  -webkit-backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(7px);
   backdrop-filter: blur(4px);
   z-index: 0;
 }
@@ -503,28 +519,29 @@ a.selected {
 /*Boton para regresar al inicio*/
 .scrollTopBtn {
   position: fixed;
-  bottom: 5%;
-  right: 5%;
+  bottom: 4%;
+  right: 2%;
   z-index: 1;
   font-size: 20px;
   border: none;
   outline: none;
-  background-color: #007bff;
+  background-color: #da1111;
   color: white;
   cursor: pointer;
-  padding: 22px;
+  padding: 18px 21px;
   border-radius: 50%;
+  transition: 0.3s ease-in-out;
   display: none;
 }
 
 .scrollTopBtn:hover {
-  background-color: #0056b3;
+  background-color: #af0505;
 }
 
 /*Botón salir con la responsividad*/
 .exit-rsp {
   position: fixed;
-  bottom: 5%;
+  bottom: 12%;
   left: 5%;
   z-index: 2;
   font-size: 20px;
@@ -533,7 +550,7 @@ a.selected {
   background-color: #da1111;
   color: white;
   cursor: pointer;
-  padding: 22px;
+  padding: 20px;
   border-radius: 50%;
   display: none;
 }
