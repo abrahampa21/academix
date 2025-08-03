@@ -76,7 +76,7 @@ $row = mysqli_fetch_assoc($resultado);
 </head>
 
 <body>
-  <form onsubmit=" return confirmation(event)" method="POST" class="personal-data" id="personal-data" data-aos="fade-down" autocomplete="off">
+  <form method="POST" class="personal-data" id="personal-data" data-aos="fade-down" autocomplete="off">
     <table>
       <caption>
         Tus Datos Personales
@@ -96,7 +96,6 @@ $row = mysqli_fetch_assoc($resultado);
       <tr>
         <th>
           Fecha de Nacimiento
-          <i class="fa-solid fa-pen" data-input="fechaNac"></i>
         </th>
         <td>
           <input
@@ -110,7 +109,7 @@ $row = mysqli_fetch_assoc($resultado);
         </td>
       </tr>
       <tr>
-        <th>Carrera <i class="fa-solid fa-pen" data-input="carrera"></i></th>
+        <th>Carrera</th>
         <td>
           <input
             type="text"
@@ -123,7 +122,7 @@ $row = mysqli_fetch_assoc($resultado);
         </td>
       </tr>
       <tr>
-        <th>Periodo <i class="fa-solid fa-pen" data-input="periodo"></i></th>
+        <th>Periodo</th>
         <td>
           <input
             type="text"
@@ -136,7 +135,7 @@ $row = mysqli_fetch_assoc($resultado);
         </td>
       </tr>
       <tr>
-        <th>Estatus <i class="fa-solid fa-pen" data-input="estatus"></i></th>
+        <th>Estatus</th>
         <td>
           <select name="estatus" class="status" id="estatus" disabled>
             <option value="Ninguno" <?= strtolower(trim($row['estatus'])) === 'ninguno' ? 'selected' : '' ?>>Ninguno</option>
@@ -148,7 +147,6 @@ $row = mysqli_fetch_assoc($resultado);
       <tr>
         <th>
           Domicilio Actual
-          <i class="fa-solid fa-pen" data-input="direccion"></i>
         </th>
         <td>
           <input
@@ -162,9 +160,14 @@ $row = mysqli_fetch_assoc($resultado);
         </td>
       </tr>
     </table>
-    <button type="submit" class="submit" id="submit" name="actualizar">
-      Actualizar datos
-    </button>
+    <div class="buttons-submit">
+      <button class="submit" onclick="modificar(event)">
+        Modificar datos
+      </button>
+      <button type="submit" class="submit" id="submit" name="actualizar" onclick="confirmation(event)">
+        Actualizar datos
+      </button>
+    </div>
   </form>
 
 

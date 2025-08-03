@@ -18,7 +18,7 @@ body {
 
 .personal-data {
   background-color: white;
-  padding: 2rem;
+  padding: .5rem 1rem .6rem;
   border-radius: 20px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   max-width: 580px;
@@ -35,7 +35,7 @@ body {
   font-size: 1.5rem;
   font-weight: 600;
   color: #1a2a3b;
-  padding-bottom: 1rem;
+  padding-bottom: .5rem;
   text-align: center;
   border-bottom: 2px solid #d0d7de;
 }
@@ -52,6 +52,7 @@ body {
   font-weight: 600;
   color: #334155;
   width: 40%;
+  text-align: right;
 }
 
 .personal-data td {
@@ -94,8 +95,13 @@ body {
   color: #0d9488;
 }
 
+.buttons-submit{
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
 .submit {
-  margin-top: 2rem;
   width: 100%;
   padding: 0.75rem;
   font-size: 1rem;

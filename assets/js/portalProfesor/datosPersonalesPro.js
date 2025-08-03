@@ -1,21 +1,16 @@
-const pencil = document.querySelectorAll("i[data-input]");
+function modificar(e) {
+  e.preventDefault();
+  const form = document.getElementById("data-teacher");
+  const inputs = form.querySelectorAll("input, select");
 
-//Poder editar los datos de la tabla
-pencil.forEach((pen) => {
-  pen.addEventListener("click", () => {
-    const inputId = pen.getAttribute("data-input");
-    const element = document.getElementById(inputId);
-
-    if (!element) return;
-
-    if (element.tagName === "SELECT") {
-      element.disabled = false; 
-    } else if (element.tagName === "INPUT") {
-      element.readOnly = false; 
+  inputs.forEach((element) => {
+    if (element.tagName === "INPUT") {
+      element.removeAttribute("readonly");
+    } else if (element.tagName === "SELECT") {
+      element.removeAttribute("disabled");
     }
   });
-});
-
+}
 function confirmation(event) {
   const message = confirm("¿Realmente quieres modificar los datos?");
   if (!message) {

@@ -75,7 +75,6 @@ $row = mysqli_fetch_assoc($resultado);
 
 <body>
   <form
-    onsubmit="confirmation(event)"
     method="POST"
     class="data-teacher"
     id="data-teacher"
@@ -98,7 +97,7 @@ $row = mysqli_fetch_assoc($resultado);
       </tr>
       <tr>
         <th>
-          Fecha de Nacimiento <i class="fa-solid fa-pen" id="pen-date" data-input="fechaNac"></i>
+          Fecha de Nacimiento</i>
         </th>
         <td>
           <input
@@ -108,12 +107,12 @@ $row = mysqli_fetch_assoc($resultado);
             id="fechaNac"
             readonly
             title="u"
-            onclick="modifyInfo()" 
-            value="<?php echo $row['fechaNac'] ?>"/>
+            onclick="modifyInfo()"
+            value="<?php echo $row['fechaNac'] ?>" />
         </td>
       </tr>
       <tr>
-        <th>Periodo <i class="fa-solid fa-pen" data-input="periodo"></i></th>
+        <th>Periodo</th>
         <td>
           <input
             type="text"
@@ -126,7 +125,7 @@ $row = mysqli_fetch_assoc($resultado);
         </td>
       </tr>
       <tr>
-        <th>Estatus <i class="fa-solid fa-pen" data-input="estatus"></i></th>
+        <th>Estatus</th>
         <td>
           <select name="estatus" class="status" id="estatus" disabled>
             <option value="Contrato" <?= strtolower(trim($row['estatus'])) === 'contrato' ? 'selected' : '' ?>>Contrato</option>
@@ -138,7 +137,6 @@ $row = mysqli_fetch_assoc($resultado);
       <tr>
         <th>
           Domicilio Actual
-          <i class="fa-solid fa-pen" data-input="direccion"></i>
         </th>
         <td>
           <input
@@ -152,9 +150,14 @@ $row = mysqli_fetch_assoc($resultado);
         </td>
       </tr>
     </table>
-    <button type="submit" class="submit" id="submit" name="actualizar">
-      Actualizar datos
-    </button>
+    <div class="buttons-submit">
+      <button type="submit" class="submit" onclick="modificar(event)">
+        Modificar datos
+      </button>
+      <button type="submit" class="submit" id="submit" name="actualizar" onclick="confirmation(event)">
+        Actualizar datos
+      </button>
+    </div>
   </form>
 
   <!--Botón salir-->

@@ -18,7 +18,7 @@ body {
 
 .data-teacher {
   background-color: white;
-  padding: 2rem;
+  padding: 1rem 2rem;
   border-radius: 20px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   max-width: 700px;
@@ -52,6 +52,7 @@ body {
   font-weight: 600;
   color: #334155;
   width: 40%;
+  text-align: right;
 }
 
 .data-teacher td {
@@ -94,8 +95,13 @@ body {
   color: #0d9488;
 }
 
+.buttons-submit{
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
 .submit {
-  margin-top: 2rem;
   width: 100%;
   padding: 0.75rem;
   font-size: 1rem;
