@@ -45,6 +45,6 @@ function exit() {
   const message = confirm("¿Realmente quieres salir del sitio?");
 
   if (message) {
-    window.location.href = "http://localhost/academix/index.html";
+    window.location.href = "http://localhost/academix/inicio.html";
   }
 }
