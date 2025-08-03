@@ -102,7 +102,7 @@ if(isset($_POST["salir"])){
           <h4>Calificaciones</h4>
         </div>
       </a>
-      <a href="#">
+      <a href="portalAlumno/pagos.html">
         <div class="option">
           <i class="fa-solid fa-money-check-dollar"></i>
           <h4>Estado de pagos</h4>
