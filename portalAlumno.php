@@ -56,7 +56,10 @@ if(isset($_POST["salir"])){
         <li><a href="#focus" >Enfoque</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
-      <i class="fa-solid fa-bell"></i>
+      <div class="notifications">
+        <i class="fa-solid fa-bell"></i>
+        <a href="">Notificaciones</a>
+      </div>
       <!--Menú responsive-->
       <ul class="menu" id="menu">
         <li><a href="portalAlumno/datosPersonales.php">Datos Personales</a></li>

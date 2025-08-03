@@ -70,14 +70,14 @@ nav {
   cursor: pointer;
 }
 
-.nav-bar .links a {
+.nav-bar a {
   position: relative;
   color: #1a2a3b;
   font-weight: 600;
   text-decoration: none;
 }
 
-.nav-bar .links a::after {
+.nav-bar a::after {
   content: '';
   position: absolute;
   width: 0;
@@ -88,9 +88,16 @@ nav {
   transition: width 0.3s;
 }
 
-.nav-bar .links a:hover::after {
+.nav-bar a:hover::after {
   width: 100%;
 }
+
+.nav-bar .notifications{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 
 .nav-bar .fa-bell {
   font-size: 1.8rem;
