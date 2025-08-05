@@ -558,3 +558,9 @@ footer .footer-bottom a {
     font-size: 1.2rem;
   }
 }
+
+@media (max-width: 381px){
+  header .header .links-header{
+    font-size: 0.63rem;
+  }
+}

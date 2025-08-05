@@ -579,7 +579,7 @@ a.selected {
 /*Boton para regresar al inicio*/
 .scrollTopBtn {
   position: fixed;
-  bottom: 4%;
+  bottom: 2%;
   right: 2%;
   z-index: 1;
   font-size: 20px;
@@ -588,7 +588,7 @@ a.selected {
   background-color: #da1111;
   color: white;
   cursor: pointer;
-  padding: 18px 21px;
+  padding: 16px 19px;
   border-radius: 50%;
   transition: 0.3s ease-in-out;
   display: none;
@@ -671,6 +671,12 @@ a.selected {
   }
 }
 
+@media screen and (max-width: 451px){
+  .nav-bar .notifications i{
+    display: none;
+  }
+}
+
 @media screen and (max-width: 450px) {
   header h1 {
     font-size: 12px;
@@ -678,5 +684,12 @@ a.selected {
   .intro,
   .about-us {
     height: 120vh;
+  }
+
+  .nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
   }
 }
