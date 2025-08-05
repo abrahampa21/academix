@@ -98,6 +98,9 @@ nav {
   gap: 1rem;
 }
 
+.nav-bar .notifications a{
+  display: none;
+}
 
 .nav-bar .fa-bell {
   font-size: 1.8rem;
@@ -304,8 +307,6 @@ a.selected {
 .menu-side-move {
   width: 250px;
 }
-
-
 
 
 /*Contenido principal*/
@@ -597,28 +598,22 @@ a.selected {
   background-color: #af0505;
 }
 
-/*Botón salir con la responsividad*/
-.exit-rsp {
-  position: fixed;
-  bottom: 12%;
-  left: 5%;
-  z-index: 2;
-  font-size: 20px;
-  border: none;
-  outline: none;
-  background-color: #da1111;
-  color: white;
-  cursor: pointer;
-  padding: 20px;
-  border-radius: 50%;
+/*Salir con responsividad*/
+.exit-rsp{
+  margin-left: auto;
   display: none;
 }
 
-.exit-rsp i {
-  color: white;
+.exit-rsp i{
+  margin-right: .8rem;
 }
 
 /*Responsividad*/
+@media screen and (min-width: 1010px){
+  .nav-bar .notifications a{
+    display: flex;
+  }
+}
 @media screen and (max-width: 760px) {
   header h1 {
     font-size: 20px;
@@ -676,9 +671,9 @@ a.selected {
   }
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 450px) {
   header h1 {
-    font-size: 15px;
+    font-size: 12px;
   }
   .intro,
   .about-us {

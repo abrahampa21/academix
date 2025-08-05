@@ -15,7 +15,7 @@ $sql = "SELECT * FROM alumno WHERE matriculaA = '$idalum'";
 $resultado = mysqli_query($conexion, $sql);
 $row = mysqli_fetch_assoc($resultado);
 
-if(isset($_POST["salir"])){
+if (isset($_POST["salir"])) {
   session_destroy();
 }
 ?>
@@ -53,7 +53,7 @@ if(isset($_POST["salir"])){
       </div>
       <ul class="links">
         <li><a href="#about-us">Sobre Nosotros</a></li>
-        <li><a href="#focus" >Enfoque</a></li>
+        <li><a href="#focus">Enfoque</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
       <div class="notifications">
@@ -128,9 +128,7 @@ if(isset($_POST["salir"])){
 
   <!--Salir en responsividad-->
   <div class="exit-rsp">
-    <a href="#" title="Salir" onclick="exit()">
-      <i class="fa-solid fa-right-from-bracket"></i>
-    </a>
+
   </div>
 
   <!-- Contenido principal -->
@@ -220,7 +218,7 @@ if(isset($_POST["salir"])){
         <p>📍 Av. Gobernadores 1234, Campeche</p>
         <p>📞 (123) 456-7890</p>
         <p>📧 contacto@academix.edu</p>
-  </div>
+      </div>
 
       <div class="footer-section links">
         <h4>Enlaces útiles</h4>
@@ -239,6 +237,7 @@ if(isset($_POST["salir"])){
           <a href="#"><i class="fab fa-twitter" title="Twitter"></i></a>
           <a href="#"><i class="fab fa-instagram" title="Instagram"></i></a>
           <a href="#"><i class="fab fa-youtube" title="YouTube"></i></a>
+          <a href="#" title="Salir" onclick="exit()" class="exit-rsp"><i class="fa-solid fa-right-from-bracket"></i>Salir</a>
         </div>
       </div>
     </div>
