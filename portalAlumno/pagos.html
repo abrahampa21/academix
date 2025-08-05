@@ -55,9 +55,17 @@
         <h3>Reportar Problema</h3>
         <div class="destinatario">
           <h4>Destinatario</h4>
+          <input 
+          type="text"
+          name="asunto"
+          title="u"
+          placeholder="Escriba el asunto de la queja"
+          id=""
+          required
+          />
           <input
             type="number"
-            name=""
+            name="matriculaP"
             title="u"
             placeholder="Escribe la matricula del destinatario"
             id=""
@@ -68,6 +76,7 @@
           rows="5"
           placeholder="Describe el problema..."
           required
+          name="mensaje"
         ></textarea>
         <br /><br />
         <button class="btn" type="submit">Enviar Reporte</button>
