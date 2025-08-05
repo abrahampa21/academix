@@ -1,4 +1,5 @@
 <?php
+session_start();
 include '../src/conexion.php';
 
 $matriculaA = $_POST['matriculaA'];
