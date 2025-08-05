@@ -103,7 +103,6 @@ function revealPasswordRpt() {
 
 //Cambio de fondo cada cierto tiempo
 const backgroundImages = [
-  "src/img/fondo2.webp",
   "src/img/fondo1.jpg",
   "src/img/fondo3.png",
 ];

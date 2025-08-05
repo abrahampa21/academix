@@ -17,7 +17,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-   transition: background-image 1s;
+  transition: background-image 1s;
 }
 
 /*Inicio de sesión*/
@@ -46,12 +46,12 @@ body {
   margin-top: 20px;
 }
 
-.login-container img{
+.login-container img {
   transition: 0.3s;
   cursor: pointer;
 }
 
-.login-container img:hover{
+.login-container img:hover {
   transform: rotate(180deg);
 }
 
@@ -295,7 +295,7 @@ h1 {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
 
-.recuperar-pass i{
+.recuperar-pass i {
   cursor: pointer;
 }
 
@@ -322,17 +322,74 @@ h1 {
   font-size: 16px;
 }
 
-.recuperar-pass .input-button button:hover{
+.recuperar-pass .input-button button:hover {
   background-color: #156dc1;
   cursor: pointer;
 }
 
-.recuperar-pass .input-button input{
-    height: 40px;
+.recuperar-pass .input-button input {
+  height: 40px;
   background-color: #eef3f7;
   border: 1px solid #cfdce7;
   border-radius: 8px;
   padding: 0 10px;
   color: #2a3d66;
   font-size: 15px;
+}
+
+/*Responsividad*/
+@media (max-width: 450px) {
+  .login-container {
+    width: 300px;
+  }
+
+  .login-btn {
+    font-size: 14px;
+    padding: 8px 0;
+  }
+
+  .input-Usuario input {
+    font-size: 14px;
+    height: 36px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  .sign-up {
+    width: 300px;
+  }
+
+  .sign-up h1 {
+    font-size: 22px;
+  }
+
+  .sign-up .inputs input {
+    font-size: 14px;
+    height: 36px;
+  }
+
+  .sign-up .inputs button {
+    font-size: 14px;
+    padding: 8px 0;
+  }
+
+  .recuperar-pass {
+    width: 300px;
+  }
+
+  .recuperar-pass .input-button button {
+    font-size: 14px;
+    padding: 8px 0;
+  }
+
+  .recuperar-pass p{
+    width: 250px;
+  }
+
+  .recuperar-pass .input-button input {
+    height: 36px;
+    font-size: 14px;
+  }
 }
