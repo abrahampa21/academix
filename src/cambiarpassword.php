@@ -10,6 +10,6 @@
         header("Location: ../login.php");
         
     }else{
-        echo "no coinciden";
+        echo "Las contraseñas no coinciden";
     }
 ?>

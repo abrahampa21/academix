@@ -23,7 +23,7 @@ if( isset($_GET['email'])  && isset($_GET['token']) ){
 <body>
     <div class="container">
         <div class="row justify-content-md-center" style="margin-top:15%">
-            <form class="col-3" action="./verificartoken.php" method="POST">
+            <form class="col-3" action="./verificartoken.php" method="POST" autocomplete="off">
                 
                 <div class="mb-3">
                     <h2>Restablecer Contraseña</h2>

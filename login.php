@@ -69,7 +69,7 @@ if (isset($_POST["registrar"])) {
         </script>";
         $mostrarRegistro = true;
 
-    // Validar coincidencia de contraseñas
+        // Validar coincidencia de contraseñas
     } elseif ($password !== $passwordRpt) {
         echo "<script>
             alert('Las contraseñas no coinciden');
@@ -262,12 +262,12 @@ if (isset($_POST["registrar"])) {
     </form>
 
     <!--Recuperar contraseña-->
-    <form action="src/restablecerPHP.php" method="POST" class="recuperar-pass" id="recuperar-contraseña" data-aos="flip-right">
+    <form action="src/restablecerPHP.php" method="POST" class="recuperar-pass" id="recuperar-contraseña" data-aos="flip-right" autocomplete="off">
         <i id="back" class="arrow fa-solid fa-arrow-left" title="Regresar" onclick="showLogin()"></i>
         <h1>Recuperar contraseña</h1>
         <p>Ingresa tu correo electronico para recibir las instrucciones</p>
         <div class="input-button">
-            <input type="email" name="email" id="" required>
+            <input type="email" name="email" required>
             <button type="submit">Enviar</button>
         </div>
     </form>
