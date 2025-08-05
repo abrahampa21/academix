@@ -50,7 +50,7 @@
 
     <!--Reporte -->
     <div class="modal" id="modalReporte">
-      <form class="modal-content">
+      <form class="modal-content" method="post" action="portalAlumno/guardar_queja.php">
         <span class="close" onclick="cerrarModal()">&times;</span>
         <h3>Reportar Problema</h3>
         <div class="destinatario">
@@ -59,7 +59,7 @@
             type="number"
             name=""
             title="u"
-            placeholder="eg. 62218"
+            placeholder="Escribe la matricula del destinatario"
             id=""
             required
           />
