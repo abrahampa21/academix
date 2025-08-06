@@ -1,3 +1,31 @@
+<?php
+session_start();
+include '../src/conexion.php';
+mysqli_set_charset($conexion, "utf8");
+
+// Procesar el formulario cuando se envía
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $matriculaA = $_POST['matriculaA'];
+    $matriculaP = $_POST['matriculaP'];
+    $asunto = $_POST['asunto'];
+    $mensaje = $_POST['mensaje'];
+
+    $sql = "INSERT INTO quejas (matriculaA, matriculaP, asunto, mensaje)
+            VALUES ('$matriculaA', '$matriculaP', '$asunto', '$mensaje')";
+
+    if (mysqli_query($conexion, $sql)) {
+      echo "<script>
+          
+            window.location.href='pagos.php';
+          </script>";
+        exit();
+    } else {
+        echo "<script>alert('Error: ".mysqli_error($conexion)."');</script>";
+    }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -50,8 +78,9 @@
 
     <!--Reporte -->
     <div class="modal" id="modalReporte">
-      <form class="modal-content" method="post" action="./guardar_queja.php">
+      <form class="modal-content" method="post">
         <span class="close" onclick="cerrarModal()">&times;</span>
+
         <h3>Reportar Problema</h3>
         <div class="destinatario">
           <h4>Destinatario</h4>
@@ -64,7 +93,7 @@
           required
           />
           <input 
-          type="text"
+          type="number"
           name="matriculaA"
           title="u"
           placeholder="Escriba su matricula"
@@ -72,7 +101,7 @@
           required
           />
           <input
-          type="text"
+          type="number"
           name="matriculaP"
           title="u"
           placeholder="Escribe la matricula del destinatario"
@@ -87,6 +116,7 @@
           required
           name="mensaje"
         ></textarea>
+
         <br /><br />
         <button class="btn" type="submit">Enviar Reporte</button>
       </form>
