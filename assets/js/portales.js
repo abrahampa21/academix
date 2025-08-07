@@ -67,5 +67,5 @@ function notificacionAlumno(){
 }
 
 function notificacionProfesor(){
-  window.location.href = "portalAlumno/notificaciones.php";
+  window.location.href = "portalProfesor/notificaciones.php";
 }

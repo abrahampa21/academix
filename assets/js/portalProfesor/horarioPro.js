@@ -111,6 +111,10 @@ function authorized() {
   });
 }
 
-function returnMenu(){
+function returnMenuAlu(){
+  window.location.href = "../portalAlumno.php";
+}
+
+function returnMenuProf(){
   window.location.href = "../portalProfesor.php";
 }

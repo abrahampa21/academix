@@ -88,6 +88,3 @@ function authorized() {
   });
 }
 
-function returnMenu(){
-  window.location.href = "../portalAlumno.php";
-}

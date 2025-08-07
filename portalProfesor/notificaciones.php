@@ -7,6 +7,7 @@ if (!isset($_SESSION['id_matricula']) || $_SESSION['rol'] !== 'prof') {
     exit;
 }
 
+
 $matricula_profesor = $_SESSION['id_matricula'];
 
 // Procesar respuesta si se envió
@@ -89,7 +90,7 @@ $result = $stmt->get_result();
     </table>
   </div>
 
-  <div class="exit-rsp" onclick="returnMenu()">
+  <div class="exit-rsp" onclick="returnMenuProf()">
     <a href="#" title="Salir"><i class="fa-solid fa-arrow-left"></i></a>
   </div>
 

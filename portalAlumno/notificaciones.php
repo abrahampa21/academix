@@ -2,12 +2,12 @@
 session_start();
 include("../src/conexion.php");
 
-if (!isset($_SESSION['id_matricula']) || $_SESSION['rol'] !== 'prof') {
+if (!isset($_SESSION['id_matricula']) || $_SESSION['rol'] !== 'alu') {
     echo "Acceso no autorizado.";
     exit;
 }
 
-$matricula_profesor = $_SESSION['id_matricula'];
+$matricula_alumno = $_SESSION['id_matricula'];
 
 // Procesar respuesta si se envió
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['responder'])) {
@@ -15,15 +15,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['responder'])) {
     $respuesta = $_POST['respuesta'];
     $estado = $_POST['estado'];
 
-    $stmt = $conexion->prepare("UPDATE quejas SET respuesta = ?, estado = ? WHERE id = ? AND matriculaP = ?");
-    $stmt->bind_param("ssis", $respuesta, $estado, $id_mensaje, $matricula_profesor);
+    $stmt = $conexion->prepare("UPDATE quejas SET respuesta = ?, estado = 'respondida' WHERE id = ? AND matriculaA = ?");
+    $stmt->bind_param("ssis", $respuesta, $estado, $id_mensaje, $matricula_alumno);
     $stmt->execute();
 }
 
-// Obtener mensajes dirigidos al profesor
-$sql = "SELECT id, asunto, mensaje, matriculaA, estado, respuesta FROM quejas WHERE matriculaP = ? and estado='pendiente'";
+// Obtener mensajes dirigidos al alumno
+$sql = "SELECT id, asunto, mensaje, matriculaP, estado, respuesta FROM quejas WHERE matriculaA = ? and estado='respondida'";
 $stmt = $conexion->prepare($sql);
-$stmt->bind_param("s", $matricula_profesor);
+$stmt->bind_param("s", $matricula_alumno);
 $stmt->execute();
 $result = $stmt->get_result();
 ?>
@@ -65,10 +65,10 @@ $result = $stmt->get_result();
                             <form method="post">
                                 <td><?php echo htmlspecialchars($row['asunto']); ?></td>
                                 <td><?php echo htmlspecialchars($row['mensaje']); ?></td>
-                                <td><?php echo htmlspecialchars($row['matriculaA']); ?></td>
+                                <td><?php echo htmlspecialchars($row['matriculaP']); ?></td>
                                 <td>
-                                    <select name="estado">
-                                        <option value="pendiente" <?= $row['estado'] === 'pendiente' ? 'selected' : '' ?>>Pendiente</option>
+                                    <select name="estado" type="readonly">
+                                        
                                         <option value="respondida" <?= $row['estado'] === 'respondida' ? 'selected' : '' ?>>Respondida</option>
                                     </select>
                                 </td>
@@ -91,7 +91,7 @@ $result = $stmt->get_result();
         </table>
     </div>
 
-    <div class="exit-rsp" onclick="returnMenu()">
+    <div class="exit-rsp" onclick="returnMenuAlu()">
         <a href="#" title="Salir"><i class="fa-solid fa-arrow-left"></i></a>
     </div>
 

@@ -14,6 +14,7 @@ $idprofe = $_SESSION['id_matricula'];
 $sql = "SELECT * FROM profesor WHERE matriculaP = '$idprofe'";
 $resultado = mysqli_query($conexion, $sql);
 $row = mysqli_fetch_assoc($resultado);
+
 ?>
 <!DOCTYPE html>
 <html lang="es">

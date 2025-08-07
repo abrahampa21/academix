@@ -108,7 +108,7 @@ nav {
 
 .nav-bar .fa-bell {
   font-size: 1.8rem;
-  color: yellow;
+  color: rgb(91, 91, 91);
   transition: transform 0.3s;
   cursor: pointer;
   margin-right: 1.5rem;
