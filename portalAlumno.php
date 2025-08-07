@@ -57,12 +57,13 @@ if (isset($_POST["salir"])) {
         <li><a href="#contacto">Contacto</a></li>
       </ul>
       <!--Menú responsive-->
-      <ul class="menu" id="menu">
-        <li><a href="portalAlumno/datosPersonales.php">Datos Personales</a></li>
-        <li><a href="portalAlumno/horario.html">Horario</a></li>
-        <li><a href="portalAlumno/asistencia.html">Asistencia</a></li>
-        <li><a href="portalAlumno/calificaciones.html">Calificaciones</a></li>
-      </ul>
+      <div class="menu" id="menu">
+        <i class="fa-solid fa-address-card"><a href="portalAlumno/datosPersonales.php">Datos Personales</a></i>
+        <i class="fa-solid fa-calendar-days"><a href="portalAlumno/horario.php">Horario</a></i>
+        <i class="fa-solid fa-pen"><a href="portalAlumno/asistencia.php">Asistencia</a></i>
+        <i class="fa-solid fa-book"><a href="portalAlumno/calificaciones.html">Calificaciones</a></i>
+        <i class="fa-solid fa-money-check-dollar"><a href="portalAlumno/pagos.php">Pagos</a></i>
+      </div>
     </nav>
   </header>
 
@@ -121,11 +122,6 @@ if (isset($_POST["salir"])) {
     class="scrollTopBtn fa-solid fa-arrow-up"
     id="scrollTopBtn"
     title="Ir al principio"></i>
-
-  <!--Salir en responsividad-->
-  <div class="exit-rsp">
-
-  </div>
 
   <!-- Contenido principal -->
   <main id="main">
