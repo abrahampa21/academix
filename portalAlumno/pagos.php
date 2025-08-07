@@ -3,6 +3,7 @@ session_start();
 include '../src/conexion.php';
 mysqli_set_charset($conexion, "utf8");
 
+
 // Procesar el formulario cuando se envía
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $matriculaA = $_POST['matriculaA'];
@@ -22,6 +23,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo "<script>alert('Error: ".mysqli_error($conexion)."');</script>";
     }
 }
+
+
 ?>
 
 
@@ -91,7 +94,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           required
           />
           <input 
-          type="number"
+          type="hidden"
           name="matriculaA"
           title="u"
           placeholder="Escriba su matricula"
