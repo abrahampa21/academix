@@ -108,9 +108,10 @@ nav {
 
 .nav-bar .fa-bell {
   font-size: 1.8rem;
-  color: #ffcc00;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  color: yellow;
   transition: transform 0.3s;
+  cursor: pointer;
+  margin-right: 1.5rem;
 }
 
 .nav-bar .fa-bell:hover {

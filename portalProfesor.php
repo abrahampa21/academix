@@ -47,6 +47,7 @@ $row = mysqli_fetch_assoc($resultado);
         <li><a href="#focus">Enfoque</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
+      <i class="fa-solid fa-bell bell-icon" onclick="notificacionProfesor()"></i>
       <!--Menú responsivo-->
       <div class="menu" id="menu">
         <i class="fa-solid fa-address-card"><a href="portalProfesor/datosPersonalesPro.php">Datos Personales</a></i>
@@ -80,7 +81,7 @@ $row = mysqli_fetch_assoc($resultado);
           <h4>Horario</h4>
         </div>
       </a>
-      <a href="portalProfesor/notificaciones.php" id="asistencia-btn">
+      <a href="portalProfesor/alumnos.html" id="asistencia-btn">
         <div class="option">
           <i class="fa-solid fa-pen"></i>
           <h4>Alumnos</h4>

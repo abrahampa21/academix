@@ -61,3 +61,11 @@ document.addEventListener("click", (event) => {
     }
   }
 });
+
+function notificacionAlumno(){
+  window.location.href = "portalAlumno/notificaciones.php";
+}
+
+function notificacionProfesor(){
+  window.location.href = "portalAlumno/notificaciones.php";
+}

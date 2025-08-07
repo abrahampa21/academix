@@ -56,6 +56,7 @@ if (isset($_POST["salir"])) {
         <li><a href="#focus">Enfoque</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
+      <i class="fa-solid fa-bell bell-icon" onclick="notificacionAlumno()"></i>
       <!--Menú responsive-->
       <div class="menu" id="menu">
         <i class="fa-solid fa-address-card"><a href="portalAlumno/datosPersonales.php">Datos Personales</a></i>

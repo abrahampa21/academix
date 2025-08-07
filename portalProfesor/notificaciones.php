@@ -38,34 +38,7 @@ $result = $stmt->get_result();
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <link rel="stylesheet" href="../assets/css/portalProfesor/horarioPro.css?v=1.0">
-  <style>
-    textarea {
-        width: 100%;
-        resize: vertical;
-        min-height: 60px;
-    }
-    select {
-        padding: 5px;
-        font-size: 16px;
-  border-radius: 5px;
-  background-color: #e2e8f0;
-  color: #000;
-    }
-    button[type="submit"] {
-        padding: 6px 12px;
-        background-color: #2c8bff;
-        color: white;
-        border: none;
-        cursor: pointer;
-
-        font-family: "Plus Jakarta Sans", sans-serif;
-  border-radius: 3px;
-  background-color: #1a3d7c;
-  color: #fff;
-  transition: 0.3s;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-    }
-  </style>
+  <link rel="stylesheet" href="notificaciones.css">
 </head>
 <body>
   <div class="horario-container" data-aos="fade-down">
