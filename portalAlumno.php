@@ -111,7 +111,7 @@ if (isset($_POST["salir"])) {
       </a>
     </div>
     <div class="exit">
-      <a href="#" title="Salir" onclick="exit()" name="salir">
+      <a href="/portalAlumno.php" title="Salir" onclick="exit()" name="salir">
         <i class="fa-solid fa-right-from-bracket"></i>
       </a>
       <h4>Salir</h4>

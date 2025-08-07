@@ -96,7 +96,7 @@ $row = mysqli_fetch_assoc($resultado);
       </a>
     </div>
     <div class="exit">
-      <a href="portalProfesor.php" title="Salir" onclick="exit()">
+      <a href="/portalProfesor.php" title="Salir" onclick="exit()">
         <i class="fa-solid fa-right-from-bracket"></i>
       </a>
       <h4>Salir</h4>
