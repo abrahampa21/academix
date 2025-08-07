@@ -201,7 +201,7 @@ if (isset($_POST["registrar"])) {
             <h1>Inicio de Sesión</h1>
             <img src="src/img/academix.jpg" alt="Logo página">
             <div class="input-Usuario div-input matricula-div-login">
-                <input type="text" name="matricula" class="inputs-login" placeholder="Matrícula" required>
+                <input type="text" name="matricula" class="inputs-login" placeholder="Matrícula" maxlength="7" required>
                 <i class="fa-solid fa-user"></i>
             </div>
 
@@ -234,7 +234,7 @@ if (isset($_POST["registrar"])) {
                 <i class="fa-solid fa-envelope"></i>
             </div>
             <div class="div-user div-input">
-                <input type="text" name="matricula" class="inputs-register" placeholder="Matrícula" id="matricula" required value="<?php echo $datosFormulario['matricula']?>">
+                <input type="text" name="matricula" class="inputs-register" placeholder="Matrícula" id="matricula"  maxlength="7" required value="<?php echo $datosFormulario['matricula']?>">
                 <i class="fa-solid fa-pen-nib"></i>
             </div>
             <div class="input-password div-input">
