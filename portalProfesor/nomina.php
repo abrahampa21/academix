@@ -110,24 +110,42 @@
 
     <!--Reporte -->
     <div class="modal" id="modalReporte">
-      <form class="modal-content">
+      <form class="modal-content" method="post">
         <span class="close" onclick="cerrarModal()">&times;</span>
         <h3>Reportar Problema</h3>
         <div class="destinatario">
           <h4>Destinatario</h4>
-          <input
-            type="email"
-            name=""
-            title="u"
-            placeholder="eg. itesrenedescartes.edu.mx"
-            id=""
-            required
+          <input 
+          type="text"
+          name="asunto"
+          title="u"
+          placeholder="Escriba el asunto de la queja"
+          id=""
+          required
           />
+          <input 
+          type="number"
+          name="matriculaA"
+          title="u"
+          placeholder="Escriba su matricula"
+          id=""
+          required
+          />
+          <input
+          type="number"
+          name="matriculaP"
+          title="u"
+          placeholder="Escribe la matricula del destinatario"
+          id=""
+          required
+          />
+            
         </div>
         <textarea
           rows="5"
           placeholder="Describe el problema..."
           required
+          name="mensaje"
         ></textarea>
         <br /><br />
         <button class="btn" type="submit">Enviar Reporte</button>

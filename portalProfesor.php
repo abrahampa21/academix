@@ -77,7 +77,7 @@ $row = mysqli_fetch_assoc($resultado);
           <h4>Datos Personales</h4>
         </div>
       </a>
-      <a href="portalProfesor/horarioPro.html" id="horario-btn">
+      <a href="portalProfesor/horarioPro.php" id="horario-btn">
         <div class="option">
           <i class="fa-solid fa-calendar-days"></i>
           <h4>Horario</h4>
@@ -89,7 +89,7 @@ $row = mysqli_fetch_assoc($resultado);
           <h4>Alumnos</h4>
         </div>
       </a>
-      <a href="portalProfesor/nomina.html">
+      <a href="portalProfesor/nomina.php">
         <div class="option">
           <i class="fa-solid fa-book"></i>
           <h4>Nómina</h4>
