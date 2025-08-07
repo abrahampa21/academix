@@ -1,5 +1,24 @@
 <?php
 session_start();
+include("../src/conexion.php");
+
+if (!isset($_SESSION['id_matricula']) || $_SESSION['rol'] !== 'prof') {
+  echo "<script>
+            alert('Por favor, inicie sesión primero');
+            window.location.href='login.php';
+          </script>";
+  exit();
+}
+
+$idprofe = $_SESSION['id_matricula'];
+
+$sql = "SELECT * FROM profesor WHERE matriculaP = '$idprofe'";
+$resultado = mysqli_query($conexion, $sql);
+$row = mysqli_fetch_assoc($resultado);
+?>
+
+<?php
+session_start();
 include '../src/conexion.php';
 mysqli_set_charset($conexion, "utf8");
 
@@ -154,17 +173,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           id=""
           required
           />
+          <?php
+if (!isset($_SESSION['id_matricula'])) {
+    echo "<script>alert('Sesión expirada o no iniciada. Vuelve a iniciar sesión'); window.location.href='../login.php';</script>";
+    exit;
+}
+?>
+
           <input 
-          type="number"
-          name="matriculaA"
-          title="u"
-          placeholder="Escriba su matricula"
-          id=""
-          required
-          />
+  type="hidden"
+  name="matriculaP"
+  value="<?php echo $_SESSION['id_matricula']; ?>"
+/>
           <input
           type="number"
-          name="matriculaP"
+          name="matriculaA"
           title="u"
           placeholder="Escribe la matricula del destinatario"
           id=""
