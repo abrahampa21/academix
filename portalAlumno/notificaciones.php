@@ -55,7 +55,6 @@ $result = $stmt->get_result();
                     <th>Remitente</th>
                     <th>Estado</th>
                     <th>Respuesta</th>
-                    <th>Acción</th>
                 </tr>
             </thead>
             <tbody>
@@ -75,10 +74,7 @@ $result = $stmt->get_result();
                                 <td>
                                     <textarea name="respuesta"><?php echo htmlspecialchars($row['respuesta']); ?></textarea>
                                 </td>
-                                <td>
-                                    <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
-                                    <button type="submit" name="responder">Enviar</button>
-                                </td>
+                                
                             </form>
                         </tr>
                     <?php endwhile; ?>
