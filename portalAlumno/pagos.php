@@ -80,7 +80,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <div class="modal" id="modalReporte">
       <form class="modal-content" method="post">
         <span class="close" onclick="cerrarModal()">&times;</span>
-
         <h3>Reportar Problema</h3>
         <div class="destinatario">
           <h4>Destinatario</h4>

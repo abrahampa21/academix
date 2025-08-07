@@ -99,7 +99,7 @@ if (isset($_POST["salir"])) {
           <h4>Asistencia</h4>
         </div>
       </a>
-      <a href="portalAlumno/calificaciones.html">
+      <a href="portalAlumno/calificaciones.php">
         <div class="option">
           <i class="fa-solid fa-book"></i>
           <h4>Calificaciones</h4>
