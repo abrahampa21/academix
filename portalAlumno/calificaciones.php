@@ -45,11 +45,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       src="https://kit.fontawesome.com/e522357059.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <title>Tabla de Calificaciones</title>
   </head>
   <body>
     <div class="tabla-container" data-aos="fade-down">
-      <table class="tabla-calificaciones">
+      <table class="tabla-calificaciones" id="calificaciones">
         <caption>
           Calificaciones del Alumno
         </caption>
@@ -102,6 +103,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
       <br />
       <button class="btn" onclick="abrirModal()">Reportar un problema</button>
+      <button class="btn" onclick="descargarPDF()">Descargar boleta en PDF</button>
     </div>
 
     <!--Botón regresar-->
