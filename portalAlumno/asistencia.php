@@ -166,6 +166,7 @@ if (!isset($_SESSION['id_matricula'])) {
           title="u"
           placeholder="Escribe la matricula del destinatario"
           id=""
+          maxlength="7"
           required
           />
             
