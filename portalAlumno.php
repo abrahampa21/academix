@@ -27,7 +27,7 @@ if (isset($_POST["salir"])) {
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" href="src/img/academix.jpg" />
-  <link rel="stylesheet" href="Assets/css/portales.css?v=1.0" />
+  <link rel="stylesheet" href="/assets/css/portales.css?v=1.0" />
   <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
