@@ -128,14 +128,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           id=""
           required
           />
-          <input 
-          type="number"
-          name="matriculaA"
-          title="u"
-          placeholder="Escriba su matricula"
-          id=""
-          required
-          />
+          <?php
+if (!isset($_SESSION['id_matricula'])) {
+    echo "<script>alert('Sesión expirada o no iniciada. Vuelve a iniciar sesión'); window.location.href='../login.php';</script>";
+    exit;
+}
+?>
+
+  <input
+  type="hidden"
+  name="matriculaA"
+  value="<?php echo $_SESSION['id_matricula']; ?>"
+/>
           <input
           type="number"
           name="matriculaP"
