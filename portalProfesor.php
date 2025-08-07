@@ -47,16 +47,13 @@ $row = mysqli_fetch_assoc($resultado);
         <li><a href="#focus">Enfoque</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
-
       <!--Menú responsivo-->
-      <ul class="menu" id="menu">
-        <li>
-          <a href="portalProfesor/datosPersonalesPro.php">Datos Personales</a>
-        </li>
-        <li><a href="portalProfesor/horarioPro.html">Horario</a></li>
-        <li><a href="portalProfesor/alumnos.html">Alumnos</a></li>
-        <li><a href="#">Nómina</a></li>
-      </ul>
+      <div class="menu" id="menu">
+        <i class="fa-solid fa-address-card"><a href="portalProfesor/datosPersonalesPro.php">Datos Personales</a></i>
+        <i class="fa-solid fa-calendar-day"><a href="portalProfesor/horarioPro.html">Horario</a></i>
+        <i class="fa-solid fa-pen"><a href="portalProfesor/alumnos.html">Alumnos</a></i>
+        <i class="fa-solid fa-book"><a href="portalProfesor/nomina.html">Nómina</a></i>
+      </div>
     </nav>
   </header>
 
@@ -110,12 +107,6 @@ $row = mysqli_fetch_assoc($resultado);
     id="scrollTopBtn"
     title="Ir al principio"></i>
 
-  <!--Salir en responsividad-->
-  <div class="exit-rsp">
-    <a href="#" title="Salir" onclick="exit()">
-      <i class="fa-solid fa-right-from-bracket"></i>
-    </a>
-  </div>
 
   <!-- Contenido principal -->
   <main id="main">
@@ -223,6 +214,7 @@ $row = mysqli_fetch_assoc($resultado);
           <a href="#"><i class="fab fa-twitter" title="Twitter"></i></a>
           <a href="#"><i class="fab fa-instagram" title="Instagram"></i></a>
           <a href="#"><i class="fab fa-youtube" title="YouTube"></i></a>
+          <a href="#" title="Salir" onclick="exit()" class="exit-rsp"><i class="fa-solid fa-right-from-bracket"></i>Salir</a>
         </div>
       </div>
     </div>
