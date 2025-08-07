@@ -73,5 +73,5 @@ function cerrarModal() {
 }
 
 function returnMenu(){
-  window.location.href = "../portalAlumno.php";
+  window.location.href = "portalAlumno.php";
 }
