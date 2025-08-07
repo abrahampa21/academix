@@ -17,6 +17,33 @@ $resultado = mysqli_query($conexion, $sql);
 $row = mysqli_fetch_assoc($resultado);
 ?>
 
+<?php
+session_start();
+include '../src/conexion.php';
+mysqli_set_charset($conexion, "utf8");
+
+// Procesar el formulario cuando se envía
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $matriculaA = $_POST['matriculaA'];
+    $matriculaP = $_POST['matriculaP'];
+    $asunto = $_POST['asunto'];
+    $mensaje = $_POST['mensaje'];
+
+    $sql = "INSERT INTO quejas (matriculaA, matriculaP, asunto, mensaje)
+            VALUES ('$matriculaA', '$matriculaP', '$asunto', '$mensaje')";
+
+    if (mysqli_query($conexion, $sql)) {
+      echo "<script>
+          
+            window.location.href='horario.php';
+          </script>";
+        exit();
+    } else {
+        echo "<script>alert('Error: ".mysqli_error($conexion)."');</script>";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -155,25 +182,48 @@ $row = mysqli_fetch_assoc($resultado);
     </div>
 
     <!--Reporte -->
-    <div data-aos="zoom-in" class="modal" id="modalReporte">
-      <form class="modal-content">
+    <div class="modal" id="modalReporte">
+      <form class="modal-content" method="post">
         <span class="close" onclick="cerrarModal()">&times;</span>
         <h3>Reportar Problema</h3>
         <div class="destinatario">
           <h4>Destinatario</h4>
-          <input
-            type="email"
-            name=""
-            title="u"
-            placeholder="eg. itesrenedescartes.edu.mx"
-            id=""
-            required
+          <input 
+          type="text"
+          name="asunto"
+          title="u"
+          placeholder="Escriba el asunto de la queja"
+          id=""
+          required
           />
+          <?php
+if (!isset($_SESSION['id_matricula'])) {
+    echo "<script>alert('Sesión expirada o no iniciada. Vuelve a iniciar sesión'); window.location.href='../login.php';</script>";
+    exit;
+}
+?>
+
+          <input 
+  type="hidden"
+  name="matriculaA"
+  value="<?php echo $_SESSION['id_matricula']; ?>"
+/>
+          <input
+          type="number"
+          name="matriculaP"
+          title="u"
+          placeholder="Escribe la matricula del destinatario"
+          id=""
+          maxlength="7"
+          required
+          />
+            
         </div>
         <textarea
           rows="5"
           placeholder="Describe el problema..."
           required
+          name="mensaje"
         ></textarea>
         <br /><br />
         <button class="btn" type="submit">Enviar Reporte</button>
