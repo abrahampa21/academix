@@ -61,6 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       src="https://kit.fontawesome.com/e522357059.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <link rel="icon" href="../src/img/academix.jpg" />
     <link rel="stylesheet" href="../assets/css/portalAlumno/asistencia.css?v=1.0" />
     <title>Asistencias</title>
@@ -122,6 +123,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       </table>
       <br />
       <button class="btn" onclick="abrirModal()">Reportar un problema</button>
+      <button class="btn" type="submit" onclick="descargarPDF()">Descargas asistencias en PDF</button>
     </div>
 
     <!--Botón salir-->
