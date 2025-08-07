@@ -80,7 +80,7 @@ $row = mysqli_fetch_assoc($resultado);
           <h4>Horario</h4>
         </div>
       </a>
-      <a href="portalProfesor/alumnos.html" id="asistencia-btn">
+      <a href="portalProfesor/notificaciones.php" id="asistencia-btn">
         <div class="option">
           <i class="fa-solid fa-pen"></i>
           <h4>Alumnos</h4>
