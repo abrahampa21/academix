@@ -17,4 +17,9 @@ function confirmation(event) {
     event.preventDefault();
   }
 }
+
+function returnMenu(){
+  window.location.href = "../portalProfesor.php";
+}
+
 AOS.init();

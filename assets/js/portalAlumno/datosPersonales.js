@@ -20,4 +20,8 @@ function confirmation(event) {
   }
 }
 
+function returnMenu(){
+  window.location.href = "../portalAlumno.php";
+}
+
 AOS.init();
