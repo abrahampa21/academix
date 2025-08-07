@@ -1,3 +1,29 @@
+<?php
+session_start();
+include '../src/conexion.php';
+mysqli_set_charset($conexion, "utf8");
+
+// Procesar el formulario cuando se envía
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $matriculaA = $_POST['matriculaA'];
+    $matriculaP = $_POST['matriculaP'];
+    $asunto = $_POST['asunto'];
+    $mensaje = $_POST['mensaje'];
+
+    $sql = "INSERT INTO quejas (matriculaA, matriculaP, asunto, mensaje)
+            VALUES ('$matriculaA', '$matriculaP', '$asunto', '$mensaje')";
+
+    if (mysqli_query($conexion, $sql)) {
+      echo "<script>
+            window.location.href='nomina.php';
+          </script>";
+        exit();
+    } else {
+        echo "<script>alert('Error: ".mysqli_error($conexion)."');</script>";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="es">
   <head>
