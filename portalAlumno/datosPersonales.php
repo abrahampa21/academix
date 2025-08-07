@@ -111,14 +111,22 @@ $row = mysqli_fetch_assoc($resultado);
       <tr>
         <th>Carrera</th>
         <td>
-          <input
-            type="text"
-            class="dp-inputs"
-            name="carrera"
-            id="carrera"
-            readonly
-            required
-            value="<?php echo $row['carrera'] ?>" />
+          <select
+  class="status"
+  name="carrera"
+  id="carrera"
+  required
+  disabled
+>
+  <option value="">-- Selecciona una carrera --</option>
+  <option value="Pedagogía" <?= strtolower(trim($row['carrera'])) === 'pedagogía' ? 'selected' : '' ?>>Pedagogía</option>
+  <option value="Administración de Empresas" <?= strtolower(trim($row['carrera'])) === 'administración de empresas' ? 'selected' : '' ?>>Administración de Empresas</option>
+  <option value="Programación y Webmaster" <?= strtolower(trim($row['carrera'])) === 'programación y webmaster' ? 'selected' : '' ?>>Programación y Webmaster</option>
+  <option value="Artes Culinarias" <?= strtolower(trim($row['carrera'])) === 'artes culinarias y negocios gastronómicos' ? 'selected' : '' ?>>Artes Culinarias y Negocios Gastronómicos</option>
+  <option value="Derecho" <?= strtolower(trim($row['carrera'])) === 'derecho' ? 'selected' : '' ?>>Derecho</option>
+  <option value="Contaduría" <?= strtolower(trim($row['carrera'])) === 'contaduría' ? 'selected' : '' ?>>Contaduría</option>
+</select>
+
         </td>
       </tr>
       <tr>
