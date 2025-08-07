@@ -124,14 +124,18 @@ $row = mysqli_fetch_assoc($resultado);
       <tr>
         <th>Periodo</th>
         <td>
-          <input
-            type="text"
-            class="dp-inputs"
-            name="periodo"
-            id="periodo"
-            readonly
-            required
-            value="<?php echo $row['periodo'] ?>" />
+          <select
+  name="periodo"
+  class="status"
+  id="periodo"
+  required
+  disabled
+>
+  <option value="">-- Selecciona un periodo --</option>
+  <option value="Enero - Abril" <?= strtolower(trim($row['periodo'])) === 'enero - abril' ? 'selected' : '' ?>>Enero - Abril</option>
+  <option value="Abril - Agosto" <?= strtolower(trim($row['periodo'])) === 'abril - agosto' ? 'selected' : '' ?>>Abril - Agosto</option>
+  <option value="Septiembre - Diciembre" <?= strtolower(trim($row['periodo'])) === 'septiembre - diciembre' ? 'selected' : '' ?>>Septiembre - Diciembre</option>
+</select>
         </td>
       </tr>
       <tr>
