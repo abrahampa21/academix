@@ -110,3 +110,7 @@ function authorized() {
     }
   });
 }
+
+function returnMenu(){
+  window.location.href = "../portalProfesor.php";
+}

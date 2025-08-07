@@ -15,7 +15,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (mysqli_query($conexion, $sql)) {
       echo "<script>
-          
             window.location.href='pagos.php';
           </script>";
         exit();
@@ -70,8 +69,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
 
     <!--Botón regresar-->
-    <div class="exit-rsp">
-      <a href="../portalAlumno.php" title="Salir">
+    <div class="exit-rsp" onclick="returnMenu()">
+      <a href="#" title="Salir">
         <i class="fa-solid fa-arrow-left"></i>
       </a>
     </div>

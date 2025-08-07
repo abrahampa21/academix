@@ -161,8 +161,8 @@ $row = mysqli_fetch_assoc($resultado);
   </form>
 
   <!--Botón salir-->
-  <div class="exit-rsp">
-    <a href="../portalProfesor.php" title="Salir">
+  <div class="exit-rsp" onclick="returnMenu()">
+    <a href="#" title="Salir">
       <i class="fa-solid fa-arrow-left"></i>
     </a>
   </div>

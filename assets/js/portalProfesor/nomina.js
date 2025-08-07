@@ -37,3 +37,7 @@ function filtrarTabla() {
     fila.style.display = visible ? "" : "none";
   });
 }
+
+function returnMenu(){
+  window.location.href = "../portalProfesor.php";
+}

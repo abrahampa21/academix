@@ -11,3 +11,7 @@ function abrirModal() {
 function cerrarModal() {
   document.getElementById("modalReporte").style.display = "none";
 }
+
+function returnMenu(){
+  window.location.href = "../portalAlumno.php";
+}
