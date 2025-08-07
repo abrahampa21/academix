@@ -112,20 +112,18 @@ $row = mysqli_fetch_assoc($resultado);
         <th>Carrera</th>
         <td>
           <select
-  class="status"
-  name="carrera"
-  id="carrera"
-  required
-  disabled
->
-  <option value="">-- Selecciona una carrera --</option>
-  <option value="Pedagogía" <?= strtolower(trim($row['carrera'])) === 'pedagogía' ? 'selected' : '' ?>>Pedagogía</option>
-  <option value="Administración de Empresas" <?= strtolower(trim($row['carrera'])) === 'administración de empresas' ? 'selected' : '' ?>>Administración de Empresas</option>
-  <option value="Programación y Webmaster" <?= strtolower(trim($row['carrera'])) === 'programación y webmaster' ? 'selected' : '' ?>>Programación y Webmaster</option>
-  <option value="Artes Culinarias" <?= strtolower(trim($row['carrera'])) === 'artes culinarias y negocios gastronómicos' ? 'selected' : '' ?>>Artes Culinarias y Negocios Gastronómicos</option>
-  <option value="Derecho" <?= strtolower(trim($row['carrera'])) === 'derecho' ? 'selected' : '' ?>>Derecho</option>
-  <option value="Contaduría" <?= strtolower(trim($row['carrera'])) === 'contaduría' ? 'selected' : '' ?>>Contaduría</option>
-</select>
+            class="status"
+            name="carrera"
+            id="carrera"
+            required
+            disabled>
+            <option value="Pedagogía" <?= strtolower(trim($row['carrera'])) === 'pedagogía' ? 'selected' : '' ?>>Pedagogía</option>
+            <option value="Administración de Empresas" <?= strtolower(trim($row['carrera'])) === 'administración de empresas' ? 'selected' : '' ?>>Administración de Empresas</option>
+            <option value="Programación y Webmaster" <?= strtolower(trim($row['carrera'])) === 'programación y webmaster' ? 'selected' : '' ?>>Programación y Webmaster</option>
+            <option value="Artes Culinarias" <?= strtolower(trim($row['carrera'])) === 'artes culinarias y negocios gastronómicos' ? 'selected' : '' ?>>Artes Culinarias y Negocios Gastronómicos</option>
+            <option value="Derecho" <?= strtolower(trim($row['carrera'])) === 'derecho' ? 'selected' : '' ?>>Derecho</option>
+            <option value="Contaduría" <?= strtolower(trim($row['carrera'])) === 'contaduría' ? 'selected' : '' ?>>Contaduría</option>
+          </select>
 
         </td>
       </tr>
@@ -133,17 +131,15 @@ $row = mysqli_fetch_assoc($resultado);
         <th>Periodo</th>
         <td>
           <select
-  name="periodo"
-  class="status"
-  id="periodo"
-  required
-  disabled
->
-  <option value="">-- Selecciona un periodo --</option>
-  <option value="Enero - Abril" <?= strtolower(trim($row['periodo'])) === 'enero - abril' ? 'selected' : '' ?>>Enero - Abril</option>
-  <option value="Abril - Agosto" <?= strtolower(trim($row['periodo'])) === 'abril - agosto' ? 'selected' : '' ?>>Abril - Agosto</option>
-  <option value="Septiembre - Diciembre" <?= strtolower(trim($row['periodo'])) === 'septiembre - diciembre' ? 'selected' : '' ?>>Septiembre - Diciembre</option>
-</select>
+            name="periodo"
+            class="status"
+            id="periodo"
+            required
+            disabled>
+            <option value="Enero - Abril" <?= strtolower(trim($row['periodo'])) === 'enero - abril' ? 'selected' : '' ?>>Enero - Abril</option>
+            <option value="Abril - Agosto" <?= strtolower(trim($row['periodo'])) === 'abril - agosto' ? 'selected' : '' ?>>Abril - Agosto</option>
+            <option value="Septiembre - Diciembre" <?= strtolower(trim($row['periodo'])) === 'septiembre - diciembre' ? 'selected' : '' ?>>Septiembre - Diciembre</option>
+          </select>
         </td>
       </tr>
       <tr>
