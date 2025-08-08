@@ -88,7 +88,7 @@ $result = $stmt->get_result();
     </div>
 
     <div class="exit-rsp" onclick="returnMenuAlu()">
-        <a href="#" title="Salir"><i class="fa-solid fa-arrow-left"></i></a>
+        <a href="/portalAlumno.php" title="Salir"><i class="fa-solid fa-arrow-left"></i></a>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
