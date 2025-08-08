@@ -7,6 +7,7 @@ const passwordRpt = document.getElementById("contraseña-rpt");
 const showPassword = document.getElementById("eye-slash");
 const showPasswordRpt = document.getElementById("eye-slash-rpt");
 const loginPwd = document.getElementById("login-pwd");
+const loginIconPwd = document.getElementById("login-pwd-icon");
 const inputsRegister = document.querySelectorAll(".inputs-register");
 const inputsLogin = document.querySelectorAll(".inputs-login");
 
@@ -84,8 +85,8 @@ function revealPassword() {
 function revealPasswordLogin() {
   const isPassword = loginPwd.type == "password";
   loginPwd.type = isPassword ? "text" : "password";
-  showPassword.classList.toggle("fa-eye");
-  showPassword.classList.toggle("fa-eye-slash");
+  loginIconPwd.classList.toggle("fa-eye");
+  loginIconPwd.classList.toggle("fa-eye-slash");
 
 }
 
