@@ -1,7 +1,10 @@
-body {
+*{
   margin: 0;
-  padding: 2rem;
-  height: 100vh;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: "Plus Jakarta Sans", sans-serif;
   background: linear-gradient(
     330deg,
@@ -14,6 +17,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
 }
 
 .container{
