@@ -16,7 +16,7 @@ function cerrarModal(){
 }
 
 function returnMenu(){
-  window.location.href = "portalAlumno.php";
+  window.location.href = "https://academix.space/portalAlumno.php";
 }
 
 function descargarPDF() {

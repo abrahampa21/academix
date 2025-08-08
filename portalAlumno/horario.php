@@ -176,7 +176,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <!--Botón salir-->
     <div class="exit-rsp" onclick="returnMenu()">
-      <a href="portalAlumno.php" title="Salir">
+      <a href="" title="Salir">
         <i class="fa-solid fa-arrow-left"></i>
       </a>
     </div>

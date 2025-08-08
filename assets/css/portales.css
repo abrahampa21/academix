@@ -675,6 +675,7 @@ a.selected {
   .icon-menu {
     transform: translateY(10px);
   }
+  
 }
 
 @media (max-width: 500px) {
@@ -691,6 +692,10 @@ a.selected {
   .intro,
   .about-us {
     height: 120vh;
+  }
+
+  .nav-bar .fa-bell{
+    margin-right: 0;
   }
 
   .nav-bar{
