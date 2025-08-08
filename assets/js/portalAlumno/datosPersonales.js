@@ -21,7 +21,7 @@ function confirmation(event) {
 }
 
 function returnMenu(){
-  window.location.href = "https://academix.space/portalAlumno.php";
+  window.location.href = "../portalAlumno.php";
 }
 
 AOS.init();
