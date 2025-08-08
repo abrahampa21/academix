@@ -71,7 +71,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <!--Botón regresar-->
     <div class="exit-rsp" onclick="returnMenu()">
+<<<<<<< HEAD
       <a href="" title="Salir">
+=======
+      <a href="/portalAlumno.php" title="Salir">
+>>>>>>> 84fe1cb9bb099b2d40be61067074676832282e64
         <i class="fa-solid fa-arrow-left"></i>
       </a>
     </div>
