@@ -11,7 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&display=swap"
       rel="stylesheet"
     />
-        <script
+    <script
       src="https://kit.fontawesome.com/e522357059.js"
       crossorigin="anonymous"
     ></script>
@@ -20,54 +20,64 @@
     <title>Alumnos</title>
   </head>
   <body>
-    <table class="alumnos" data-aos="fade-down" id="alumnos">
-      <tbody>
-        <tr>
-          <th>Alumno</th>
-          <th>Asistencia</th>
-          <th>Calificacion</th>
-          <th>Puntos extras</th>
-          <th>Asignatura</th>
-        </tr>
-        <tr>
-          <td></td>
-          <td><a href="../portalAlumno/asistencia.php">Ver asistencias</a></td>
-          <td>10</td>
-          <td>2</td>
-          <td>Programación avanzada</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-      </tbody>
-    </table>
-  </body>
+    <div class="container" data-aos="fade-down">
+      <table class="alumnos" id="alumnos">
+        <tbody>
+          <tr>
+            <th>Alumno</th>
+            <th>Asistencia</th>
+            <th>Calificacion</th>
+            <th>Puntos extras</th>
+            <th>Asignatura</th>
+          </tr>
+          <tr>
+            <td></td>
+            <td>
+              <a href="../portalAlumno/asistencia.php">Ver asistencias</a>
+            </td>
+            <td>10</td>
+            <td>2</td>
+            <td>Programación avanzada</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="container-submit">
+        <button class="btn" id="btn-modified-schedule">Modificar datos</button>
+        <button class="btn add-subject" id="add-subject">
+          Actualizar datos
+        </button>
+      </div>
+    </div>
 
-  <!--Botón salir-->
+    <!--Botón salir-->
     <div class="exit-rsp" onclick="returnMenu()">
       <a href="#" title="Salir">
         <i class="fa-solid fa-arrow-left"></i>
       </a>
     </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script src="../assets/js/portalProfesor/alumnos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="../assets/js/portalProfesor/alumnos.js"></script>
+  </body>
 </html>

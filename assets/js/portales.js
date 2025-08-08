@@ -45,7 +45,7 @@ function exit() {
   const message = confirm("¿Realmente quieres salir del sitio?");
 
   if (message) {
-    window.location.href = "https://academix.space/index.html";
+    window.location.href = "index.html";
   }
 }
 
