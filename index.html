@@ -31,8 +31,21 @@
     ></script>
     <title>ITES René Descartes - Inicio</title>
   </head>
-  <body>
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-4G187DGVGB"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
 
+    gtag("config", "G-4G187DGVGB");
+  </script>
+  <body>
     <!--Header-->
     <header>
       <div class="header">
@@ -74,10 +87,7 @@
     </header>
 
     <!--Botón para regresar al inicio-->
-    <i
-      class="scrollTopBtn fa-solid fa-arrow-up"
-      id="scrollTopBtn"
-    ></i>
+    <i class="scrollTopBtn fa-solid fa-arrow-up" id="scrollTopBtn"></i>
 
     <div class="si-fixed" id="si-fixed">
       <a href="#" title="icons"><i class="fa-brands fa-facebook-f"></i></a>
@@ -152,7 +162,8 @@
         <h2>Inscríbete</h2>
         <p>
           ¡No te quedes fuera! Pregunta por nuestro sistema de becas y de las
-          promociones que puedes gozar al integrarte con nosotros durante toda tu estancia en la licenciatura.
+          promociones que puedes gozar al integrarte con nosotros durante toda
+          tu estancia en la licenciatura.
         </p>
       </div>
     </section>
