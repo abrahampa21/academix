@@ -546,7 +546,7 @@ footer .footer-bottom a {
 
 @media (max-width: 450px) {
   header .header .links-header {
-    font-size: 0.65rem;
+    font-size: .7rem;
   }
 
   .menu{
@@ -559,8 +559,3 @@ footer .footer-bottom a {
   }
 }
 
-@media (max-width: 381px){
-  header .header .links-header{
-    font-size: 0.63rem;
-  }
-}
