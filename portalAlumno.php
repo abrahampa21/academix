@@ -62,7 +62,7 @@ if (isset($_POST["salir"])) {
         <i class="fa-solid fa-address-card"><a href="portalAlumno/datosPersonales.php">Datos Personales</a></i>
         <i class="fa-solid fa-calendar-days"><a href="portalAlumno/horario.php">Horario</a></i>
         <i class="fa-solid fa-pen"><a href="portalAlumno/asistencia.php">Asistencia</a></i>
-        <i class="fa-solid fa-book"><a href="portalAlumno/calificaciones.html">Calificaciones</a></i>
+        <i class="fa-solid fa-book"><a href="portalAlumno/calificaciones.php">Calificaciones</a></i>
         <i class="fa-solid fa-money-check-dollar"><a href="portalAlumno/pagos.php">Pagos</a></i>
       </div>
     </nav>

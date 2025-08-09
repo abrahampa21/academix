@@ -702,10 +702,22 @@ a.selected {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: .5rem;
   }
 
   .menu{
     right: 8%;
+  }
+
+  header .toggle{
+    margin: 0;
+  }
+
+  .nav-bar .title img{
+    width: 40px;
+  }
+
+  .nav-bar .title h1{
+    font-size: 1.4rem;
   }
 }

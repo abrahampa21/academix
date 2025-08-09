@@ -1,6 +1,10 @@
-body {
+*{
   margin: 0;
-  height: 100vh;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: "Plus Jakarta Sans", sans-serif;
   display: flex;
   justify-content: center;
@@ -14,6 +18,8 @@ body {
     #d4d8dd,
     #1a2d42
   );
+  background-repeat: no-repeat;
+  padding: 1rem;
 }
 
 .personal-data {
@@ -22,7 +28,8 @@ body {
   border-radius: 20px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   max-width: 580px;
-  width: 90%;
+  width: 100%;
+  overflow-x: auto;
 }
 
 .personal-data table {
@@ -35,7 +42,7 @@ body {
   font-size: 1.5rem;
   font-weight: 600;
   color: #1a2a3b;
-  padding-bottom: .5rem;
+  padding-bottom: 0.5rem;
   text-align: center;
   border-bottom: 2px solid #d0d7de;
 }
@@ -57,21 +64,21 @@ body {
 
 .personal-data td {
   color: #475569;
-  width: 80%;
+  width: 60%;
 }
 
-.personal-data .status{
-  padding: .5rem 5rem;
+.personal-data .status {
+  padding: 0.5rem;
   font-size: 16px;
   border-radius: 5px;
   background-color: #e2e8f0;
   color: #000;
-
+  width: 100%;
 }
 
 .personal-data input[type="text"],
 .personal-data input[type="date"] {
-  width: 90%;
+  width: 100%;
   padding: 0.5rem 0.75rem;
   border: 1px solid #cbd5e1;
   border-radius: 10px;
@@ -80,36 +87,19 @@ body {
   color: #1e293b;
 }
 
-.personal-data select{
-  width: 90%;
-  margin: 0;
-  padding: 0;
-}
-
 .personal-data input[readonly] {
   background-color: #e2e8f0;
   cursor: not-allowed;
 }
 
-.personal-data i.fa-pen {
-  margin-left: 0.5rem;
-  color: #14b8a6;
-  cursor: pointer;
-  transition: color 0.3s;
-}
-
-.personal-data i.fa-pen:hover {
-  color: #0d9488;
-}
-
-.buttons-submit{
+.buttons-submit {
   display: flex;
-  align-items: center;
-  gap: 2rem;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .submit {
-  width: 100%;
+  flex: 1;
   padding: 0.75rem;
   font-size: 1rem;
   font-weight: 600;
@@ -125,7 +115,7 @@ body {
   background-color: #0d9488;
 }
 
-/*Botón para regresar*/
+/* Botón para regresar */
 .exit-rsp {
   position: fixed;
   top: 2%;
@@ -150,3 +140,51 @@ body {
   background-color: #0056b3;
 }
 
+/*RESPONSIVE */
+@media (max-width: 768px) {
+  body {
+    align-items: flex-start;
+    padding-top: 2rem;
+  }
+
+  .personal-data {
+    padding: 1rem;
+  }
+
+  .personal-data table {
+    display: block;
+  }
+
+  .personal-data th {
+    text-align: left;
+    width: 100%;
+    display: block;
+    padding-bottom: 0.25rem;
+  }
+
+  .personal-data td {
+    width: 100%;
+    display: block;
+    padding-bottom: 1rem;
+  }
+
+  .buttons-submit {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .personal-data caption {
+    font-size: 1.2rem;
+  }
+
+  .submit {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+
+  .exit-rsp {
+    font-size: 16px;
+    padding: 8px 10px;
+  }
+}
