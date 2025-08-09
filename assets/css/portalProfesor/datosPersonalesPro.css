@@ -1,11 +1,22 @@
-body {
+* {
   margin: 0;
-  height: 100vh;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
   font-family: "Plus Jakarta Sans", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
-    background: linear-gradient(
+  animation: gradient 15s ease infinite;
+  background: linear-gradient(
     330deg,
     #1a2d42,
     #aab7b7,
@@ -13,7 +24,7 @@ body {
     #d4d8dd,
     #1a2d42
   );
-  animation: gradient 15s ease infinite;
+  background-repeat: no-repeat;
 }
 
 .data-teacher {
@@ -59,13 +70,12 @@ body {
   color: #475569;
 }
 
-.data-teacher .status{
-  padding: .5rem 5rem;
+.data-teacher .status {
+  padding: 0.5rem 5rem;
   font-size: 16px;
   border-radius: 5px;
   background-color: #e2e8f0;
   color: #000;
-
 }
 
 .data-teacher input[type="text"],
@@ -95,7 +105,7 @@ body {
   color: #0d9488;
 }
 
-.buttons-submit{
+.buttons-submit {
   display: flex;
   align-items: center;
   gap: 2rem;
@@ -139,7 +149,6 @@ body {
   color: white;
 }
 
-.exit-rsp:hover{
+.exit-rsp:hover {
   background-color: #0056b3;
-
 }
