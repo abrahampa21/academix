@@ -35,6 +35,20 @@ if (isset($_POST["salir"])) {
     src="https://kit.fontawesome.com/e522357059.js"
     crossorigin="anonymous"></script>
   <title>Portal del Alumno</title>
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-4G187DGVGB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-4G187DGVGB");
+  </script>
 </head>
 
 <body>

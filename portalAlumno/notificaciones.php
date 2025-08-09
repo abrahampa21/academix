@@ -33,13 +33,27 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Avisos y Mensajes</title>
         <link rel="icon" href="../src/img/academix.jpg" />
         <script src="https://kit.fontawesome.com/e522357059.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
         <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
         <link rel="stylesheet" href="../assets/css/portalProfesor/horarioPro.css?v=1.0">
         <link rel="stylesheet" href="notificaciones.css">
+        <title>Avisos y Mensajes</title>
+        <!-- Google tag (gtag.js) -->
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-4G187DGVGB"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+
+            gtag("config", "G-4G187DGVGB");
+        </script>
     </head>
 
     <body>
@@ -67,14 +81,14 @@
                                     <td><?php echo htmlspecialchars($row['matriculaP']); ?></td>
                                     <td>
                                         <select name="estado" type="readonly">
-                                            
+
                                             <option value="respondida" <?= $row['estado'] === 'respondida' ? 'selected' : '' ?>>Respondida</option>
                                         </select>
                                     </td>
                                     <td>
                                         <textarea name="respuesta"><?php echo htmlspecialchars($row['respuesta']); ?></textarea>
                                     </td>
-                                    
+
                                 </form>
                             </tr>
                         <?php endwhile; ?>

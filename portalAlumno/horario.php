@@ -24,214 +24,215 @@ mysqli_set_charset($conexion, "utf8");
 
 // Procesar el formulario cuando se envía
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $matriculaA = $_POST['matriculaA'];
-    $matriculaP = $_POST['matriculaP'];
-    $asunto = $_POST['asunto'];
-    $mensaje = $_POST['mensaje'];
+  $matriculaA = $_POST['matriculaA'];
+  $matriculaP = $_POST['matriculaP'];
+  $asunto = $_POST['asunto'];
+  $mensaje = $_POST['mensaje'];
 
-    $sql = "INSERT INTO quejas (matriculaA, matriculaP, asunto, mensaje)
+  $sql = "INSERT INTO quejas (matriculaA, matriculaP, asunto, mensaje)
             VALUES ('$matriculaA', '$matriculaP', '$asunto', '$mensaje')";
 
-    if (mysqli_query($conexion, $sql)) {
-      echo "<script>
+  if (mysqli_query($conexion, $sql)) {
+    echo "<script>
           
             window.location.href='horario.php';
           </script>";
-        exit();
-    } else {
-        echo "<script>alert('Error: ".mysqli_error($conexion)."');</script>";
-    }
+    exit();
+  } else {
+    echo "<script>alert('Error: " . mysqli_error($conexion) . "');</script>";
+  }
 }
 ?>
 
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="../src/img/academix.jpg" />
-    <script
-      src="https://kit.fontawesome.com/e522357059.js"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
-    />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-    <link rel="stylesheet" href="../assets/css/portalAlumno/horario.css" />
-    <title>Horario de Clases</title>
-  </head>
-  <body>
-    <div class="horario-container" data-aos="fade-down">
-      <div class="horario-header">
-        <h1>Horario de Clases - Mayo a Agosto</h1>
-        <br />
-        <div class="buttons-modified">
-          <button class="botoncitos" id="botoncito" onclick="descargarPDF()">
-            Descargar como PDF
-          </button>
-          <button class="botoncitos" onclick="authorized()">
-            Modificar Horario
-          </button>
-        </div>
-      </div>
-      <table id="horario">
-        <caption>
-          <?php echo $row['carrera'] ?>
-        </caption>
-        <thead>
-          <tr>
-            <th>Asignatura</th>
-            <th>Clave</th>
-            <th>Horas/Semana</th>
-            <th>Lunes</th>
-            <th>Martes</th>
-            <th>Miércoles</th>
-            <th>Jueves</th>
-            <th>Viernes</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="asignatura">
-              Propaganda y Medios<br /><span class="profesor"
-                >Mtro. Omar Enrique Kantun</span
-              >
-            </td>
-            <td>311</td>
-            <td>3</td>
-            <td></td>
-            <td>7:00 - 9:00</td>
-            <td></td>
-            <td></td>
-            <td>8:00 - 9:00</td>
-          </tr>
-          <tr>
-            <td class="asignatura">
-              Programación de Web I<br /><span class="profesor"
-                >I.S.C. Edward Enrique Morales</span
-              >
-            </td>
-            <td>312</td>
-            <td>5</td>
-            <td>10:30 - 12:30</td>
-            <td></td>
-            <td>11:30 - 12:30</td>
-            <td></td>
-            <td>9:30 - 11:30</td>
-          </tr>
-          <tr>
-            <td class="asignatura">
-              Redes I<br /><span class="profesor"
-                >I.S.C. Luis Manuel Cambranis</span
-              >
-            </td>
-            <td>313</td>
-            <td>5</td>
-            <td></td>
-            <td>9:30 - 11:30</td>
-            <td></td>
-            <td>9:30 - 11:30</td>
-            <td>7:00 - 8:00</td>
-          </tr>
-          <tr>
-            <td class="asignatura">
-              Lenguaje PHP y Java<br /><span class="profesor"
-                >Lic. Cesar Ricardo Cen Poot</span
-              >
-            </td>
-            <td>314</td>
-            <td>6</td>
-            <td>8:00 - 10:00</td>
-            <td></td>
-            <td>9:30 - 11:30</td>
-            <td>11:30 - 13:30</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td class="asignatura">
-              Diseño de Páginas Web<br /><span class="profesor"
-                >Mtro. Abraham Izoteco Valle</span
-              >
-            </td>
-            <td>315</td>
-            <td>4</td>
-            <td></td>
-            <td></td>
-            <td>7:00 - 9:00</td>
-            <td>7:00 - 9:00</td>
-            <td></td>
-          </tr>
-        </tbody>
-      </table>
 
-      <div class="buttons-submit">
-        <button class="btn" onclick="abrirModal()">Reportar un problema</button>
-        <button class="btn" id="btn-modified-schedule">
-          Enviar horario modificado
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="../src/img/academix.jpg" />
+  <script
+    src="https://kit.fontawesome.com/e522357059.js"
+    crossorigin="anonymous"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <link rel="stylesheet" href="../assets/css/portalAlumno/horario.css" />
+  <title>Horario de Clases</title>
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-4G187DGVGB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-4G187DGVGB");
+  </script>
+</head>
+
+<body>
+  <div class="horario-container" data-aos="fade-down">
+    <div class="horario-header">
+      <h1>Horario de Clases - Mayo a Agosto</h1>
+      <br />
+      <div class="buttons-modified">
+        <button class="botoncitos" id="botoncito" onclick="descargarPDF()">
+          Descargar como PDF
+        </button>
+        <button class="botoncitos" onclick="authorized()">
+          Modificar Horario
         </button>
       </div>
     </div>
+    <table id="horario">
+      <caption>
+        <?php echo $row['carrera'] ?>
+      </caption>
+      <thead>
+        <tr>
+          <th>Asignatura</th>
+          <th>Clave</th>
+          <th>Horas/Semana</th>
+          <th>Lunes</th>
+          <th>Martes</th>
+          <th>Miércoles</th>
+          <th>Jueves</th>
+          <th>Viernes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="asignatura">
+            Propaganda y Medios<br /><span class="profesor">Mtro. Omar Enrique Kantun</span>
+          </td>
+          <td>311</td>
+          <td>3</td>
+          <td></td>
+          <td>7:00 - 9:00</td>
+          <td></td>
+          <td></td>
+          <td>8:00 - 9:00</td>
+        </tr>
+        <tr>
+          <td class="asignatura">
+            Programación de Web I<br /><span class="profesor">I.S.C. Edward Enrique Morales</span>
+          </td>
+          <td>312</td>
+          <td>5</td>
+          <td>10:30 - 12:30</td>
+          <td></td>
+          <td>11:30 - 12:30</td>
+          <td></td>
+          <td>9:30 - 11:30</td>
+        </tr>
+        <tr>
+          <td class="asignatura">
+            Redes I<br /><span class="profesor">I.S.C. Luis Manuel Cambranis</span>
+          </td>
+          <td>313</td>
+          <td>5</td>
+          <td></td>
+          <td>9:30 - 11:30</td>
+          <td></td>
+          <td>9:30 - 11:30</td>
+          <td>7:00 - 8:00</td>
+        </tr>
+        <tr>
+          <td class="asignatura">
+            Lenguaje PHP y Java<br /><span class="profesor">Lic. Cesar Ricardo Cen Poot</span>
+          </td>
+          <td>314</td>
+          <td>6</td>
+          <td>8:00 - 10:00</td>
+          <td></td>
+          <td>9:30 - 11:30</td>
+          <td>11:30 - 13:30</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="asignatura">
+            Diseño de Páginas Web<br /><span class="profesor">Mtro. Abraham Izoteco Valle</span>
+          </td>
+          <td>315</td>
+          <td>4</td>
+          <td></td>
+          <td></td>
+          <td>7:00 - 9:00</td>
+          <td>7:00 - 9:00</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
 
-    <!--Botón salir-->
-    <div class="exit-rsp" onclick="returnMenu()">
-      <a href="#" title="Salir">
-        <i class="fa-solid fa-arrow-left"></i>
-      </a>
+    <div class="buttons-submit">
+      <button class="btn" onclick="abrirModal()">Reportar un problema</button>
+      <button class="btn" id="btn-modified-schedule">
+        Enviar horario modificado
+      </button>
     </div>
+  </div>
 
-    <!--Reporte -->
-    <div class="modal" id="modalReporte">
-      <form class="modal-content" method="post">
-        <span class="close" onclick="cerrarModal()">&times;</span>
-        <h3>Reportar Problema</h3>
-        <div class="destinatario">
-          <h4>Destinatario</h4>
-          <input 
+  <!--Botón salir-->
+  <div class="exit-rsp" onclick="returnMenu()">
+    <a href="#" title="Salir">
+      <i class="fa-solid fa-arrow-left"></i>
+    </a>
+  </div>
+
+  <!--Reporte -->
+  <div class="modal" id="modalReporte">
+    <form class="modal-content" method="post">
+      <span class="close" onclick="cerrarModal()">&times;</span>
+      <h3>Reportar Problema</h3>
+      <div class="destinatario">
+        <h4>Destinatario</h4>
+        <input
           type="text"
           name="asunto"
           title="u"
           placeholder="Escriba el asunto de la queja"
           id=""
-          required
-          />
-          <?php
-if (!isset($_SESSION['id_matricula'])) {
-    echo "<script>alert('Sesión expirada o no iniciada. Vuelve a iniciar sesión'); window.location.href='../login.php';</script>";
-    exit;
-}
-?>
+          required />
+        <?php
+        if (!isset($_SESSION['id_matricula'])) {
+          echo "<script>alert('Sesión expirada o no iniciada. Vuelve a iniciar sesión'); window.location.href='../login.php';</script>";
+          exit;
+        }
+        ?>
 
-          <input 
-  type="hidden"
-  name="matriculaA"
-  value="<?php echo $_SESSION['id_matricula']; ?>"
-/>
-          <input
+        <input
+          type="hidden"
+          name="matriculaA"
+          value="<?php echo $_SESSION['id_matricula']; ?>" />
+        <input
           type="number"
           name="matriculaP"
           title="u"
           placeholder="Escribe la matricula del destinatario"
           id=""
           maxlength="7"
-          required
-          />
-            
-        </div>
-        <textarea
-          rows="5"
-          placeholder="Describe el problema..."
-          required
-          name="mensaje"
-        ></textarea>
-        <br /><br />
-        <button class="btn" type="submit">Enviar Reporte</button>
-      </form>
-    </div>
+          required />
 
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script src="../assets/js/portalAlumno/horario.js"></script>
-  </body>
+      </div>
+      <textarea
+        rows="5"
+        placeholder="Describe el problema..."
+        required
+        name="mensaje"></textarea>
+      <br /><br />
+      <button class="btn" type="submit">Enviar Reporte</button>
+    </form>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="../assets/js/portalAlumno/horario.js"></script>
+</body>
+
 </html>

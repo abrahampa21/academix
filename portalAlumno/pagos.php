@@ -5,22 +5,22 @@ mysqli_set_charset($conexion, "utf8");
 
 // Procesar el formulario cuando se envía
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $matriculaA = $_POST['matriculaA'];
-    $matriculaP = $_POST['matriculaP'];
-    $asunto = $_POST['asunto'];
-    $mensaje = $_POST['mensaje'];
+  $matriculaA = $_POST['matriculaA'];
+  $matriculaP = $_POST['matriculaP'];
+  $asunto = $_POST['asunto'];
+  $mensaje = $_POST['mensaje'];
 
-    $sql = "INSERT INTO quejas (matriculaA, matriculaP, asunto, mensaje)
+  $sql = "INSERT INTO quejas (matriculaA, matriculaP, asunto, mensaje)
             VALUES ('$matriculaA', '$matriculaP', '$asunto', '$mensaje')";
 
-    if (mysqli_query($conexion, $sql)) {
-      echo "<script>
+  if (mysqli_query($conexion, $sql)) {
+    echo "<script>
             window.location.href='pagos.php';
           </script>";
-        exit();
-    } else {
-        echo "<script>alert('Error: ".mysqli_error($conexion)."');</script>";
-    }
+    exit();
+  } else {
+    echo "<script>alert('Error: " . mysqli_error($conexion) . "');</script>";
+  }
 }
 
 ?>
@@ -28,107 +28,118 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
-    />
-    <link rel="icon" href="../src/img/academix.jpg" />
-    <link rel="stylesheet" href="../assets/css/portalAlumno/pagos.css" />
-    <script
-      src="https://kit.fontawesome.com/e522357059.js"
-      crossorigin="anonymous"
-    ></script>
-    <title>Estado de Pagos</title>
-  </head>
-  <body>
-    <div class="tabla-container">
-      <table>
-        <caption>
-          Estado de Pagos Mensuales
-        </caption>
-        <thead>
-          <tr>
-            <th>Mes</th>
-            <th>Estado</th>
-            <th>Monto Pagado</th>
-          </tr>
-        </thead>
-        <tbody id="tablaPagos">
-          <!-- Se llenará dinámicamente con JavaScript -->
-        </tbody>
-      </table>
-      <div class="advertencia" id="advertenciaPago">
-        Se te cobrará la colegiatura normal ($2200) este mes si no realizas el
-        pago antes del día 10.
-      </div>
 
-      <button class="btn" onclick="abrirModal()">Reportar un problema</button>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+  <link rel="icon" href="../src/img/academix.jpg" />
+  <link rel="stylesheet" href="../assets/css/portalAlumno/pagos.css" />
+  <script
+    src="https://kit.fontawesome.com/e522357059.js"
+    crossorigin="anonymous"></script>
+  <title>Estado de Pagos</title>
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-4G187DGVGB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-4G187DGVGB");
+  </script>
+</head>
+
+<body>
+  <div class="tabla-container">
+    <table>
+      <caption>
+        Estado de Pagos Mensuales
+      </caption>
+      <thead>
+        <tr>
+          <th>Mes</th>
+          <th>Estado</th>
+          <th>Monto Pagado</th>
+        </tr>
+      </thead>
+      <tbody id="tablaPagos">
+        <!-- Se llenará dinámicamente con JavaScript -->
+      </tbody>
+    </table>
+    <div class="advertencia" id="advertenciaPago">
+      Se te cobrará la colegiatura normal ($2200) este mes si no realizas el
+      pago antes del día 10.
     </div>
 
-    <!--Botón regresar-->
-    <div class="exit-rsp" onclick="returnMenu()">
-      <a href="#" title="Salir">
-        <i class="fa-solid fa-arrow-left"></i>
-      </a>
-    </div>
+    <button class="btn" onclick="abrirModal()">Reportar un problema</button>
 
-    <!--Reporte -->
-    <div class="modal" id="modalReporte">
-      <form class="modal-content" method="post">
-        <span class="close" onclick="cerrarModal()">&times;</span>
-        <h3>Reportar Problema</h3>
-        <div class="destinatario">
-          <h4>Destinatario</h4>
-          <input 
+  </div>
+
+  <!--Botón regresar-->
+  <div class="exit-rsp" onclick="returnMenu()">
+    <a href="#" title="Salir">
+      <i class="fa-solid fa-arrow-left"></i>
+    </a>
+  </div>
+
+  <!--Reporte -->
+  <div class="modal" id="modalReporte">
+    <form class="modal-content" method="post">
+      <span class="close" onclick="cerrarModal()">&times;</span>
+      <h3>Reportar Problema</h3>
+      <div class="destinatario">
+        <h4>Destinatario</h4>
+        <input
           type="text"
           name="asunto"
           title="u"
           placeholder="Escriba el asunto de la queja"
           id=""
-          required
-          />
+          required />
 
-<?php
-if (!isset($_SESSION['id_matricula'])) {
-    echo "<script>alert('Sesión expirada o no iniciada. Vuelve a iniciar sesión'); window.location.href='../login.php';</script>";
-    exit;
-}
-?>
+        <?php
+        if (!isset($_SESSION['id_matricula'])) {
+          echo "<script>alert('Sesión expirada o no iniciada. Vuelve a iniciar sesión'); window.location.href='../login.php';</script>";
+          exit;
+        }
+        ?>
 
-          <input 
-  type="hidden"
-  name="matriculaA"
-  value="<?php echo $_SESSION['id_matricula']; ?>"
-/>
+        <input
+          type="hidden"
+          name="matriculaA"
+          value="<?php echo $_SESSION['id_matricula']; ?>" />
 
-          <input
+        <input
           type="number"
           name="matriculaP"
           title="u"
           placeholder="Escribe la matricula del destinatario"
           id=""
           maxlength="7"
-          required
-          />
-            
-        </div>
-        <textarea
-          rows="5"
-          placeholder="Describe el problema..."
-          required
-          name="mensaje"
-        ></textarea>
+          required />
 
-        <br /><br />
-        <button class="btn" type="submit">Enviar Reporte</button>
-      </form>
-    </div>
+      </div>
+      <textarea
+        rows="5"
+        placeholder="Describe el problema..."
+        required
+        name="mensaje"></textarea>
 
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="../assets/js/portalAlumno/pagos.js"></script>
-  </body>
+      <br /><br />
+      <button class="btn" type="submit">Enviar Reporte</button>
+    </form>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="../assets/js/portalAlumno/pagos.js"></script>
+</body>
+
 </html>

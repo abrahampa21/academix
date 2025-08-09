@@ -75,7 +75,6 @@ if (isset($_POST["registrar"])) {
             alert('Las contraseñas no coinciden');
         </script>";
         $mostrarRegistro = true;
-
     } else {
         $alu_prof = $_POST["rol"];
         $nombre = mysqli_real_escape_string($conexion, $_POST['nombre']);
@@ -191,6 +190,20 @@ if (isset($_POST["registrar"])) {
         href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
     <script src="https://kit.fontawesome.com/e522357059.js" crossorigin="anonymous"></script>
     <title>Academix</title>
+    <!-- Google tag (gtag.js) -->
+    <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-4G187DGVGB"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+
+        gtag("config", "G-4G187DGVGB");
+    </script>
 </head>
 
 <body>
@@ -226,15 +239,15 @@ if (isset($_POST["registrar"])) {
         <h1>Registro para el portal</h1>
         <div class="inputs">
             <div class="div-name div-input">
-                <input type="text" name="nombre" class="inputs-register" placeholder="Nombre completo" id="nombre" required value="<?php echo $datosFormulario['nombre']?>">
+                <input type="text" name="nombre" class="inputs-register" placeholder="Nombre completo" id="nombre" required value="<?php echo $datosFormulario['nombre'] ?>">
                 <i class="fa-solid fa-user"></i>
             </div>
             <div class="div-email div-input">
-                <input type="email" name="email" class="inputs-register" placeholder="Correo electrónico" id="email" required value="<?php echo $datosFormulario['email']?>">
+                <input type="email" name="email" class="inputs-register" placeholder="Correo electrónico" id="email" required value="<?php echo $datosFormulario['email'] ?>">
                 <i class="fa-solid fa-envelope"></i>
             </div>
             <div class="div-user div-input">
-                <input type="text" name="matricula" class="inputs-register" placeholder="Matrícula" id="matricula"  maxlength="7" required value="<?php echo $datosFormulario['matricula']?>">
+                <input type="text" name="matricula" class="inputs-register" placeholder="Matrícula" id="matricula" maxlength="7" required value="<?php echo $datosFormulario['matricula'] ?>">
                 <i class="fa-solid fa-pen-nib"></i>
             </div>
             <div class="input-password div-input">

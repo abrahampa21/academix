@@ -71,6 +71,20 @@ $row = mysqli_fetch_assoc($resultado);
     src="https://kit.fontawesome.com/e522357059.js"
     crossorigin="anonymous"></script>
   <title>Datos Personales</title>
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-4G187DGVGB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-4G187DGVGB");
+  </script>
 </head>
 
 <body>
@@ -115,17 +129,16 @@ $row = mysqli_fetch_assoc($resultado);
         <th>Periodo</th>
         <td>
           <select
-  name="periodo"
-  class="status"
-  id="periodo"
-  required
-  disabled
->
-  <option value="">-- Selecciona un periodo --</option>
-  <option value="Enero - Abril" <?= strtolower(trim($row['periodo'])) === 'enero - abril' ? 'selected' : '' ?>>Enero - Abril</option>
-  <option value="Abril - Agosto" <?= strtolower(trim($row['periodo'])) === 'abril - agosto' ? 'selected' : '' ?>>Abril - Agosto</option>
-  <option value="Septiembre - Diciembre" <?= strtolower(trim($row['periodo'])) === 'septiembre - diciembre' ? 'selected' : '' ?>>Septiembre - Diciembre</option>
-</select>
+            name="periodo"
+            class="status"
+            id="periodo"
+            required
+            disabled>
+            <option value="">-- Selecciona un periodo --</option>
+            <option value="Enero - Abril" <?= strtolower(trim($row['periodo'])) === 'enero - abril' ? 'selected' : '' ?>>Enero - Abril</option>
+            <option value="Abril - Agosto" <?= strtolower(trim($row['periodo'])) === 'abril - agosto' ? 'selected' : '' ?>>Abril - Agosto</option>
+            <option value="Septiembre - Diciembre" <?= strtolower(trim($row['periodo'])) === 'septiembre - diciembre' ? 'selected' : '' ?>>Septiembre - Diciembre</option>
+          </select>
 
 
         </td>

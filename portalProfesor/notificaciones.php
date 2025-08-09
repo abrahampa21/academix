@@ -3,8 +3,8 @@ session_start();
 include("../src/conexion.php");
 
 if (!isset($_SESSION['id_matricula']) || $_SESSION['rol'] !== 'prof') {
-    echo "Acceso no autorizado.";
-    exit;
+  echo "Acceso no autorizado.";
+  exit;
 }
 
 
@@ -12,13 +12,13 @@ $matricula_profesor = $_SESSION['id_matricula'];
 
 // Procesar respuesta si se envió
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['responder'])) {
-    $id_mensaje = $_POST['id'];
-    $respuesta = $_POST['respuesta'];
-    $estado = $_POST['estado'];
+  $id_mensaje = $_POST['id'];
+  $respuesta = $_POST['respuesta'];
+  $estado = $_POST['estado'];
 
-    $stmt = $conexion->prepare("UPDATE quejas SET respuesta = ?, estado = ? WHERE id = ? AND matriculaP = ?");
-    $stmt->bind_param("ssis", $respuesta, $estado, $id_mensaje, $matricula_profesor);
-    $stmt->execute();
+  $stmt = $conexion->prepare("UPDATE quejas SET respuesta = ?, estado = ? WHERE id = ? AND matriculaP = ?");
+  $stmt->bind_param("ssis", $respuesta, $estado, $id_mensaje, $matricula_profesor);
+  $stmt->execute();
 }
 
 // Obtener mensajes dirigidos al profesor
@@ -30,17 +30,33 @@ $result = $stmt->get_result();
 ?>
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Avisos y Mensajes</title>
   <link rel="icon" href="../src/img/academix.jpg" />
   <script src="https://kit.fontawesome.com/e522357059.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <link rel="stylesheet" href="../assets/css/portalProfesor/horarioPro.css?v=1.0">
   <link rel="stylesheet" href="notificaciones.css">
+  <title>Avisos y Mensajes</title>
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-4G187DGVGB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-4G187DGVGB");
+  </script>
 </head>
+
 <body>
   <div class="horario-container" data-aos="fade-down">
     <div class="horario-header">
@@ -97,4 +113,5 @@ $result = $stmt->get_result();
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="../assets/js/portalProfesor/horarioPro.js"></script>
 </body>
+
 </html>
