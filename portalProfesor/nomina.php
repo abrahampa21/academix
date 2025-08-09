@@ -12,7 +12,7 @@ if (!isset($_SESSION['id_matricula']) || $_SESSION['rol'] !== 'prof') {
 
 $idprofe = $_SESSION['id_matricula'];
 
-$sql = "SELECT * FROM alumno WHERE matriculaP = '$idprofe'";
+$sql = "SELECT * FROM profesor WHERE matriculaP = '$idprofe'";
 $resultado = mysqli_query($conexion, $sql);
 $row = mysqli_fetch_assoc($resultado);
 ?>
