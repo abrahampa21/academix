@@ -487,10 +487,6 @@ footer .footer-bottom a {
 }
 
 @media (max-width: 1060px) {
-  header .header .links-header {
-    font-size: 1.5rem;
-  }
-  
   .navbar {
     justify-content: space-evenly;
   }
@@ -546,7 +542,7 @@ footer .footer-bottom a {
 
 @media (max-width: 450px) {
   header .header .links-header {
-    font-size: .7rem;
+    font-size: .83rem;
   }
 
   .menu{
