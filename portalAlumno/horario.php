@@ -108,66 +108,67 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       </thead>
       <tbody>
         <tr>
-          <td class="asignatura">
+          <td data-label="Asignatura" class="asignatura">
             Propaganda y Medios<br /><span class="profesor">Mtro. Omar Enrique Kantun</span>
           </td>
-          <td>311</td>
-          <td>3</td>
-          <td></td>
-          <td>7:00 - 9:00</td>
-          <td></td>
-          <td></td>
-          <td>8:00 - 9:00</td>
+          <td data-label="Clave">311</td>
+          <td data-label="Horas/Semana">3</td>
+          <td data-label="Lunes"></td>
+          <td data-label="Martes">7:00 - 9:00</td>
+          <td data-label="Miércoles"></td>
+          <td data-label="Jueves"></td>
+          <td data-label="Viernes">8:00 - 9:00</td>
         </tr>
         <tr>
-          <td class="asignatura">
+          <td data-label="Asignatura" class="asignatura">
             Programación de Web I<br /><span class="profesor">I.S.C. Edward Enrique Morales</span>
           </td>
-          <td>312</td>
-          <td>5</td>
-          <td>10:30 - 12:30</td>
-          <td></td>
-          <td>11:30 - 12:30</td>
-          <td></td>
-          <td>9:30 - 11:30</td>
+          <td data-label="Clave">312</td>
+          <td data-label="Horas/Semana">5</td>
+          <td data-label="Lunes">10:30 - 12:30</td>
+          <td data-label="Martes"></td>
+          <td data-label="Miércoles">11:30 - 12:30</td>
+          <td data-label="Jueves"></td>
+          <td data-label="Viernes">9:30 - 11:30</td>
         </tr>
         <tr>
-          <td class="asignatura">
+          <td data-label="Asignatura" class="asignatura">
             Redes I<br /><span class="profesor">I.S.C. Luis Manuel Cambranis</span>
           </td>
-          <td>313</td>
-          <td>5</td>
-          <td></td>
-          <td>9:30 - 11:30</td>
-          <td></td>
-          <td>9:30 - 11:30</td>
-          <td>7:00 - 8:00</td>
+          <td data-label="Clave">313</td>
+          <td data-label="Horas/Semana">5</td>
+          <td data-label="Lunes"></td>
+          <td data-label="Martes">9:30 - 11:30</td>
+          <td data-label="Miércoles"></td>
+          <td data-label="Jueves">9:30 - 11:30</td>
+          <td data-label="Viernes">7:00 - 8:00</td>
         </tr>
         <tr>
-          <td class="asignatura">
+          <td data-label="Asignatura" class="asignatura">
             Lenguaje PHP y Java<br /><span class="profesor">Lic. Cesar Ricardo Cen Poot</span>
           </td>
-          <td>314</td>
-          <td>6</td>
-          <td>8:00 - 10:00</td>
-          <td></td>
-          <td>9:30 - 11:30</td>
-          <td>11:30 - 13:30</td>
-          <td></td>
+          <td data-label="Clave">314</td>
+          <td data-label="Horas/Semana">6</td>
+          <td data-label="Lunes">8:00 - 10:00</td>
+          <td data-label="Martes"></td>
+          <td data-label="Miércoles">9:30 - 11:30</td>
+          <td data-label="Jueves">11:30 - 13:30</td>
+          <td data-label="Viernes"></td>
         </tr>
         <tr>
-          <td class="asignatura">
+          <td data-label="Asignatura" class="asignatura">
             Diseño de Páginas Web<br /><span class="profesor">Mtro. Abraham Izoteco Valle</span>
           </td>
-          <td>315</td>
-          <td>4</td>
-          <td></td>
-          <td></td>
-          <td>7:00 - 9:00</td>
-          <td>7:00 - 9:00</td>
-          <td></td>
+          <td data-label="Clave">315</td>
+          <td data-label="Horas/Semana">4</td>
+          <td data-label="Lunes"></td>
+          <td data-label="Martes"></td>
+          <td data-label="Miércoles">7:00 - 9:00</td>
+          <td data-label="Jueves">7:00 - 9:00</td>
+          <td data-label="Viernes"></td>
         </tr>
       </tbody>
+
     </table>
 
     <div class="buttons-submit">
