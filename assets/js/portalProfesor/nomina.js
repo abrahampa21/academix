@@ -8,14 +8,6 @@ function cerrarModal() {
   document.getElementById("modalReporte").style.display = "none";
 }
 
-function verDetalles(mes) {
-  alert(
-    "Detalles de deducciones y percepciones para: " +
-      mes +
-      "\n- Percepciones: $20,000\n- Deducciones: $1,500"
-  );
-}
-
 // Filtro por año y mes
 const filtroAño = document.getElementById("filtroAño");
 const filtroMes = document.getElementById("filtroMes");

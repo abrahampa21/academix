@@ -24,6 +24,10 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  background-color: #fff;
+  padding: 5rem 3rem;
+  border-radius: 12px;
+  box-shadow: 2px 2px 10px #000;
 }
 
 .alumnos {
@@ -107,11 +111,3 @@ body {
   background-color: #005bb5;
 }
 
-
-@media (max-width: 768px) {
-  .alumnos {
-    font-size: 0.85rem;
-    display: block;
-    overflow-x: auto;
-  }
-}

@@ -102,56 +102,42 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       </div>
     </div>
 
-    <table class="nomina" id="tablaNomina">
-      <thead>
-        <tr>
-          <th>Mes</th>
-          <th>Periodo</th>
-          <th>Salario Neto</th>
-          <th>Estatus</th>
-          <th>Recibo</th>
-          <th>Detalles</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr data-anio="2025" data-mes="Julio">
-          <td>Julio 2025</td>
-          <td>01/07/2025 - 31/07/2025</td>
-          <td>$18,500 MXN</td>
-          <td>Pagado</td>
-          <td><a href="#" class="btn">Descargar PDF</a></td>
-          <td>
-            <button class="btn" onclick="verDetalles('Julio 2025')">
-              Ver
-            </button>
-          </td>
-        </tr>
-        <tr data-anio="2025" data-mes="Junio">
-          <td>Junio 2025</td>
-          <td>01/06/2025 - 30/06/2025</td>
-          <td>$18,500 MXN</td>
-          <td>Pagado</td>
-          <td><a href="#" class="btn">Descargar PDF</a></td>
-          <td>
-            <button class="btn" onclick="verDetalles('Junio 2025')">
-              Ver
-            </button>
-          </td>
-        </tr>
-        <tr data-anio="2025" data-mes="Mayo">
-          <td>Mayo 2025</td>
-          <td>01/05/2025 - 31/05/2025</td>
-          <td>$18,500 MXN</td>
-          <td>Pagado</td>
-          <td><a href="#" class="btn">Descargar PDF</a></td>
-          <td>
-            <button class="btn" onclick="verDetalles('Mayo 2025')">
-              Ver
-            </button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="container-responsive">
+      <table class="nomina" id="tablaNomina">
+        <thead>
+          <tr>
+            <th>Mes</th>
+            <th>Periodo</th>
+            <th>Salario Neto</th>
+            <th>Estatus</th>
+            <th>Recibo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-anio="2025" data-mes="Julio">
+            <td data-label="Mes">Julio 2025</td>
+            <td data-label="Periodo">01/07/2025 - 31/07/2025</td>
+            <td data-label="Salario Neto">$18,500 MXN</td>
+            <td data-label="Estatus">Pagado</td>
+            <td data-label="Recibo"><a href="#" class="btn">Descargar PDF</a></td>
+          </tr>
+          <tr data-anio="2025" data-mes="Junio">
+            <td data-label="Mes">Junio 2025</td>
+            <td data-label="Periodo">01/06/2025 - 30/06/2025</td>
+            <td data-label="Salario Neto">$18,500 MXN</td>
+            <td data-label="Estatus">Pagado</td>
+            <td data-label="Recibo"><a href="#" class="btn">Descargar PDF</a></td>
+          </tr>
+          <tr data-anio="2025" data-mes="Mayo">
+            <td data-label="Mes">Mayo 2025</td>
+            <td data-label="Periodo">01/05/2025 - 31/05/2025</td>
+            <td data-label="Salario Neto">$18,500 MXN</td>
+            <td data-label="Estatus">Pagado</td>
+            <td data-label="Recibo"><a href="#" class="btn">Descargar PDF</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
     <br />
     <button class="btn" onclick="abrirModal()">

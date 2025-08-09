@@ -66,9 +66,9 @@ $row = mysqli_fetch_assoc($resultado);
       <!--Menú responsivo-->
       <div class="menu" id="menu">
         <i class="fa-solid fa-address-card"><a href="portalProfesor/datosPersonalesPro.php">Datos Personales</a></i>
-        <i class="fa-solid fa-calendar-day"><a href="portalProfesor/horarioPro.html">Horario</a></i>
+        <i class="fa-solid fa-calendar-day"><a href="portalProfesor/horarioPro.php">Horario</a></i>
         <i class="fa-solid fa-pen"><a href="portalProfesor/alumnos.html">Alumnos</a></i>
-        <i class="fa-solid fa-book"><a href="portalProfesor/nomina.html">Nómina</a></i>
+        <i class="fa-solid fa-book"><a href="portalProfesor/nomina.php">Nómina</a></i>
       </div>
     </nav>
   </header>

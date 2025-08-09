@@ -90,65 +90,67 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </button>
       </div>
     </div>
-    <table id="horario">
-      <caption>
-        Licenciaturas
-      </caption>
-      <thead>
-        <tr>
-          <th>Asignatura</th>
-          <th>Clave</th>
-          <th>Salon</th>
-          <th>Horas/Semana</th>
-          <th>Lunes</th>
-          <th>Martes</th>
-          <th>Miércoles</th>
-          <th>Jueves</th>
-          <th>Viernes</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="asignatura">
-            Programación de Web I<br /><span class="profesor">
-          </td>
-          <td>312</td>
-          <td>15</td>
-          <td>5</td>
-          <td></td>
-          <td>10:30 - 12:30</td>
-          <td>11:30 - 12:30</td>
-          <td></td>
-          <td>9:30 - 11:30</td>
-        </tr>
-        <tr>
-          <td class="asignatura">
-            Costos e inversion II<br /><span class="profesor">
-          </td>
-          <td>112</td>
-          <td>10</td>
-          <td>5</td>
-          <td>9:30 - 10:30</td>
-          <td></td>
-          <td>7:00 - 9:00</td>
-          <td></td>
-          <td>11:30 - 1:30</td>
-        </tr>
-        <tr>
-          <td class="asignatura">
-            Seguridad informatica<br /><span class="profesor">
-          </td>
-          <td>214</td>
-          <td>6</td>
-          <td>9</td>
-          <td>7:00 - 9:00</td>
-          <td>10:30 - 12:30</td>
-          <td>12:00 - 1:00</td>
-          <td>9:30 - 11:30</td>
-          <td>11:00 - 1:00</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="table-responsive">
+      <table id="horario">
+        <caption>
+          Licenciaturas
+        </caption>
+        <thead>
+          <tr>
+            <th>Asignatura</th>
+            <th>Clave</th>
+            <th>Salon</th>
+            <th>Horas/Semana</th>
+            <th>Lunes</th>
+            <th>Martes</th>
+            <th>Miércoles</th>
+            <th>Jueves</th>
+            <th>Viernes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Asignatura" class="asignatura">
+              Programación de Web I<br /><span class="profesor">
+            </td>
+            <td data-label="clave">312</td>
+            <td data-label="Salón">15</td>
+            <td data-label="Horas/Semana">5</td>
+            <td data-label="Lunes"></td>
+            <td data-label="Martes">10:30 - 12:30</td>
+            <td data-label="Miércoles">11:30 - 12:30</td>
+            <td data-label="Jueves"></td>
+            <td data-label="Viernes">9:30 - 11:30</td>
+          </tr>
+          <tr>
+            <td data-label="Asignatura" class="asignatura">
+              Costos e inversion II<br /><span class="profesor">
+            </td>
+            <td data-label="Clave">112</td>
+            <td data-label="Salón">10</td>
+            <td data-label="Horas/Semana">5</td>
+            <td data-label="Lunes">9:30 - 10:30</td>
+            <td data-label="Martes"></td>
+            <td data-label="Miércoles">7:00 - 9:00</td>
+            <td data-label="Jueves"></td>
+            <td data-label="Viernes">11:30 - 1:30</td>
+          </tr>
+          <tr>
+            <td data-label="Asignatura" class="asignatura">
+              Seguridad informatica<br /><span class="profesor">
+            </td>
+            <td data-label="Clave">214</td>
+            <td data-label="Salón">6</td>
+            <td data-label="Horas/Semana">9</td>
+            <td data-label="Lunes">7:00 - 9:00</td>
+            <td data-label="Martes">10:30 - 12:30</td>
+            <td data-label="Miércoles">12:00 - 1:00</td>
+            <td data-label="Jueves">9:30 - 11:30</td>
+            <td data-label="Viernes">11:00 - 1:00</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
     <div class="container-submit">
       <button class="btn" onclick="abrirModal()">Reportar un problema</button>
