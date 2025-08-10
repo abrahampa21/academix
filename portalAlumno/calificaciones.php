@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
   if (mysqli_query($conexion, $sql)) {
     echo "<script>
-          
+            alert('Reporte enviado con éxito');
             window.location.href='calificaciones.php';
           </script>";
     exit();
@@ -24,9 +24,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   }
 }
 ?>
-
-
-
 <!DOCTYPE html>
 <html lang="es">
 

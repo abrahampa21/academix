@@ -2,6 +2,7 @@ const btnModifiedSchedule = document.getElementById("btn-modified-schedule");
 
 AOS.init();
 
+//Descargar la tabla en formato .pdf
 function descargarPDF() {
   const tabla = document.getElementById("horario");
   const opciones = {
@@ -23,30 +24,48 @@ function cerrarModal() {
   document.getElementById("modalReporte").style.display = "none";
 }
 
+//Genera una nueva materia
 function agregarMateria() {
   const tabla = document.getElementById("horario").querySelector("tbody");
-
   const nuevaFila = document.createElement("tr");
 
-  // Crea 9 celdas vacías (igual que el número de columnas)
+  const placeholders = [
+    "Asignatura",
+    "Clave",
+    "Salón",
+    "Horas/Semana",
+    "Lunes",
+    "Martes",
+    "Miércoles",
+    "Jueves",
+    "Viernes",
+  ];
+
   for (let i = 0; i < 9; i++) {
     const td = document.createElement("td");
-    td.classList.add("asignatura");
+
     const input = document.createElement("input");
     input.type = "text";
+    input.placeholder = placeholders[i];
     input.style.width = "100%";
     input.style.border = "1px solid #aaa";
+
+    if(i == 0){
+      td.classList.add("asignatura");
+    }
     td.appendChild(input);
     nuevaFila.appendChild(td);
   }
 
+
   tabla.appendChild(nuevaFila);
 }
 
+//Función para editar los campos de la fila
 function editarHorario() {
   const tabla = document.getElementById("horario");
   const filas = tabla.querySelectorAll("tbody tr");
-  const crudButtons = document.getElementById("crud")
+  const crudButtons = document.getElementById("crud");
 
   crudButtons.style.display = "flex";
 
@@ -90,6 +109,35 @@ function guardarHorario() {
   Swal.fire("Horario enviado", "Tus cambios han sido guardados.", "success");
 }
 
+//Eliminan las materias
+function eliminarMateria() {
+  let filaSeleccionada = null;
+  const filas = document.querySelectorAll("#horario tbody tr");
+
+  filas.forEach((fila) => {
+    fila.addEventListener("click", (e) => {
+      // Evitar seleccionar si se hizo clic en un input
+      if (e.target.tagName === "INPUT") return;
+
+      if (filaSeleccionada) {
+        filaSeleccionada.classList.remove("selected");
+      }
+
+      filaSeleccionada = fila;
+      fila.classList.add("selected");
+    });
+  });
+
+  document.getElementById("delete-subject").addEventListener("click", () => {
+    if (filaSeleccionada) {
+      filaSeleccionada.remove();
+      filaSeleccionada = null;
+    } else {
+      Swal.fire("Selecciona una fila primero");
+    }
+  });
+}
+
 //Función para preguntar si tiene autorización de cambios
 function authorized() {
   Swal.fire({
@@ -103,12 +151,14 @@ function authorized() {
       Swal.fire("Autorizado!", "", "success");
       btnModifiedSchedule.setAttribute("onclick", "guardarHorario()");
       editarHorario();
+      eliminarMateria();
     } else if (result.isDenied) {
       Swal.fire("No tienes permiso de modificar");
     }
   });
 }
 
+//Funciones para volver al menú en notificaciones
 function returnMenuAlu() {
   window.location.href = "../portalAlumno.php";
 }

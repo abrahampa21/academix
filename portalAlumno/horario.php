@@ -34,8 +34,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
   if (mysqli_query($conexion, $sql)) {
     echo "<script>
-          
-            window.location.href='horario.php';
+            alert('Reporte enviado con éxito');
+            window.location.href = 'horario.php';
           </script>";
     exit();
   } else {
@@ -192,7 +192,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       <span class="close" onclick="cerrarModal()">&times;</span>
       <h3>Reportar Problema</h3>
       <div class="destinatario">
-        <h4>Destinatario</h4>
         <input
           type="text"
           name="asunto"

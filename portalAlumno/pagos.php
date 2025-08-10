@@ -15,6 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
   if (mysqli_query($conexion, $sql)) {
     echo "<script>
+            alert('Reporte enviado con éxito');
             window.location.href='pagos.php';
           </script>";
     exit();

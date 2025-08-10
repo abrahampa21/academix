@@ -1,4 +1,4 @@
-const asistenciasAlumno = document.getElementById("asistencias-alumno"); 
+const asistenciasAlumno = document.getElementById("asistencias-alumno");
 const asistenciasProfesor = document.getElementById("asistencias-profesor");
 
 AOS.init();
@@ -6,16 +6,15 @@ AOS.init();
 function abrirModal() {
   document.getElementById("modalReporte").style.display = "flex";
   document.getElementById("modalReporte").addEventListener("submit", (e) => {
-  Swal.fire("Reporte enviado exitosamente");
     cerrarModal();
-  })
+  });
 }
 
-function cerrarModal(){
+function cerrarModal() {
   document.getElementById("modalReporte").style.display = "none";
 }
 
-function returnMenu(){
+function returnMenu() {
   window.location.href = "../portalAlumno.php";
 }
 

@@ -68,9 +68,9 @@ $resultado = mysqli_query($conexion, $sql);
             <td data-label="Asistencia">
               <a href="../portalAlumno/asistencia.php?matricula=<?= urlencode($row['matriculaA']) ?>">Ver asistencias</a>
             </td>
-            <td data-label="Calificación">--</td>
-            <td data-label="Puntos Extras">--</td>
-            <td data-label="Asignatura"><?= htmlspecialchars($row['asignatura']) ?></td>
+            <td data-label="Calificación">10</td>
+            <td data-label="Puntos Extras">2</td>
+            <td data-label="Asignatura"><?= htmlspecialchars($row['asignatura']) ?>Programación Avanzada</td>
           </tr>
           <?php endwhile; ?>
         </tbody>

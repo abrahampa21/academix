@@ -16,9 +16,8 @@ function descargarPDF() {
 function abrirModal() {
   document.getElementById("modalReporte").style.display = "flex";
   document.getElementById("modalReporte").addEventListener("submit", (e) => {
-  Swal.fire("Reporte enviado con exito");
-  cerrarModal();
-  })
+    cerrarModal();
+  });
 }
 
 function cerrarModal() {
@@ -33,20 +32,45 @@ function editarHorario() {
     const celdas = fila.querySelectorAll("td");
 
     celdas.forEach((td) => {
-      // Evitar duplicar inputs si ya está editando
+      // Evita duplicar inputs si ya está editando
       if (td.querySelector("input")) return;
 
-      const valor = td.innerHTML.trim();
-      const textoPlano = td.innerText.trim();
+      const spanProfesor = td.querySelector("span.profesor");
 
-      const input = document.createElement("input");
-      input.type = "text";
-      input.value = textoPlano;
-      input.style.width = "100%";
-      input.style.border = "1px solid #aaa";
+      if (spanProfesor) {
+        const nombreProfesor = spanProfesor.innerText.trim();
 
-      td.innerHTML = "";
-      td.appendChild(input);
+        const contenidoMateria = td.innerHTML.split("<br")[0].trim();
+
+        const inputMateria = document.createElement("input");
+        inputMateria.type = "text";
+        inputMateria.value = contenidoMateria;
+        inputMateria.style.width = "100%";
+        inputMateria.style.marginBottom = "5px";
+        inputMateria.classList.add("input-materia");
+
+        const inputProfesor = document.createElement("input");
+        inputProfesor.type = "text";
+        inputProfesor.value = nombreProfesor;
+        inputProfesor.style.width = "100%";
+        inputProfesor.classList.add("input-profesor");
+
+        td.innerHTML = "";
+        td.appendChild(inputMateria);
+        td.appendChild(document.createElement("br"));
+        td.appendChild(inputProfesor);
+      } else {
+        const textoPlano = td.innerText.trim();
+
+        const input = document.createElement("input");
+        input.type = "text";
+        input.value = textoPlano;
+        input.style.width = "100%";
+        input.style.border = "1px solid #aaa";
+
+        td.innerHTML = "";
+        td.appendChild(input);
+      }
     });
   });
 }
@@ -59,15 +83,26 @@ function guardarHorario() {
     const celdas = fila.querySelectorAll("td");
 
     celdas.forEach((td) => {
-      const input = td.querySelector("input");
-      if (input) {
-        td.textContent = input.value.trim();
+      const inputMateria = td.querySelector(".input-materia");
+      const inputProfesor = td.querySelector(".input-profesor");
+
+      if (inputMateria && inputProfesor) {
+        const materia = inputMateria.value.trim();
+        const profesor = inputProfesor.value.trim();
+
+        td.innerHTML = `${materia}<br /><span class="profesor">${profesor}</span>`;
+      } else {
+        const input = td.querySelector("input");
+        if (input) {
+          td.textContent = input.value.trim();
+        }
       }
     });
   });
 
   Swal.fire("Horario enviado", "Tus cambios han sido guardados.", "success");
 }
+
 
 //Función para preguntar si tiene autorización de cambios
 function authorized() {
@@ -88,6 +123,6 @@ function authorized() {
   });
 }
 
-function returnMenu(){
+function returnMenu() {
   window.location.href = "../portalAlumno.php";
 }

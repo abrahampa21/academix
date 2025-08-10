@@ -92,7 +92,7 @@ $result = $stmt->get_result();
                 </td>
                 <td>
                   <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
-                  <button type="submit" name="responder">Enviar</button>
+                  <button type="submit" name="responder" class="enviar-noti">Enviar</button>
                 </td>
               </form>
             </tr>

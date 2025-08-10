@@ -63,7 +63,6 @@ if (
 function abrirModal() {
   document.getElementById("modalReporte").style.display = "flex";
   document.getElementById("modalReporte").addEventListener("submit", (e) => {
-  Swal.fire("Reporte enviado con exito");
   cerrarModal();
   })
 }

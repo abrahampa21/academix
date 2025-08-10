@@ -4,11 +4,6 @@
   box-sizing: border-box;
 }
 
-html, body{
-    height: 100%;
-      margin: 0;
-  padding: 0;
-}
 
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
@@ -24,8 +19,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 100vh;
 }
-
 
 .tabla-container {
   background: #ffffff;
@@ -197,10 +192,10 @@ tbody tr:nth-child(even) {
 }
 
 @media (max-width: 480px) {
-    body {
-        overflow-y: auto; /* para permitir scroll solo si es necesario */
-        padding-bottom: 0; /* evita espacio extra */
-    }
+  body {
+    overflow-y: auto; /* para permitir scroll solo si es necesario */
+    padding-bottom: 0; /* evita espacio extra */
+  }
 
   body {
     padding: 0.5rem;

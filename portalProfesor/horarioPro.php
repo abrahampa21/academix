@@ -34,6 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
   if (mysqli_query($conexion, $sql)) {
     echo "<script>
+            alert('Reporte enviado con éxito');
             window.location.href='horarioPro.php';
           </script>";
     exit();
@@ -110,7 +111,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       <tbody>
         <tr>
           <td data-label="Asignatura" class="asignatura">
-            Programación de Web I<br /><span class="profesor">
+            Programación de Web I<br />
           </td>
           <td data-label="clave">312</td>
           <td data-label="Salón">15</td>
@@ -123,7 +124,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </tr>
         <tr>
           <td data-label="Asignatura" class="asignatura">
-            Costos e inversion II<br /><span class="profesor">
+            Costos e inversion II<br />
           </td>
           <td data-label="Clave">112</td>
           <td data-label="Salón">10</td>
@@ -136,7 +137,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </tr>
         <tr>
           <td data-label="Asignatura" class="asignatura">
-            Seguridad informatica<br /><span class="profesor">
+            Seguridad informatica<br />
+          </td>
+          <td data-label="Clave">214</td>
+          <td data-label="Salón">6</td>
+          <td data-label="Horas/Semana">9</td>
+          <td data-label="Lunes">7:00 - 9:00</td>
+          <td data-label="Martes">10:30 - 12:30</td>
+          <td data-label="Miércoles">12:00 - 1:00</td>
+          <td data-label="Jueves">9:30 - 11:30</td>
+          <td data-label="Viernes">11:00 - 1:00</td>
+        </tr>
+        <tr>
+          <td data-label="Asignatura" class="asignatura">
+            Seguridad informatica<br />
           </td>
           <td data-label="Clave">214</td>
           <td data-label="Salón">6</td>

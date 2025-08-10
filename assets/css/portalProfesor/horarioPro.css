@@ -72,12 +72,6 @@ tbody tr:hover {
   font-weight: 600;
 }
 
-.profesor {
-  font-size: 0.9em;
-  color: #555;
-  font-style: italic;
-}
-
 caption {
   font-size: 1.3rem;
   margin-bottom: 10px;
@@ -188,6 +182,24 @@ caption {
   cursor: pointer;
 }
 
+.enviar-noti {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 1rem;
+  cursor: pointer;
+  border-radius: 7px;
+  transition: 0.3s ease-in-out;
+}
+
+.enviar-noti:hover {
+  background-color: #0056b3;
+}
+
+tr.selected {
+  background-color: #ffcaca !important;
+}
+
 /*Botón para regresar*/
 .exit-rsp {
   position: fixed;
@@ -285,11 +297,11 @@ caption {
     margin-bottom: 0.5rem;
   }
 
-  .container-submit{
+  .container-submit {
     flex-direction: column-reverse;
   }
 
-  .crud{
+  .crud {
     flex-direction: column;
     margin-left: 0;
   }
@@ -312,13 +324,16 @@ caption {
 }
 
 @media (max-width: 480px) {
+  .horario-header h1 {
+    font-size: 20px;
+  }
   table {
     font-size: 12px;
   }
 
   th,
   td {
-    padding: 4px;
+    padding: 4px 15px;
   }
 
   .container-submit {
