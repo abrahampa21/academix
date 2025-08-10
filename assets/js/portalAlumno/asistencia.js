@@ -15,7 +15,7 @@ function cerrarModal() {
 }
 
 function returnMenu() {
-  window.location.href = "../portalAlumno.php";
+  window.history.back();
 }
 
 function descargarPDF() {
