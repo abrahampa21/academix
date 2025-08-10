@@ -6,7 +6,7 @@ include("../src/conexion.php");
 if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'prof') {
     echo "<script>
             alert('Acceso denegado'); 
-            window.location.href='login.php';
+            window.location.href='../login.php';
           </script>";
     exit();
 }
