@@ -1,7 +1,7 @@
 <?php
 session_start();
 include("../src/conexion.php");
-
+ 
 if (
     !isset($_SESSION['id_matricula']) && // No es alumno
     !(
