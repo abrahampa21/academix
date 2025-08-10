@@ -2,19 +2,28 @@
 session_start();
 include("../src/conexion.php");
 
-if (!isset($_SESSION['id_matricula']) || $_SESSION['rol'] !== 'alu') {
-  echo "<script>
-            alert('Por favor, inicie sesión primero');
-            window.location.href='../login.php';
-          </script>";
-  exit();
+if (
+    !isset($_SESSION['id_matricula']) && // No es alumno
+    !(
+        isset($_SESSION['rol']) &&
+        $_SESSION['rol'] === 'prof' &&
+        isset($_GET['matricula'])
+    )
+) {
+    echo "<script>alert('Por favor, inicie sesión primero'); window.location.href='../login.php';</script>";
+    exit();
 }
 
-$idalum = $_SESSION['id_matricula'];
+if (isset($_SESSION['rol']) && $_SESSION['rol'] === 'alu') {
+    $idalum = $_SESSION['id_matricula'];
+} elseif ($_SESSION['rol'] === 'prof' && isset($_GET['matricula'])) {
+    $idalum = $_GET['matricula'];
+}
 
 $sql = "SELECT * FROM alumno WHERE matriculaA = '$idalum'";
 $resultado = mysqli_query($conexion, $sql);
 $row = mysqli_fetch_assoc($resultado);
+
 ?>
 
 <?php
