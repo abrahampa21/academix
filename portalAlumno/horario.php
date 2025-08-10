@@ -2,6 +2,34 @@
 session_start();
 include("../src/conexion.php");
 
+// Maneja la petición AJAX que guarda el PDF en la BD
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['action'] === 'save_pdf') {
+  header('Content-Type: application/json; charset=utf-8');
+
+  if (!isset($_SESSION['id_matricula'])) {
+    echo json_encode(['success' => false, 'error' => 'Sesión no iniciada']);
+    exit();
+  }
+
+  if (!isset($_FILES['pdf']) || $_FILES['pdf']['error'] !== UPLOAD_ERR_OK) {
+    echo json_encode(['success' => false, 'error' => 'No se recibió el archivo PDF o hubo un error en la subida.']);
+    exit();
+  }
+
+  $matricula = $_SESSION['id_matricula'];
+  $pdfContent = file_get_contents($_FILES['pdf']['tmp_name']);
+  $pdfEscaped = mysqli_real_escape_string($conexion, $pdfContent);
+
+  $sqlUpdate = "UPDATE alumno SET horario = '$pdfEscaped' WHERE matriculaA = '$matricula' LIMIT 1";
+
+  if (mysqli_query($conexion, $sqlUpdate)) {
+    echo json_encode(['success' => true]);
+  } else {
+    echo json_encode(['success' => false, 'error' => mysqli_error($conexion)]);
+  }
+  exit();
+}
+
 if (!isset($_SESSION['id_matricula']) || $_SESSION['rol'] !== 'alu') {
   echo "<script>
             alert('Por favor, inicie sesión primero');
