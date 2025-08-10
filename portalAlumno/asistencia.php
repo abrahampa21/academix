@@ -5,7 +5,7 @@ include("../src/conexion.php");
 if (!isset($_SESSION['id_matricula']) || $_SESSION['rol'] !== 'alu') {
   echo "<script>
             alert('Por favor, inicie sesión primero');
-            window.location.href='login.php';
+            window.location.href='../login.php';
           </script>";
   exit();
 }
