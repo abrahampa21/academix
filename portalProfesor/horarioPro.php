@@ -2,6 +2,36 @@
 session_start();
 include("../src/conexion.php");
 
+// Maneja la petición AJAX que guarda el PDF en la BD (profesor)
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['action'] === 'save_pdf') {
+  header('Content-Type: application/json; charset=utf-8');
+
+  if (!isset($_SESSION['id_matricula'])) {
+    echo json_encode(['success' => false, 'error' => 'Sesión no iniciada']);
+    exit();
+  }
+
+  if (!isset($_FILES['pdf']) || $_FILES['pdf']['error'] !== UPLOAD_ERR_OK) {
+    echo json_encode(['success' => false, 'error' => 'No se recibió el archivo PDF o hubo un error en la subida.']);
+    exit();
+  }
+
+  $matricula = $_SESSION['id_matricula'];
+  $pdfContent = file_get_contents($_FILES['pdf']['tmp_name']);
+  $pdfEscaped = mysqli_real_escape_string($conexion, $pdfContent);
+
+  // Guardar en la columna horario del profesor
+  $sqlUpdate = "UPDATE profesor SET horario = '$pdfEscaped' WHERE matriculaP = '$matricula' LIMIT 1";
+
+  if (mysqli_query($conexion, $sqlUpdate)) {
+    echo json_encode(['success' => true]);
+  } else {
+    echo json_encode(['success' => false, 'error' => mysqli_error($conexion)]);
+  }
+  exit();
+}
+
+// Validación normal de acceso
 if (!isset($_SESSION['id_matricula']) || $_SESSION['rol'] !== 'prof') {
   echo "<script>
             alert('Por favor, inicie sesión primero');
@@ -16,34 +46,6 @@ $sql = "SELECT * FROM profesor WHERE matriculaP = '$idprofe'";
 $resultado = mysqli_query($conexion, $sql);
 $row = mysqli_fetch_assoc($resultado);
 ?>
-
-<?php
-session_start();
-include '../src/conexion.php';
-mysqli_set_charset($conexion, "utf8");
-
-// Procesar el formulario cuando se envía
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-  $matriculaA = $_POST['matriculaA'];
-  $matriculaP = $_POST['matriculaP'];
-  $asunto = $_POST['asunto'];
-  $mensaje = $_POST['mensaje'];
-
-  $sql = "INSERT INTO quejas (matriculaA, matriculaP, asunto, mensaje)
-            VALUES ('$matriculaA', '$matriculaP', '$asunto', '$mensaje')";
-
-  if (mysqli_query($conexion, $sql)) {
-    echo "<script>
-            alert('Reporte enviado con éxito');
-            window.location.href='horarioPro.php';
-          </script>";
-    exit();
-  } else {
-    echo "<script>alert('Error: " . mysqli_error($conexion) . "');</script>";
-  }
-}
-?>
-
 
 <!DOCTYPE html>
 <html lang="es">
