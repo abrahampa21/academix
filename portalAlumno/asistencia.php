@@ -1,23 +1,23 @@
 <?php
 session_start();
 include("../src/conexion.php");
-
+ 
 if (
-  !isset($_SESSION['id_matricula']) && // No es alumno
-  !(
-    isset($_SESSION['rol']) &&
-    $_SESSION['rol'] === 'prof' &&
-    isset($_GET['matricula'])
-  )
+    !isset($_SESSION['id_matricula']) && // No es alumno
+    !(
+        isset($_SESSION['rol']) &&
+        $_SESSION['rol'] === 'prof' &&
+        isset($_GET['matricula'])
+    )
 ) {
-  echo "<script>alert('Por favor, inicie sesión primero'); window.location.href='../login.php';</script>";
-  exit();
+    echo "<script>alert('Por favor, inicie sesión primero'); window.location.href='../login.php';</script>";
+    exit();
 }
 
 if (isset($_SESSION['rol']) && $_SESSION['rol'] === 'alu') {
-  $idalum = $_SESSION['id_matricula'];
+    $idalum = $_SESSION['id_matricula'];
 } elseif ($_SESSION['rol'] === 'prof' && isset($_GET['matricula'])) {
-  $idalum = $_GET['matricula'];
+    $idalum = $_GET['matricula'];
 }
 
 $sql = "SELECT * FROM alumno WHERE matriculaA = '$idalum'";
@@ -43,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
   if (mysqli_query($conexion, $sql)) {
     echo "<script>
-            alert('Reporte enviado con éxito');
+          
             window.location.href='asistencia.php';
           </script>";
     exit();
@@ -160,6 +160,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       <span class="close" onclick="cerrarModal()">&times;</span>
       <h3>Reportar Problema</h3>
       <div class="destinatario">
+        <h4>Destinatario</h4>
         <input
           type="text"
           name="asunto"
