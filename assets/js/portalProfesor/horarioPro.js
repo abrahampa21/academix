@@ -46,9 +46,9 @@ function agregarMateria() {
 function editarHorario() {
   const tabla = document.getElementById("horario");
   const filas = tabla.querySelectorAll("tbody tr");
-  const addSubject = document.getElementById("add-subject");
+  const crudButtons = document.getElementById("crud")
 
-  addSubject.style.display = "block";
+  crudButtons.style.display = "flex";
 
   filas.forEach((fila) => {
     const celdas = fila.querySelectorAll("td");

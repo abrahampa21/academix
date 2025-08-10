@@ -78,28 +78,35 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       </thead>
       <tbody>
         <tr>
-          <td>Matemáticas</td>
+          <td>Diseño de Páginas Web</td>
           <td>8.5</td>
           <td>9.0</td>
           <td>8.7</td>
           <td>8.7</td>
         </tr>
         <tr>
-          <td>Historia</td>
+          <td>Lenguajes PHP y JavaScript</td>
           <td>9.2</td>
           <td>9.5</td>
           <td>9.0</td>
           <td>9.2</td>
         </tr>
         <tr>
-          <td>Ciencias</td>
+          <td>Programación de Web I</td>
           <td>8.0</td>
           <td>8.5</td>
           <td>9.0</td>
           <td>8.5</td>
         </tr>
         <tr>
-          <td>Inglés</td>
+          <td>Propaganda y Medios</td>
+          <td>9.0</td>
+          <td>9.3</td>
+          <td>9.1</td>
+          <td>9.1</td>
+        </tr>
+        <tr>
+          <td>Redes I</td>
           <td>9.0</td>
           <td>9.3</td>
           <td>9.1</td>
@@ -115,8 +122,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </table>
 
     <br />
-    <button class="btn" onclick="abrirModal()">Reportar un problema</button>
-    <button class="btn" onclick="descargarPDF()">Descargar boleta en PDF</button>
+    <button class="btn" onclick="abrirModal()" aria-label="Reportar un problema">Reportar un problema</button>
+    <button class="btn" onclick="descargarPDF()" aria-label="Descargar boleta en PDF">Descargar boleta en PDF</button>
   </div>
 
   <!--Botón regresar-->

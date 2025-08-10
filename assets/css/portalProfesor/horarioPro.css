@@ -22,11 +22,6 @@ body {
   min-height: 100vh;
 }
 
-.table-responsive {
-  overflow-x: auto;
-}
-
-
 .horario-container {
   background: #fff;
   padding: 20px;
@@ -139,9 +134,10 @@ caption {
   margin-top: 1rem;
 }
 
-.add-subject {
+.crud {
   margin-left: auto;
   display: none;
+  gap: 10px;
 }
 
 .modal {
@@ -234,7 +230,7 @@ caption {
     padding: 10px;
   }
 
-    thead {
+  thead {
     display: none;
   }
 
@@ -254,7 +250,6 @@ caption {
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
   }
-
 
   td {
     text-align: left;
@@ -278,10 +273,25 @@ caption {
     color: #1a3d7c;
   }
 
+  .profesor {
+    display: block;
+    text-align: right;
+    margin-right: 13px;
+  }
+
   caption {
     text-align: left;
     font-size: 1rem;
     margin-bottom: 0.5rem;
+  }
+
+  .container-submit{
+    flex-direction: column-reverse;
+  }
+
+  .crud{
+    flex-direction: column;
+    margin-left: 0;
   }
 
   .buttons-modified {
@@ -291,6 +301,13 @@ caption {
 
   .botoncitos {
     width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .horario-header h1 {
+    font-size: 1rem;
+    margin-top: 1rem;
   }
 }
 
@@ -305,7 +322,6 @@ caption {
   }
 
   .container-submit {
-    flex-direction: column;
     gap: 0.5rem;
   }
 

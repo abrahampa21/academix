@@ -54,6 +54,8 @@ body {
   word-wrap: break-word;
   overflow-wrap: break-word;
   white-space: normal;
+  padding: 1rem;
+  text-align: center;
 }
 
 .asistencia th {

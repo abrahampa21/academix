@@ -90,7 +90,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </button>
       </div>
     </div>
-    <table id="horario">
+    <table class="horario" id="horario">
       <caption>
         <?php echo $row['carrera'] ?>
       </caption>
