@@ -326,6 +326,8 @@ tr.selected {
 @media (max-width: 480px) {
   .horario-header h1 {
     font-size: 20px;
+    margin-top: 2.2rem;
+
   }
   table {
     font-size: 12px;
