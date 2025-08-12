@@ -79,6 +79,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       Se te cobrará la colegiatura normal ($2200) este mes si no realizas el
       pago antes del día 10.
     </div>
+    <div class="advertencia segunda-advertencia" id="advertenciaSegundoPago">
+      Se te cobrará la colegiatura normal ($2200) a partir del día 11 hasta el 31.
+    </div>
 
     <button class="btn" onclick="abrirModal()">Reportar un problema</button>
 

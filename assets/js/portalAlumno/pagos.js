@@ -24,6 +24,7 @@ meses.forEach((mes, index) => {
 
 const tablaPagos = document.getElementById("tablaPagos");
 const advertencia = document.getElementById("advertenciaPago");
+const advertenciaDos = document.getElementById("advertenciaSegundoPago");
 
 const fecha = new Date();
 const mesActualNombre = fecha.toLocaleString("es-ES", { month: "long" });
@@ -53,10 +54,20 @@ Object.entries(pagos).forEach(([mes, info]) => {
 if (
   pagos[mesCapitalizado] &&
   !pagos[mesCapitalizado].pagado &&
+  dia >= 1 &&
+  dia <= 10
+) {
+  advertencia.style.display = "block";
+}
+
+// Mostrar advertencia si no ha pagado este mes y estamos entre el 11 y el 31
+if (
+  pagos[mesCapitalizado] &&
+  !pagos[mesCapitalizado].pagado &&
   dia >= 11 &&
   dia <= 31
 ) {
-  advertencia.style.display = "block";
+  advertenciaDos.style.display = "block";
 }
 
 
