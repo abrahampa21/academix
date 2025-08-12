@@ -556,5 +556,13 @@ footer .footer-bottom a {
   .menu li a{
     font-size: 1.2rem;
   }
+
+  footer .contact{
+    padding: 0.9rem;
+  }
+  
+  footer .contact p{
+    font-size: 1rem;
+  }
 }
 
